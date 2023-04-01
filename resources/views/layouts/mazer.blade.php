@@ -4,18 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="assets/css/main/app.css" />
-    <link rel="stylesheet" href="assets/css/pages/auth.css" />
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon" />
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png" />
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
+    {{-- CSS --}}
+    <link rel="stylesheet" href="assets/css/main/app.css" />
+    <link rel="stylesheet" href="assets/css/main/app-dark.css" />
+    <link rel="stylesheet" href="assets/css/pages/auth.css" />
 </head>
 
 <body>
+    <script scr="assets/js/initTheme.js"></script>
     <div id="auth">
         <div class="row h-100">
             <div class="col-lg-5 col-12">
