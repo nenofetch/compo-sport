@@ -1,4 +1,4 @@
-@extends('layouts.mazer')
+@extends('layouts.auth.main')
 
 @section('main')
     <div class="auth-logo">
@@ -65,4 +65,10 @@
             {{ __('Register') }}
         </button>
     </form>
+    <div class="text-center mt-5 text-lg fs-4">
+        <p class="text-gray-600">
+          Already have an account?
+          <a href="{{ route('login') }}" class="font-bold">Log in</a>.
+        </p>
+    </div>
 @endsection
