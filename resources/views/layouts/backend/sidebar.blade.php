@@ -77,7 +77,7 @@
           <li class="sidebar-title">Menu</li>
 
           <li class="sidebar-item active">
-            <a href="index.html" class="sidebar-link">
+            <a href="{{ route('dashboard') }}" class="sidebar-link">
               <i class="bi bi-grid-fill"></i>
               <span>Dashboard</span>
             </a>
@@ -90,7 +90,7 @@
             </a>
             <ul class="submenu">
               <li class="submenu-item">
-                <a href="">Kategori Blog & Berita</a>
+                <a href="{{ route('kategori.index') }}">Kategori Blog & Berita</a>
               </li>
               <li class="submenu-item">
                 <a href="">Artikel Blog</a>

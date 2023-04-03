@@ -21,4 +21,7 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
+    Route::resources([
+        'kategori' => App\Http\Controllers\Backend\CategoryController::class
+    ]);
 });
