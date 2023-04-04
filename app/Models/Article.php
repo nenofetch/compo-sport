@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
-    public $fillable = ['image', 'title', 'content', 'slug', 'user_id', 'category_id', 'position_id'];
+    public $fillable = ['image', 'title', 'content', 'slug', 'user_id', 'category_id', 'position_id', 'status'];
 
     public function users()
     {

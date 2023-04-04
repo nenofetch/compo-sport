@@ -46,6 +46,7 @@
                 <th>Slug</th>
                 <th>Penulis</th>
                 <th>Kategori</th>
+                <th>Status</th>
                 <th width="20%">Aksi</th>
               </tr>
             </thead>
@@ -59,6 +60,7 @@
                 <td>{{ $row->slug }}</td>
                 <td>{{ $row->users->name }}</td>
                 <td>{{ $row->categories->title }}</td>
+                <td><span class="badge bg-{{ $row->status == 'Publish' ? 'success' : 'danger' }}">{{ $row->status == 'Publish' ? 'Publish' : 'Draft' }}</span></td>
                 <td>
                   <button class="btn btn-warning" onclick="window.location='/articles_blog/<?= $row->id ?>/edit'"><i class="fas fa-edit"></i> Edit</button>
                   <button class="btn btn-danger btn-delete" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
