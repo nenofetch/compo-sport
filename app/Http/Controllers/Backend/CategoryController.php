@@ -23,27 +23,26 @@ class CategoryController extends Controller
             'slug'  => Str::slug($request->title, '-')
         ]);
 
-        // Alert::success('Success', 'Kategori berhasil ditambahkan!');
-        // return redirect('kategori');
+        return redirect()->back()->with('message', 'Data berhasil ditambahkan!');
     }
 
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $category = Category::find($id);
 
         $category->update([
-            'title' => $request->name,
+            'title' => $request->title,
             'slug'  => Str::slug($request->title, '-')
         ]);
 
-        Alert::success('Success', 'Kategori berhasil diubah!');
-        return redirect('kategori');
+        return redirect()->back()->with('message', 'Data berhasil diubah!');
     }
 
     public function destroy($id)
     {
         $category = Category::find($id);
         $category->delete();
-        return response()->json(['status' => 'Data berhasil dihapus!']);
+
+        return response()->json(['message' => 'Data berhasil dihapus!']);
     }
 }
