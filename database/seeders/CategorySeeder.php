@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $data = [
+        $categories = [
             [
                 'title' => 'Berita',
                 'slug'  => 'berita',
@@ -26,6 +26,6 @@ class CategorySeeder extends Seeder
             ],
         ];
 
-        Category::insert($data);
+        Category::insert($categories);
     }
 }
