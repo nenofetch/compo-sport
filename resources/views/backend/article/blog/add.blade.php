@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Konten</label>
-                                        <textarea name="content" id="summernote" class="form-control @error('content') is-invalid @enderror"></textarea>
+                                        <textarea name="content" id="summernote" class="form-control @error('content') is-invalid @enderror">{{ old('content') }}</textarea>
                                         @error('content')
                                             <div class="invalid-feedback">
                                                 {{ $message }}

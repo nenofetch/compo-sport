@@ -36,13 +36,14 @@ class ArticlesBlogController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('uploads/blogs');
+            $imagePath = $request->file('image')->store('public/blogs');
+            $imageName = basename($imagePath);
         } else {
-            $path = '';
+            $imageName = '';
         }
 
         Article::create([
-            'image' => $path,
+            'image' => $imageName,
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
             'content' => $request->content,
@@ -52,7 +53,7 @@ class ArticlesBlogController extends Controller
             'status' => $request->status
         ]);
 
-        return redirect()->route('articles_blog.index')->with('message', 'Data berhasil ditambahkan!');
+        return redirect('articles_blog')->with('message', 'Data berhasil ditambahkan!');
     }
 
     public function edit($id)
