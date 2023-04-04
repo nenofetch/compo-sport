@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ArticlesBlogController extends Controller
@@ -34,7 +35,7 @@ class ArticlesBlogController extends Controller
             'category_id' => 'required',
         ]);
 
-        if ($request->hashFile('image')) {
+        if ($request->hasFile('image')) {
             $path = $request->file('image')->store('uploads/blogs');
         } else {
             $path = '';
@@ -48,7 +49,8 @@ class ArticlesBlogController extends Controller
             'user_id' => Auth::user()->id,
             'category_id' => $request->category_id,
             'position_id' => 2,
-            'status' => $request->status        ]);
+            'status' => $request->status
+        ]);
 
         return redirect()->route('articles_blog.index')->with('message', 'Data berhasil ditambahkan!');
     }

@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
           <h3>Tambah Data</h3>
-          <a href="{{ route('articles_blog.index') }}" class="btn btn-warning">Kembali</a>
+          <a href="{{ route('articles_blog.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -45,7 +45,7 @@
                                 <div class="col-md-9 col-12">
                                     <div class="form-group">
                                         <label for="first-name-column">Judul</label>
-                                        <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" placeholder="Judul" />
+                                        <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}" placeholder="Judul" />
                                         @error('title')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Konten</label>
-                                        <div name="content" id="summernote" class="form-control @error('content') is-invalid @enderror"></div>
+                                        <textarea name="content" id="summernote" class="form-control @error('content') is-invalid @enderror"></textarea>
                                         @error('content')
                                             <div class="invalid-feedback">
                                                 {{ $message }}

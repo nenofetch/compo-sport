@@ -34,7 +34,7 @@
     <section class="section">
       <div class="card">
         <div class="card-header">
-            <button class="btn btn-primary" onclick="window.location='/articles_blog/create'"><i class="fas fa-plus"></i> Tambah Data</button>
+            <button class="btn btn-primary btn-sm" onclick="window.location='/articles_blog/create'"><i class="fas fa-plus"></i> Tambah Data</button>
         </div>
         <div class="card-body">
           <table class="table categories-table" id="table1">
@@ -58,12 +58,13 @@
                 <td><img src="{{ asset('storage/' . $row->image) }}" width="15%" alt="image"></td>
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
-                <td>{{ $row->users->name }}</td>
-                <td>{{ $row->categories->title }}</td>
+                <td>{{ $row->user->name }}</td>
+                <td>{{ $row->category->title }}</td>
                 <td><span class="badge bg-{{ $row->status == 'Publish' ? 'success' : 'danger' }}">{{ $row->status == 'Publish' ? 'Publish' : 'Draft' }}</span></td>
                 <td>
-                  <button class="btn btn-warning" onclick="window.location='/articles_blog/<?= $row->id ?>/edit'"><i class="fas fa-edit"></i> Edit</button>
-                  <button class="btn btn-danger btn-delete" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
+                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='/articles_blog/<?= $row->id ?>'"><i class="fas fa-eye"></i> Detail</button>
+                  <button class="btn btn-warning btn-sm mb-2" onclick="window.location='/articles_blog/<?= $row->id ?>/edit'"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn btn-danger btn-delete btn-sm mb-2" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
                 </td>
               </tr>
             @endforeach
