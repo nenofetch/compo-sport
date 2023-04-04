@@ -34,7 +34,7 @@
     <section class="section">
       <div class="card">
         <div class="card-header">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#border-less-add"><i class="fas fa-plus"></i> Tambah Data</button>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#border-less-add"><i class="fas fa-plus"></i> Tambah Data</button>
         </div>
         <div class="card-body">
           <table class="table categories-table" id="table1">
@@ -54,8 +54,8 @@
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
                 <td>
-                  <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#border-less-edit{{ $row->id }}"><i class="fas fa-edit"></i> Edit</button>
-                  <button class="btn btn-danger btn-delete" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
+                  <button class="btn btn-warning btn-sm mb-2" data-bs-toggle="modal" data-bs-target="#border-less-edit{{ $row->id }}"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn btn-danger btn-sm mb-2 btn-delete" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
                 </td>
               </tr>
             @endforeach
