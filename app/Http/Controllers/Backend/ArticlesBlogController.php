@@ -46,7 +46,7 @@ class ArticlesBlogController extends Controller
             'slug' => Str::slug($request->title, '-'),
             'content' => $request->content,
             'user_id' => Auth::user()->id,
-            'category_id' => $request->category,
+            'category_id' => $request->category_id,
             'position_id' => 2,
         ]);
 

@@ -45,7 +45,7 @@
                                 <div class="col-md-9 col-12">
                                     <div class="form-group">
                                         <label for="first-name-column">Judul</label>
-                                        <input type="text" name="title" class="form-control @error('content') is-invalid @enderror" placeholder="Judul" />
+                                        <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" placeholder="Judul" />
                                         @error('title')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Konten</label>
-                                        <input name="content" id="summernote" class="form-control @error('content') is-invalid @enderror"/>
+                                        <div name="content" id="summernote" class="form-control @error('content') is-invalid @enderror"></div>
                                         @error('content')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="first-name-column">Kategori</label>
-                                        <select name="category" class="form-select">
+                                        <select name="category_id" class="form-control @error('category_id') is-invalid @enderror">
                                             <option value="">Pilih Kategori</option>
                                             @foreach ($categories as $row)
                                                 <option id="categories_data" value="{{ $row->id }}"
@@ -87,6 +87,11 @@
                                                 </option>
                                             @endforeach
                                         </select>
+                                        @error('category_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-end">
