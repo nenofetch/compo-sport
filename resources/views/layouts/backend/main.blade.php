@@ -6,17 +6,17 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title') - Mazer Admin Dashboard</title>
 
-    <link rel="stylesheet" href="assets/css/main/app.css" />
-    <link rel="stylesheet" href="assets/css/main/app-dark.css" />
-    <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/x-icon"/>
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app.css" />
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app-dark.css" />
+    <link rel="shortcut icon" href="{{ asset('backend') }}/assets/images/logo/favicon.svg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('backend') }}/assets/images/logo/favicon.png" type="image/png"/>
 
-    <link rel="stylesheet" href="assets/css/shared/iconly.css"/>
-    <link rel="stylesheet" href="assets/extensions/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/shared/iconly.css"/>
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/@fortawesome/fontawesome-free/css/all.min.css"/>
   </head>
 
   <body>
-    <script src="assets/js/initTheme.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/initTheme.js"></script>
     <div id="app">
 
         <!-- Sidebar -->
@@ -37,7 +37,7 @@
 
         </div>
     </div>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/bootstrap.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/app.js"></script>
   </body>
 </html>
