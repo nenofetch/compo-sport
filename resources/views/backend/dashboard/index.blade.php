@@ -119,7 +119,7 @@
                         style="width: 10px"
                       >
                         <use
-                          xlink:href="assets/images/bootstrap-icons.svg#circle-fill"
+                          xlink:href="{{ asset('backend') }}/assets/images/bootstrap-icons.svg#circle-fill"
                         />
                       </svg>
                       <h5 class="mb-0 ms-3">Europe</h5>
@@ -143,7 +143,7 @@
                         style="width: 10px"
                       >
                         <use
-                          xlink:href="assets/images/bootstrap-icons.svg#circle-fill"
+                          xlink:href="{{ asset('backend') }}/assets/images/bootstrap-icons.svg#circle-fill"
                         />
                       </svg>
                       <h5 class="mb-0 ms-3">America</h5>
@@ -167,7 +167,7 @@
                         style="width: 10px"
                       >
                         <use
-                          xlink:href="assets/images/bootstrap-icons.svg#circle-fill"
+                          xlink:href="{{ asset('backend') }}/assets/images/bootstrap-icons.svg#circle-fill"
                         />
                       </svg>
                       <h5 class="mb-0 ms-3">Indonesia</h5>
@@ -202,7 +202,7 @@
                         <td class="col-3">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-md">
-                              <img src="assets/images/faces/5.jpg" />
+                              <img src="{{ asset('backend') }}/assets/images/faces/5.jpg" />
                             </div>
                             <p class="font-bold ms-3 mb-0">Si Cantik</p>
                           </div>
@@ -217,7 +217,7 @@
                         <td class="col-3">
                           <div class="d-flex align-items-center">
                             <div class="avatar avatar-md">
-                              <img src="assets/images/faces/2.jpg" />
+                              <img src="{{ asset('backend') }}/assets/images/faces/2.jpg" />
                             </div>
                             <p class="font-bold ms-3 mb-0">Si Ganteng</p>
                           </div>
@@ -242,7 +242,7 @@
           <div class="card-body py-4 px-4">
             <div class="d-flex align-items-center">
               <div class="avatar avatar-xl">
-                <img src="assets/images/faces/1.jpg" alt="Face 1" />
+                <img src="{{ asset('backend') }}/assets/images/faces/1.jpg" alt="Face 1" />
               </div>
               <div class="ms-3 name">
                 <h5 class="font-bold">John Duck</h5>
@@ -258,7 +258,7 @@
           <div class="card-content pb-4">
             <div class="recent-message d-flex px-4 py-3">
               <div class="avatar avatar-lg">
-                <img src="assets/images/faces/4.jpg" />
+                <img src="{{ asset('backend') }}/assets/images/faces/4.jpg" />
               </div>
               <div class="name ms-4">
                 <h5 class="mb-1">Hank Schrader</h5>
@@ -267,7 +267,7 @@
             </div>
             <div class="recent-message d-flex px-4 py-3">
               <div class="avatar avatar-lg">
-                <img src="assets/images/faces/5.jpg" />
+                <img src="{{ asset('backend') }}/assets/images/faces/5.jpg" />
               </div>
               <div class="name ms-4">
                 <h5 class="mb-1">Dean Winchester</h5>
@@ -276,7 +276,7 @@
             </div>
             <div class="recent-message d-flex px-4 py-3">
               <div class="avatar avatar-lg">
-                <img src="assets/images/faces/1.jpg" />
+                <img src="{{ asset('backend') }}/assets/images/faces/1.jpg" />
               </div>
               <div class="name ms-4">
                 <h5 class="mb-1">John Dodol</h5>
@@ -303,6 +303,6 @@
       </div>
     </section>
 </div>
-<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
+<script src="{{ asset('backend') }}/assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="{{ asset('backend') }}/assets/js/pages/dashboard.js"></script>
 @endsection
