@@ -19,7 +19,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('kategori.index') }}">Kategori</a>
+                <a href="{{ route('category.index') }}">Kategori</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 List
@@ -76,7 +76,7 @@
                         <i data-feather="x"></i>
                     </button>
                 </div>
-                <form action="{{ route('kategori.store') }}" method="POST" class="form form-vertical">
+                <form action="{{ route('category.store') }}" method="POST" class="form form-vertical">
                     @csrf
                     <div class="modal-body">
                         <div class="form-body">
@@ -116,7 +116,7 @@
                         <i data-feather="x"></i>
                     </button>
                 </div>
-                <form action="{{ route('kategori.update', $row->id ) }}" method="POST" class="form form-vertical">
+                <form action="{{ route('category.update', $row->id ) }}" method="POST" class="form form-vertical">
                     @csrf
                     @method('PUT')
                     <div class="modal-body">
@@ -182,7 +182,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: "kategori/" + id,
+                    url: "category/" + id,
                     type: 'DELETE',
                     data: {
                         "id": id,
