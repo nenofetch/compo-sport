@@ -67,7 +67,7 @@
                                         <label for="city-column">Foto</label>
                                         <div class="col-md-6 mt-2 mb-2">
                                             <img src="{{ asset('backend/assets/images/logo/default.png') }}"
-                                                alt=""class="img-thumbnail img-preview">
+                                                alt="image"class="img-thumbnail img-preview">
                                         </div>
                                         <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
                                         @error('image')

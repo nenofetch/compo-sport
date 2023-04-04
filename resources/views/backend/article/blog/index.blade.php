@@ -41,7 +41,7 @@
             <thead>
               <tr>
                 <th width="5%">No</th>
-                <th>Foto</th>
+                <th width="10%">Foto</th>
                 <th>Judul</th>
                 <th>Slug</th>
                 <th>Penulis</th>
@@ -55,7 +55,7 @@
               <tr>
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
-                <td><img src="{{ asset('storage/blogs/' . $row->image) }}" width="15%" alt="image"></td>
+                <td><img src="{{ asset('storage/blogs/' . $row->image) }}" width="100%" alt="image"></td>
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
                 <td>{{ $row->user->name }}</td>
@@ -110,7 +110,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: "article/" + id,
+                    url: "articles_blog/" + id,
                     type: 'DELETE',
                     data: {
                         "id": id,
