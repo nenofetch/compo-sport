@@ -90,13 +90,13 @@
             </a>
             <ul class="submenu">
               <li class="submenu-item">
-                <a href="{{ route('kategori.index') }}">Kategori Blog & Berita</a>
+                <a href="{{ route('category.index') }}">Kategori Blog & Berita</a>
               </li>
               <li class="submenu-item">
-                <a href="">Artikel Blog</a>
+                <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
               </li>
               <li class="submenu-item">
-                <a href="">Artikel Berita</a>
+                <a href="{{ route('articles_news.index') }}">Artikel Berita</a>
               </li>
             </ul>
           </li>
