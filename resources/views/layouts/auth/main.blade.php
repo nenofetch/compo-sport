@@ -8,13 +8,13 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="assets/css/main/app.css" />
-    <link rel="stylesheet" href="assets/css/main/app-dark.css" />
-    <link rel="stylesheet" href="assets/css/pages/auth.css" />
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app.css" />
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app-dark.css" />
+    <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/auth.css" />
 </head>
 
 <body>
-    <script scr="assets/js/initTheme.js"></script>
+    <script scr="{{ asset('backend') }}/assets/js/initTheme.js"></script>
     <div id="auth">
         <div class="row h-100">
             <div class="col-lg-5 col-12">
