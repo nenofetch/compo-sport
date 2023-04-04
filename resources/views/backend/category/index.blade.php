@@ -189,15 +189,15 @@
                         "_token": $('meta[name="csrf-token"]').attr('content'),
                     },
                     success: function(response) {
-                        Toastify({
+                        swal.fire({
+                            icon: 'success',
+                            title: 'Berhasil',
                             text: response.message,
-                            duration: 3000,
-                            close: true,
-                            gravity: "top",
-                            position: "center",
-                            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                            progressBar: true,
-                        }).showToast();
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload();
+                            }
+                        });
                     },
                 });
             }
