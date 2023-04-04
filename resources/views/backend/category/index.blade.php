@@ -4,10 +4,10 @@
 
 @section('content')
 <!-- Css -->
-<link rel="stylesheet" href="assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css"/>
-<link rel="stylesheet" href="assets/css/pages/datatables.css"/>
-<link rel="stylesheet" href="assets/extensions/toastify-js/src/toastify.css"/>
-<link rel="stylesheet" href="assets/extensions/sweetalert2/sweetalert2.min.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/datatables.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/toastify-js/src/toastify.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/sweetalert2/sweetalert2.min.css"/>
 
 <div class="page-heading">
     <div class="page-title">
@@ -149,11 +149,11 @@
 </div>
 
 <!-- Js -->
-<script src="assets/extensions/jquery/jquery.min.js"></script>
+<script src="{{ asset('backend') }}/assets/extensions/jquery/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
-<script src="assets/js/pages/datatables.js"></script>
-<script src="assets/extensions/toastify-js/src/toastify.js"></script>
-<script src="assets/extensions/sweetalert2/sweetalert2.min.js"></script>
+<script src="{{ asset('backend') }}/assets/js/pages/datatables.js"></script>
+<script src="{{ asset('backend') }}/assets/extensions/toastify-js/src/toastify.js"></script>
+<script src="{{ asset('backend') }}/assets/extensions/sweetalert2/sweetalert2.min.js"></script>
 @if (Session::has('message'))
 <script>
     Toastify({
