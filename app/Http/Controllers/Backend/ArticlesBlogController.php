@@ -48,7 +48,7 @@ class ArticlesBlogController extends Controller
             'user_id' => Auth::user()->id,
             'category_id' => $request->category_id,
             'position_id' => 2,
-        ]);
+            'status' => $request->status        ]);
 
         return redirect()->route('articles_blog.index')->with('message', 'Data berhasil ditambahkan!');
     }

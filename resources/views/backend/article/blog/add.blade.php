@@ -95,8 +95,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-primary me-1 mb-1">Publish</button>
-                                    <button type="submit" class="btn btn-danger me-1 mb-1">Draft</button>
+                                    <input type="submit" class="btn btn-primary me-1 mb-1" name="status" value="Publish">
+                                    <input type="submit" class="btn btn-danger me-1 mb-1" name="status" value="Draft">
                                 </div>
 
                             </div>
