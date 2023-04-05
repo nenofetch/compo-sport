@@ -147,10 +147,10 @@
             </a>
             <ul class="submenu">
               <li class="submenu-item">
-                <a href="">Profil</a>
+                <a href="{{ route('profile.index') }}">Profil</a>
               </li>
               <li class="submenu-item">
-                <a href="">Ganti Kata Sandi</a>
+                <a href="{{ route('change_password.index') }}">Ganti Kata Sandi</a>
               </li>
             </ul>
           </li>

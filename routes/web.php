@@ -25,5 +25,7 @@ Route::middleware(['auth'])->group(function () {
         'articles_news' => App\Http\Controllers\Backend\ArticlesNewsController::class,
         'pages_cms' => App\Http\Controllers\Backend\PagesCMSController::class,
         'pages_compro' => App\Http\Controllers\Backend\PagesComproController::class,
+        'profile' => App\Http\Controllers\Backend\ProfileController::class,
+        'change_password' => App\Http\Controllers\Backend\ChangePasswordController::class,
     ]);
 });
