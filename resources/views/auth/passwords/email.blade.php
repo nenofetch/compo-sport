@@ -37,5 +37,4 @@
           <a href="{{ route('login') }}" class="font-bold">Log in</a>.
         </p>
     </div>
-</div>
 @endsection

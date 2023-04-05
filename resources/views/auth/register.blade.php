@@ -1,6 +1,6 @@
 @extends('layouts.auth.main')
 
-@section('main')
+@section('content')
     <div class="auth-logo">
         <a href="index.html">
             <img src="{{ asset('backend') }}/assets/images/logo/logo.svg" alt="Logo">
