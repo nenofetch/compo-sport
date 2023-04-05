@@ -55,7 +55,7 @@
                                         <label for="city-column">Foto</label>
                                         <div class="col-md-2 mt-2 mb-2">
                                             @if ($pages_cms->image)
-                                                <img src="{{ asset('storage/pages/' . $pages_cms->image) }}"
+                                                <img src="{{ asset('storage/pages/cms/' . $pages_cms->image) }}"
                                                     alt="image"class="img-thumbnail img-preview">
                                             @else
                                                 <img src="{{ asset('backend/assets/images/logo/default.png') }}"

@@ -31,7 +31,7 @@ class PagesComproController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/pages');
+            $imagePath = $request->file('image')->store('public/pages/compro');
             $imageName = basename($imagePath);
         } else {
             $imageName = '';
@@ -73,8 +73,8 @@ class PagesComproController extends Controller
         $pages_compro = Page::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete($pages_compro->image);
-            $imagePath = $request->file('image')->store('public/pages');
+            Storage::delete('public/pages/compro/' . $pages_compro->image);
+            $imagePath = $request->file('image')->store('public/pages/compro');
             $imageName = basename($imagePath);
         } else {
             $imageName = $pages_compro->image;
@@ -94,7 +94,7 @@ class PagesComproController extends Controller
     {
         $pages_compro = Page::find($id);
         if ($pages_compro->image) {
-            Storage::delete($pages_compro->image);
+            Storage::delete('public/pages/compro/' . $pages_compro->image);
         }
 
         $pages_compro->delete();

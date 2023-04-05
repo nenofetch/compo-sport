@@ -31,7 +31,7 @@ class PagesCMSController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/pages');
+            $imagePath = $request->file('image')->store('public/pages/cms');
             $imageName = basename($imagePath);
         } else {
             $imageName = '';
@@ -73,8 +73,8 @@ class PagesCMSController extends Controller
         $pages_cms = Page::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete($pages_cms->image);
-            $imagePath = $request->file('image')->store('public/pages');
+            Storage::delete('public/pages/cms/' . $pages_cms->image);
+            $imagePath = $request->file('image')->store('public/pages/cms');
             $imageName = basename($imagePath);
         } else {
             $imageName = $pages_cms->image;
@@ -94,7 +94,7 @@ class PagesCMSController extends Controller
     {
         $pages_cms = Page::find($id);
         if ($pages_cms->image) {
-            Storage::delete($pages_cms->image);
+            Storage::delete('public/pages/cms/' . $pages_cms->image);
         }
 
         $pages_cms->delete();

@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="text-center mb-3">
-                                <img src="{{ asset('storage/pages/' . $pages_compro->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
+                                <img src="{{ asset('storage/pages/compro/' . $pages_compro->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
                             </div>
                             <article>
                                 {!! $pages_compro->content !!}

@@ -54,7 +54,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>
                     @if ($row->image)
-                        <img src="{{ asset('storage/pages/' . $row->image) }}" width="100%" alt="image">
+                        <img src="{{ asset('storage/pages/compro/' . $row->image) }}" width="100%" alt="image">
                     @else
                         Tidak memakai foto
                     @endif
