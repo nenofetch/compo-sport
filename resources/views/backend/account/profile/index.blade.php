@@ -34,15 +34,19 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('profile.store') }}" method="POST" class="form" data-parsley-validate>
+                        <form action="{{ route('profile.store') }}" method="POST" class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
                                     <div class="card">
                                         <div class="card-body py-4 px-4">
                                           <div class="d-flex align-items-center">
                                             <div class="avatar avatar-xl">
-                                              <img src="{{ $profile->image }}" class="img-preview" alt="avatar" />
+                                                @if ($profile->image )
+                                                    <img src="{{ asset('storage/profile/' . $profile->image ) }}" alt="avatar">
+                                                @else
+                                                    <img src="{{ $profile->image }}" class="img-preview" alt="avatar" />
+                                                @endif
                                             </div>
                                             <div class="ms-3 name">
                                               <h5 class="font-bold">{{ $profile->name }}</h5>
@@ -52,7 +56,7 @@
                                         </div>
                                       </div>
                                 </div>
-                                <div class="col-lg-8">
+                                <div class="col-lg-7">
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
                                         <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>

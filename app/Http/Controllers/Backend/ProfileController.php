@@ -37,7 +37,7 @@ class ProfileController extends Controller
             $imagePath = $request->file('image')->store('public/profile');
 
             if ($profile->image != 'backend/assets/images/faces/2.jpg') {
-                Storage::delete($articles_news->image);
+                Storage::delete('public/profile/' . $articles_news->image);
                 $imageName = basename($imagePath);
             }
 
