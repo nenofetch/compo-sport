@@ -36,7 +36,7 @@ class ArticlesNewsController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/news');
+            $imagePath = $request->file('image')->store('public/article/news');
             $imageName = basename($imagePath);
         } else {
             $imageName = '';
@@ -83,8 +83,8 @@ class ArticlesNewsController extends Controller
         $articles_news = Article::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete($articles_news->image);
-            $imagePath = $request->file('image')->store('public/news');
+            Storage::delete('public/article/news/' .$articles_news->image);
+            $imagePath = $request->file('image')->store('public/article/news');
             $imageName = basename($imagePath);
         } else {
             $imageName = $articles_news->image;
@@ -106,7 +106,7 @@ class ArticlesNewsController extends Controller
     {
         $articles_news = Article::find($id);
         if ($articles_news->image) {
-            Storage::delete($articles_news->image);
+            Storage::delete('public/article/news/' .$articles_news->image);
         }
 
         $articles_news->delete();

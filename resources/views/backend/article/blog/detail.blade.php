@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="text-center">
-                                <img src="{{ asset('storage/blogs/' . $articles_blog->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
+                                <img src="{{ asset('storage/article/blogs/' . $articles_blog->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
                                 <dt class="the-icon mb-3 mt-3">
                                     <i class="fas fa-user"></i> {{ $articles_blog->user->name }}
                                     <i class="fas fa-tag ml-4"></i> {{ $articles_blog->category->title }}

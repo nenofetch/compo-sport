@@ -55,7 +55,7 @@
               <tr>
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
-                <td><img src="{{ asset('storage/news/' . $row->image) }}" width="100%" alt="image"></td>
+                <td><img src="{{ asset('storage/article/news/' . $row->image) }}" width="100%" alt="image"></td>
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
                 <td>{{ $row->user->name }}</td>

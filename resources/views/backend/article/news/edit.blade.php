@@ -69,7 +69,7 @@
                                         <label for="city-column">Foto</label>
                                         <div class="col-md-6 mt-2 mb-2">
                                             @if ($articles_news->image)
-                                                <img src="{{ asset('storage/news/' . $articles_news->image) }}"
+                                                <img src="{{ asset('storage/article/news/' . $articles_news->image) }}"
                                                     alt="image"class="img-thumbnail img-preview">
                                             @else
                                                 <img src="{{ asset('backend/assets/images/logo/default.png') }}"
