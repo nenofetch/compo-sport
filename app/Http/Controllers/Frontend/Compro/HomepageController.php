@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend\Compro;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -14,7 +14,7 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        return view('frontend.Home.index');
+        return view('frontend.compro.index');
     }
 
     /**

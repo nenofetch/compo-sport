@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', App\Http\Controllers\Frontend\HomepageController::class);
+Route::resource('/', App\Http\Controllers\Frontend\Compro\HomepageController::class);
 
 Auth::routes();
 
