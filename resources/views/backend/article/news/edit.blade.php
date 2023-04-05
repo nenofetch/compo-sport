@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Ubah Data Artikel Blog')
+@section('title', 'Ubah Data Artikel Berita')
 
 @section('content')
 <!-- CSS -->
@@ -18,7 +18,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('articles_news.index') }}">Artikel Blog</a>
+                <a href="{{ route('articles_news.index') }}">Artikel Berita</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Ubah Data

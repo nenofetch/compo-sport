@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Tambah Data Artikel Blog')
+@section('title', 'Tambah Data Artikel Berita')
 
 @section('content')
 <!-- CSS -->
@@ -66,7 +66,7 @@
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
                                         <div class="col-md-6 mt-2 mb-2">
-                                            <img src="{{ asset('backend/assets/images/logo/default.png') }}"
+                                            <img src="{{ asset('backend/assets/images/eritao/default.png') }}"
                                                 alt="image"class="img-thumbnail img-preview">
                                         </div>
                                         <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
