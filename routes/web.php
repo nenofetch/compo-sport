@@ -23,5 +23,7 @@ Route::middleware(['auth'])->group(function () {
         'category' => App\Http\Controllers\Backend\CategoryController::class,
         'articles_blog' => App\Http\Controllers\Backend\ArticlesBlogController::class,
         'articles_news' => App\Http\Controllers\Backend\ArticlesNewsController::class,
+        'pages_cms' => App\Http\Controllers\Backend\PagesCMSController::class,
+        'pages_compro' => App\Http\Controllers\Backend\PagesComproController::class,
     ]);
 });

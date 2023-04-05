@@ -101,11 +101,19 @@
             </ul>
           </li>
 
-          <li class="sidebar-item">
-            <a href="" class="sidebar-link">
+          <li class="sidebar-item has-sub">
+            <a href="#" class="sidebar-link">
               <i class="bi bi-grid-1x2-fill"></i>
               <span>Halaman</span>
             </a>
+            <ul class="submenu">
+              <li class="submenu-item">
+                <a href="{{ route('pages_cms.index') }}">CMS</a>
+              </li>
+              <li class="submenu-item">
+                <a href="{{ route('pages_compro.index') }}">Company Profile</a>
+              </li>
+            </ul>
           </li>
 
           <li class="sidebar-item">
@@ -153,12 +161,12 @@
               <span>Pengaturan Website</span>
             </a>
             <ul class="submenu">
-              <li class="submenu-item">
-                <a href="">Company Profile</a>
-              </li>
-              <li class="submenu-item">
-                <a href="">CMS</a>
-              </li>
+                <li class="submenu-item">
+                    <a href="">CMS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="">Company Profile</a>
+                </li>
             </ul>
           </li>
 
