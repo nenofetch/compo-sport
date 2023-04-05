@@ -3,7 +3,7 @@
 @section('main')
     <div class="auth-logo">
         <a href="index.html">
-            <img src="assets/images/logo/logo.svg" alt="Logo">
+            <img src="{{ asset('backend') }}/assets/images/logo/logo.svg" alt="Logo">
         </a>
     </div>
     <h1 class="auth-title">Log in.</h1>
