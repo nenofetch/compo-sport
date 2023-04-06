@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Artikel Blog')
+@section('title', 'Fasilitas')
 
 @section('content')
 <!-- Css -->
@@ -13,13 +13,13 @@
     <div class="page-title">
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
-          <h3>Data Artikel Blog</h3>
+          <h3>Data Fasilitas</h3>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
+                <a href="{{ route('facility.index') }}">Fasilitas</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 List
@@ -33,6 +33,9 @@
     <!-- Basic Tables start -->
     <section class="section">
       <div class="card">
+        <div class="card-header">
+            <button class="btn btn-primary btn-sm" onclick="window.location='/facility/create'"><i class="fas fa-plus"></i> Tambah Data</button>
+        </div>
         <div class="card-body">
           <table class="table categories-table" id="table1">
             <thead>
@@ -41,26 +44,22 @@
                 <th width="10%">Foto</th>
                 <th>Judul</th>
                 <th>Slug</th>
-                <th>Penulis</th>
-                <th>Kategori</th>
-                <th>Status</th>
                 <th width="20%">Aksi</th>
               </tr>
             </thead>
             <tbody>
-            @foreach ($articles_blog as $row)
+            @foreach ($facilities as $row)
               <tr>
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
-                <td><img src="{{ asset('storage/article/' . $row->image) }}" width="100%" alt="image"></td>
+                <td>
+                    <img src="{{ asset('storage/facility/' . $row->image) }}" width="100%" alt="image">
+                </td>
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
-                <td>{{ $row->user->name }}</td>
-                <td>{{ $row->category->title }}</td>
-                <td><span class="badge bg-{{ $row->status == 'Publish' ? 'success' : 'danger' }}">{{ $row->status == 'Publish' ? 'Publish' : 'Draft' }}</span></td>
                 <td>
-                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='/articles_blog/{{ $row->id }}'"><i class="fas fa-eye"></i> Detail</button>
-                  <button class="btn btn-warning btn-sm mb-2" onclick="window.location='/articles_blog/{{ $row->id }}/edit'"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='/facility/{{ $row->id }}'"><i class="fas fa-eye"></i> Detail</button>
+                  <button class="btn btn-warning btn-sm mb-2" onclick="window.location='/facility/{{ $row->id }}/edit'"><i class="fas fa-edit"></i> Edit</button>
                   <button class="btn btn-danger btn-delete btn-sm mb-2" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
                 </td>
               </tr>
@@ -107,7 +106,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: "articles_blog/" + id,
+                    url: "facility/" + id,
                     type: 'DELETE',
                     data: {
                         "id": id,

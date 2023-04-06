@@ -1,9 +1,9 @@
 @extends('layouts.auth.main')
 
-@section('main')
+@section('content')
     <div class="auth-logo">
         <a href="index.html">
-            <img src="assets/images/logo/logo.svg" alt="Logo">
+            <img src="{{ asset('backend') }}/assets/images/logo/logo.svg" alt="Logo">
         </a>
     </div>
     <h1 class="auth-title">Log in.</h1>
@@ -50,10 +50,6 @@
         </button>
     </form>
     <div class="text-center mt-5 text-lg fs-4">
-        <p class="text-gray-600">
-          Don't have an account?
-          <a href="{{ route('register') }}" class="font-bold">Sign up</a>.
-        </p>
         <p>
           <a class="font-bold" href="{{ route('password.request') }}">Forgot password?</a>
         </p>

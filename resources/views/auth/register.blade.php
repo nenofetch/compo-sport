@@ -1,9 +1,9 @@
 @extends('layouts.auth.main')
 
-@section('main')
+@section('content')
     <div class="auth-logo">
         <a href="index.html">
-            <img src="assets/images/logo/logo.svg" alt="Logo">
+            <img src="{{ asset('backend') }}/assets/images/logo/logo.svg" alt="Logo">
         </a>
     </div>
     <h1 class="auth-title">Sign Up.</h1>

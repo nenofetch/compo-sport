@@ -21,7 +21,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
     Route::resources([
         'category' => App\Http\Controllers\Backend\CategoryController::class,
+        'write_articles' => App\Http\Controllers\Backend\WriteArticlesController::class,
         'articles_blog' => App\Http\Controllers\Backend\ArticlesBlogController::class,
         'articles_news' => App\Http\Controllers\Backend\ArticlesNewsController::class,
+        'pages' => App\Http\Controllers\Backend\PagesController::class,
+        'facility' => App\Http\Controllers\Backend\FacilityController::class,
+        'profile' => App\Http\Controllers\Backend\ProfileController::class,
+        'change_password' => App\Http\Controllers\Backend\ChangePasswordController::class,
     ]);
 });

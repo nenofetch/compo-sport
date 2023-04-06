@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Singgasana Sports</title>
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app.css" />
@@ -19,7 +19,7 @@
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
-                    @yield('main')
+                    @yield('content')
 
                 </div>
             </div>

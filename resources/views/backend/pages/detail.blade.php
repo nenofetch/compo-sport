@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Detail Data Artikel Blog')
+@section('title', 'Detail Data Halaman CMS')
 
 @section('content')
 <div class="page-heading">
@@ -8,13 +8,13 @@
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
           <h3>Detail Data</h3>
-          <a href="{{ route('articles_blog.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
+          <a href="{{ route('pages.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
+                <a href="{{ route('pages.index') }}">Halaman CMS</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Detail Data
@@ -31,20 +31,16 @@
           <div class="col-12">
             <div class="card">
                 <div class="card-header text-center">
-                    <h3 class="card-title">{{ $articles_blog->title }}</h3>
+                    <h3 class="card-title">{{ $pages->title }}</h3>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
                         <div class="row">
-                            <div class="text-center">
-                                <img src="{{ asset('storage/article/' . $articles_blog->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
-                                <dt class="the-icon mb-3 mt-3">
-                                    <i class="fas fa-user"></i> {{ $articles_blog->user->name }}
-                                    <i class="fas fa-tag ml-4"></i> {{ $articles_blog->category->title }}
-                                </dt>
+                            <div class="text-center mb-3">
+                                <img src="{{ asset('storage/pages/' . $pages->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
                             </div>
                             <article>
-                                {!! $articles_blog->content !!}
+                                {!! $pages->content !!}
                             </article>
                         </div>
                     </div>

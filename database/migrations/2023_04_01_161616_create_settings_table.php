@@ -20,9 +20,7 @@ return new class extends Migration
             $table->string('telpon', 15);
             $table->string('email');
             $table->string('address');
-            $table->unsignedBigInteger('position_id');
             $table->timestamps();
-            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
         });
     }
 

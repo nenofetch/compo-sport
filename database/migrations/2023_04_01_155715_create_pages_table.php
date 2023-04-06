@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('image');
             $table->string('slug');
             $table->text('content');
-            $table->unsignedBigInteger('position_id');
             $table->timestamps();
-            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
         });
     }
 

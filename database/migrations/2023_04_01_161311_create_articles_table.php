@@ -18,15 +18,13 @@ return new class extends Migration
             $table->string('image');
             $table->string('title');
             $table->string('slug');
-            $table->string('content');
+            $table->text('content');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('position_id');
             $table->string('status');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
         });
     }
 

@@ -1,4 +1,4 @@
-@extends('frontend.layouts.main')
+@extends('layouts.frontend.main')
 
 @section('title')
     <title>Singgasana Sports</title>
@@ -6,7 +6,7 @@
 
 @section('content')
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex align-items-center">
+    <section id="beranda" class="hero d-flex align-items-center">
 
         <div class="container">
             <div class="row">
@@ -34,7 +34,7 @@
 
     <main id="main">
         <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <section id="tentang" class="about">
 
             <div class="container" data-aos="fade-up">
                 <div class="row gx-0">
@@ -395,7 +395,7 @@
 {{--        </section><!-- End Features Section -->--}}
 
         <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
+        <section id="layanan" class="services">
 
             <div class="container" data-aos="fade-up">
 
@@ -689,7 +689,7 @@
 {{--        </section><!-- End F.A.Q Section -->--}}
 
         <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <section id="fasilitas" class="portfolio">
 
             <div class="container" data-aos="fade-up">
 
@@ -1123,7 +1123,7 @@
         </section><!-- End Clients Section -->
 
         <!-- ======= Recent Blog Posts Section ======= -->
-        <section id="recent-blog-posts" class="recent-blog-posts">
+        <section id="blog" class="recent-blog-posts">
 
             <div class="container" data-aos="fade-up">
 
