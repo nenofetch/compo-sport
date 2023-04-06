@@ -154,19 +154,11 @@
             </ul>
           </li>
 
-          <li class="sidebar-item has-sub">
-            <a href="#" class="sidebar-link">
+          <li class="sidebar-item">
+            <a href="" class="sidebar-link">
               <i class="bi bi-gear-fill"></i>
-              <span>Pengaturan Website</span>
+              <span>Pengaturan</span>
             </a>
-            <ul class="submenu">
-                <li class="submenu-item">
-                    <a href="">CMS</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="">Company Profile</a>
-                </li>
-            </ul>
           </li>
 
           <li class="sidebar-item">
