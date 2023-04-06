@@ -33,9 +33,6 @@
     <!-- Basic Tables start -->
     <section class="section">
       <div class="card">
-        <div class="card-header">
-            <button class="btn btn-primary btn-sm" onclick="window.location='/articles_blog/create'"><i class="fas fa-plus"></i> Tambah Data</button>
-        </div>
         <div class="card-body">
           <table class="table categories-table" id="table1">
             <thead>
@@ -55,7 +52,7 @@
               <tr>
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
-                <td><img src="{{ asset('storage/article/blogs/' . $row->image) }}" width="100%" alt="image"></td>
+                <td><img src="{{ asset('storage/article/' . $row->image) }}" width="100%" alt="image"></td>
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
                 <td>{{ $row->user->name }}</td>

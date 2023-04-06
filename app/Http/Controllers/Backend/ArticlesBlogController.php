@@ -36,7 +36,7 @@ class ArticlesBlogController extends Controller
     //     ]);
 
     //     if ($request->hasFile('image')) {
-    //         $imagePath = $request->file('image')->store('public/article/blogs');
+    //         $imagePath = $request->file('image')->store('public/article');
     //         $imageName = basename($imagePath);
     //     } else {
     //         $imageName = '';
@@ -83,8 +83,8 @@ class ArticlesBlogController extends Controller
         $articles_blog = Article::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/article/blogs/' . $articles_blog->image);
-            $imagePath = $request->file('image')->store('public/article/blogs');
+            Storage::delete('public/article/' . $articles_blog->image);
+            $imagePath = $request->file('image')->store('public/article');
             $imageName = basename($imagePath);
         } else {
             $imageName = $articles_blog->image;
@@ -106,7 +106,7 @@ class ArticlesBlogController extends Controller
     {
         $articles_blog = Article::find($id);
         if ($articles_blog->image) {
-            Storage::delete('public/article/blogs/' . $articles_blog->image);
+            Storage::delete('public/article/' . $articles_blog->image);
         }
 
         $articles_blog->delete();

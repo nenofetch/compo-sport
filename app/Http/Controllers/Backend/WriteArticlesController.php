@@ -29,7 +29,7 @@ class WriteArticlesController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/article/news');
+            $imagePath = $request->file('image')->store('public/article');
             $imageName = basename($imagePath);
         } else {
             $imageName = '';
