@@ -76,33 +76,33 @@
         <ul class="menu">
           <li class="sidebar-title">Menu</li>
 
-          <li class="sidebar-item active">
+          <li class="sidebar-item {{ Request::is('dashboard*') ? 'active' : '' }}">
             <a href="{{ route('dashboard') }}" class="sidebar-link">
               <i class="bi bi-grid-fill"></i>
               <span>Dashboard</span>
             </a>
           </li>
 
-          <li class="sidebar-item">
+          <li class="sidebar-item {{ Request::is('category*') ? 'active' : '' }}">
             <a href="{{ route('category.index') }}" class="sidebar-link">
               <i class="bi bi-stack"></i>
               <span>Kategori</span>
             </a>
           </li>
 
-          <li class="sidebar-item has-sub">
+          <li class="sidebar-item has-sub {{ Request::is(['write_articles*', 'articles_blog*', 'articles_news*']) ? 'active' : '' }}">
             <a href="#" class="sidebar-link">
               <i class="bi bi-pen-fill"></i>
               <span>Artikel</span>
             </a>
-            <ul class="submenu">
-                <li class="submenu-item">
+            <ul class="submenu {{ Request::is(['write_articles*', 'articles_blog*', 'articles_news*']) ? 'active' : '' }}">
+                <li class="submenu-item {{ Request::is('write_articles*') ? 'active' : '' }}">
                     <a href="{{ route('write_articles.index') }}">Tulis Artikel</a>
                 </li>
-                <li class="submenu-item">
+                <li class="submenu-item {{ Request::is('articles_blog*') ? 'active' : '' }}">
                     <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
                 </li>
-                <li class="submenu-item">
+                <li class="submenu-item {{ Request::is('articles_news*') ? 'active' : '' }}">
                     <a href="{{ route('articles_news.index') }}">Artikel Berita</a>
                 </li>
             </ul>
@@ -139,16 +139,16 @@
 
           <li class="sidebar-title">Akun &amp; Pengaturan</li>
 
-          <li class="sidebar-item has-sub">
+          <li class="sidebar-item has-sub {{ Request::is(['profile*', 'change_password*']) ? 'active' : '' }}">
             <a href="#" class="sidebar-link">
               <i class="bi bi-person-badge-fill"></i>
               <span>Akun</span>
             </a>
-            <ul class="submenu">
-              <li class="submenu-item">
+            <ul class="submenu {{ Request::is(['profile*', 'change_password*']) ? 'active' : '' }}">
+              <li class="submenu-item {{ Request::is('profile*') ? 'active' : '' }}">
                 <a href="{{ route('profile.index') }}">Profil</a>
               </li>
-              <li class="submenu-item">
+              <li class="submenu-item {{ Request::is('change_password*') ? 'active' : '' }}">
                 <a href="{{ route('change_password.index') }}">Ganti Kata Sandi</a>
               </li>
             </ul>
