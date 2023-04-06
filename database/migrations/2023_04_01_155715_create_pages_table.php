@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('slug');
             $table->text('content');
-            $table->unsignedBigInteger('position_id');
             $table->timestamps();
-            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
         });
     }
 

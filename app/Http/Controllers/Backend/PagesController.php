@@ -8,18 +8,18 @@ use App\Models\Page;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class PagesCMSController extends Controller
+class PagesController extends Controller
 {
     public function index()
     {
-        $pages_cms = Page::where('position_id', 1)->get();
+        $pages = Page::all();
 
-        return view('backend.pages.cms.index', compact('pages_cms'));
+        return view('backend.pages.index', compact('pages'));
     }
 
     public function create()
     {
-        return view('backend.pages.cms.add');
+        return view('backend.pages.add');
     }
 
     public function store(Request $request)
@@ -31,7 +31,7 @@ class PagesCMSController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/pages/cms');
+            $imagePath = $request->file('image')->store('public/pages');
             $imageName = basename($imagePath);
         } else {
             $imageName = '';
@@ -42,24 +42,23 @@ class PagesCMSController extends Controller
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
             'content' => $request->content,
-            'position_id' => 1,
         ]);
 
-        return redirect('pages_cms')->with('message', 'Data berhasil ditambahkan!');
+        return redirect('pages')->with('message', 'Data berhasil ditambahkan!');
     }
 
     public function show($id)
     {
-        $pages_cms = Page::find($id);
+        $pages = Page::find($id);
 
-        return view('backend.pages.cms.detail', compact('pages_cms'));
+        return view('backend.pages.detail', compact('pages'));
     }
 
     public function edit($id)
     {
-        $pages_cms = Page::find($id);
+        $pages = Page::find($id);
 
-        return view('backend.pages.cms.edit', compact('pages_cms'));
+        return view('backend.pages.edit', compact('pages'));
     }
 
     public function update(Request $request,$id)
@@ -70,34 +69,34 @@ class PagesCMSController extends Controller
             'content' => 'required',
         ]);
 
-        $pages_cms = Page::find($id);
+        $pages = Page::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/pages/cms/' . $pages_cms->image);
-            $imagePath = $request->file('image')->store('public/pages/cms');
+            Storage::delete('public/pages/' . $pages->image);
+            $imagePath = $request->file('image')->store('public/pages');
             $imageName = basename($imagePath);
         } else {
-            $imageName = $pages_cms->image;
+            $imageName = $pages->image;
         }
 
-        $pages_cms->update([
+        $pages->update([
             'image' => $imageName,
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
             'content' => $request->content,
         ]);
 
-        return redirect('pages_cms')->with('message', 'Data berhasil diubah!');
+        return redirect('pages')->with('message', 'Data berhasil diubah!');
     }
 
     public function destroy($id)
     {
-        $pages_cms = Page::find($id);
-        if ($pages_cms->image) {
-            Storage::delete('public/pages/cms/' . $pages_cms->image);
+        $pages = Page::find($id);
+        if ($pages->image) {
+            Storage::delete('public/pages/' . $pages->image);
         }
 
-        $pages_cms->delete();
+        $pages->delete();
         return response()->json(['status' => 'Data berhasil dihapus!']);
     }
 }

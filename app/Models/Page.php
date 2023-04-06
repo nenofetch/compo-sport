@@ -9,5 +9,5 @@ class Page extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['image', 'title', 'slug', 'content', 'position_id'];
+    protected $fillable = ['image', 'title', 'slug', 'content'];
 }
