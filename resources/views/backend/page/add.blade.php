@@ -12,13 +12,13 @@
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
           <h3>Tambah Data</h3>
-          <a href="{{ route('pages.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
+          <a href="{{ route('page.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('pages.index') }}">Halaman</a>
+                <a href="{{ route('page.index') }}">Halaman</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Tambah Data
@@ -36,7 +36,7 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('pages.store') }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
+                        <form action="{{ route('page.store') }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             <div class="row">
                                 <div class="col-12">

@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Ubah Data Halaman CMS')
+@section('title', 'Ubah Data Halaman')
 
 @section('content')
 <!-- CSS -->
@@ -12,13 +12,13 @@
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
           <h3>Ubah Data</h3>
-          <a href="{{ route('pages.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
+          <a href="{{ route('page.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('pages.index') }}">Halaman CMS</a>
+                <a href="{{ route('page.index') }}">Halaman</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Ubah Data
@@ -36,7 +36,7 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('pages.update', $pages->id) }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
+                        <form action="{{ route('page.update', $pages->id) }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             @method('PUT')
                             <div class="row">
@@ -53,21 +53,25 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
-                                        <div class="col-md-2 mt-2 mb-2">
-                                            @if ($pages->image)
-                                                <img src="{{ asset('storage/pages/' . $pages->image) }}"
-                                                    alt="image"class="img-thumbnail img-preview">
-                                            @else
-                                                <img src="{{ asset('backend/assets/images/logo/default.png') }}"
-                                                    alt="image"class="img-thumbnail img-preview">
-                                            @endif
-                                        </div>
-                                        <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
-                                        @error('image')
-                                            <div class="invalid-feedback">
-                                                {{ $message }}
+                                        <div class="row">
+                                            <div class="col-md-2 mt-2 mb-2">
+                                                @if ($pages->image)
+                                                    <img src="{{ asset('storage/page/' . $pages->image) }}"
+                                                        alt="image"class="img-thumbnail img-preview">
+                                                @else
+                                                    <img src="{{ asset('backend/assets/images/logo/default.png') }}"
+                                                        alt="image"class="img-thumbnail img-preview">
+                                                @endif
                                             </div>
-                                        @enderror
+                                            <div class="col-md-10">
+                                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
+                                                @error('image')
+                                                    <div class="invalid-feedback">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Konten</label>

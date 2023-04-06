@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Detail Data Halaman CMS')
+@section('title', 'Detail Data Halaman')
 
 @section('content')
 <div class="page-heading">
@@ -8,13 +8,13 @@
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
           <h3>Detail Data</h3>
-          <a href="{{ route('pages.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
+          <a href="{{ route('page.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('pages.index') }}">Halaman CMS</a>
+                <a href="{{ route('page.index') }}">Halaman</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Detail Data
@@ -37,7 +37,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="text-center mb-3">
-                                <img src="{{ asset('storage/pages/' . $pages->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
+                                <img src="{{ asset('storage/page/' . $pages->image) }}" width="60%" alt="image"class="img-thumbnail img-preview">
                             </div>
                             <article>
                                 {!! $pages->content !!}
