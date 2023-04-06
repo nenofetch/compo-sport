@@ -108,15 +108,15 @@
             </ul>
           </li>
 
-          <li class="sidebar-item">
+          <li class="sidebar-item {{ Request::is('pages*') ? 'active' : '' }}">
             <a href="{{ route('pages.index') }}" class="sidebar-link">
               <i class="bi bi-grid-1x2-fill"></i>
               <span>Halaman</span>
             </a>
           </li>
 
-          <li class="sidebar-item">
-            <a href="" class="sidebar-link">
+          <li class="sidebar-item {{ Request::is('facility*') ? 'active' : '' }}">
+            <a href="{{ route('facility.index') }}" class="sidebar-link">
               <i class="bi bi-journal-check"></i>
               <span>Fasilitas</span>
             </a>
