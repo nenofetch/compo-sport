@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="frontend/assets/img/hero-img.png" class="img-fluid" alt="">
+                    <img src="{{ asset('frontend') }}/assets/img/hero-img.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="frontend/assets/img/background-ssnrc.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('frontend') }}/assets/img/background-ssnrc.jpg" class="img-fluid" alt="">
                     </div>
 
                 </div>
@@ -211,7 +211,7 @@
                         <div class="box">
                             <h3 style="color: #07d5c0;">Free Plan</h3>
                             <div class="price"><sup>$</sup>0<span> / mo</span></div>
-                            <img src="frontend/assets/img/pricing-free.png" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/pricing-free.png" class="img-fluid" alt="">
                             <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -228,7 +228,7 @@
                             <span class="featured">Featured</span>
                             <h3 style="color: #65c600;">Starter Plan</h3>
                             <div class="price"><sup>$</sup>19<span> / mo</span></div>
-                            <img src="frontend/assets/img/pricing-starter.png" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/pricing-starter.png" class="img-fluid" alt="">
                             <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -244,7 +244,7 @@
                         <div class="box">
                             <h3 style="color: #ff901c;">Business Plan</h3>
                             <div class="price"><sup>$</sup>29<span> / mo</span></div>
-                            <img src="frontend/assets/img/pricing-business.png" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/pricing-business.png" class="img-fluid" alt="">
                             <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -260,7 +260,7 @@
                         <div class="box">
                             <h3 style="color: #ff0071;">Ultimate Plan</h3>
                             <div class="price"><sup>$</sup>49<span> / mo</span></div>
-                            <img src="frontend/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
                             <ul>
                                 <li>Aida dere</li>
                                 <li>Nec feugiat nisl</li>
@@ -305,12 +305,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-1.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -320,12 +320,12 @@
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-2.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -335,28 +335,12 @@
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-3.jpg"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-4.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -367,12 +351,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-5.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-5.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -383,12 +367,28 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-6.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-6.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.jpg"
+                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
+                        <div class="portfolio-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -399,12 +399,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/kolam-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Kolam</h4>
                                 <p></p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/kolam-2.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -415,12 +415,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/tenis-meja-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/tenis-meja-2.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -431,12 +431,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/tenis-meja-3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/tenis-meja-3.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -447,12 +447,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/venue/tenis-meja-1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/venue/tenis-meja-1.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -463,12 +463,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Card 2</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/portfolio/portfolio-4.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -480,12 +480,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 3</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/portfolio/portfolio-6.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -496,12 +496,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Card 1</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/portfolio/portfolio-7.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -512,12 +512,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="frontend/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Card 3</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="frontend/assets/img/portfolio/portfolio-8.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.jpg"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -558,7 +558,7 @@
                                     risus at semper.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="frontend/assets/img/testimonials/testimonials-1.jpg"
+                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-1.jpg"
                                          class="testimonial-img" alt="">
                                     <h3>Saul Goodman</h3>
                                     <h4>Ceo &amp; Founder</h4>
@@ -579,7 +579,7 @@
                                     legam anim culpa.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="frontend/assets/img/testimonials/testimonials-2.jpg"
+                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-2.jpg"
                                          class="testimonial-img" alt="">
                                     <h3>Sara Wilsson</h3>
                                     <h4>Designer</h4>
@@ -600,7 +600,7 @@
                                     minim.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="frontend/assets/img/testimonials/testimonials-3.jpg"
+                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-3.jpg"
                                          class="testimonial-img" alt="">
                                     <h3>Jena Karlis</h3>
                                     <h4>Store Owner</h4>
@@ -621,7 +621,7 @@
                                     dolore labore illum veniam.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="frontend/assets/img/testimonials/testimonials-4.jpg"
+                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-4.jpg"
                                          class="testimonial-img" alt="">
                                     <h3>Matt Brandon</h3>
                                     <h4>Freelancer</h4>
@@ -642,7 +642,7 @@
                                     culpa fore nisi cillum quid.
                                 </p>
                                 <div class="profile mt-auto">
-                                    <img src="frontend/assets/img/testimonials/testimonials-5.jpg"
+                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-5.jpg"
                                          class="testimonial-img" alt="">
                                     <h3>John Larson</h3>
                                     <h4>Entrepreneur</h4>
@@ -670,21 +670,21 @@
 
                 <div class="clients-slider swiper">
                     <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-1.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-1.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-2.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-2.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-3.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-3.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-4.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-4.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-5.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-5.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-6.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-6.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-7.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-7.png" class="img-fluid"
                                                        alt=""></div>
-                        <div class="swiper-slide"><img src="frontend/assets/img/clients/client-8.png" class="img-fluid"
+                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-8.png" class="img-fluid"
                                                        alt=""></div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -707,7 +707,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="frontend/assets/img/blog/blog-1.jpg" class="img-fluid"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.jpg" class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Tue, September 15</span>
                             <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur
@@ -719,7 +719,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="frontend/assets/img/blog/blog-2.jpg" class="img-fluid"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.jpg" class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Fri, August 28</span>
                             <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
@@ -730,7 +730,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="frontend/assets/img/blog/blog-3.jpg" class="img-fluid"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.jpg" class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Mon, July 11</span>
                             <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
