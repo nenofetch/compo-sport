@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', App\Http\Controllers\Frontend\Compro\HomepageController::class);
+Route::resource('/', App\Http\Controllers\Frontend\HomepageController::class);
 
 Auth::routes();
 
@@ -21,6 +21,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
     Route::resources([
         'category' => App\Http\Controllers\Backend\CategoryController::class,
+        'write_articles' => App\Http\Controllers\Backend\WriteArticlesController::class,
         'articles_blog' => App\Http\Controllers\Backend\ArticlesBlogController::class,
         'articles_news' => App\Http\Controllers\Backend\ArticlesNewsController::class,
         'pages_cms' => App\Http\Controllers\Backend\PagesCMSController::class,

@@ -83,21 +83,28 @@
             </a>
           </li>
 
+          <li class="sidebar-item">
+            <a href="{{ route('category.index') }}" class="sidebar-link">
+              <i class="bi bi-stack"></i>
+              <span>Kategori</span>
+            </a>
+          </li>
+
           <li class="sidebar-item has-sub">
             <a href="#" class="sidebar-link">
               <i class="bi bi-pen-fill"></i>
               <span>Artikel</span>
             </a>
             <ul class="submenu">
-              <li class="submenu-item">
-                <a href="{{ route('category.index') }}">Kategori Blog & Berita</a>
-              </li>
-              <li class="submenu-item">
-                <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
-              </li>
-              <li class="submenu-item">
-                <a href="{{ route('articles_news.index') }}">Artikel Berita</a>
-              </li>
+                <li class="submenu-item">
+                    <a href="{{ route('write_articles.index') }}">Tulis Artikel</a>
+                </li>
+                <li class="submenu-item">
+                    <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
+                </li>
+                <li class="submenu-item">
+                    <a href="{{ route('articles_news.index') }}">Artikel Berita</a>
+                </li>
             </ul>
           </li>
 

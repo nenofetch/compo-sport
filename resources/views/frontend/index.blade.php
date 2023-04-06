@@ -1,4 +1,4 @@
-@extends('layouts.frontend.compro.main')
+@extends('layouts.frontend.main')
 
 @section('title')
     <title>Singgasana Sports</title>
