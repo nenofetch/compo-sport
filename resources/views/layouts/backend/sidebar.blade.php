@@ -108,8 +108,8 @@
             </ul>
           </li>
 
-          <li class="sidebar-item {{ Request::is('pages*') ? 'active' : '' }}">
-            <a href="{{ route('pages.index') }}" class="sidebar-link">
+          <li class="sidebar-item {{ Request::is('page*') ? 'active' : '' }}">
+            <a href="{{ route('page.index') }}" class="sidebar-link">
               <i class="bi bi-grid-1x2-fill"></i>
               <span>Halaman</span>
             </a>

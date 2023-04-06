@@ -8,18 +8,18 @@ use App\Models\Page;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class PagesController extends Controller
+class PageController extends Controller
 {
     public function index()
     {
         $pages = Page::all();
 
-        return view('backend.pages.index', compact('pages'));
+        return view('backend.page.index', compact('pages'));
     }
 
     public function create()
     {
-        return view('backend.pages.add');
+        return view('backend.page.add');
     }
 
     public function store(Request $request)
@@ -31,7 +31,7 @@ class PagesController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/pages');
+            $imagePath = $request->file('image')->store('public/page');
             $imageName = basename($imagePath);
         } else {
             $imageName = '';
@@ -44,21 +44,21 @@ class PagesController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect('pages')->with('message', 'Data berhasil ditambahkan!');
+        return redirect('page')->with('message', 'Data berhasil ditambahkan!');
     }
 
     public function show($id)
     {
         $pages = Page::find($id);
 
-        return view('backend.pages.detail', compact('pages'));
+        return view('backend.page.detail', compact('pages'));
     }
 
     public function edit($id)
     {
         $pages = Page::find($id);
 
-        return view('backend.pages.edit', compact('pages'));
+        return view('backend.page.edit', compact('pages'));
     }
 
     public function update(Request $request,$id)
@@ -72,8 +72,8 @@ class PagesController extends Controller
         $pages = Page::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/pages/' . $pages->image);
-            $imagePath = $request->file('image')->store('public/pages');
+            Storage::delete('public/page/' . $pages->image);
+            $imagePath = $request->file('image')->store('public/page');
             $imageName = basename($imagePath);
         } else {
             $imageName = $pages->image;
@@ -86,14 +86,14 @@ class PagesController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect('pages')->with('message', 'Data berhasil diubah!');
+        return redirect('page')->with('message', 'Data berhasil diubah!');
     }
 
     public function destroy($id)
     {
         $pages = Page::find($id);
         if ($pages->image) {
-            Storage::delete('public/pages/' . $pages->image);
+            Storage::delete('public/page/' . $pages->image);
         }
 
         $pages->delete();

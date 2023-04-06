@@ -24,7 +24,7 @@ Route::middleware(['auth'])->group(function () {
         'write_articles' => App\Http\Controllers\Backend\WriteArticlesController::class,
         'articles_blog' => App\Http\Controllers\Backend\ArticlesBlogController::class,
         'articles_news' => App\Http\Controllers\Backend\ArticlesNewsController::class,
-        'pages' => App\Http\Controllers\Backend\PagesController::class,
+        'page' => App\Http\Controllers\Backend\PageController::class,
         'facility' => App\Http\Controllers\Backend\FacilityController::class,
         'profile' => App\Http\Controllers\Backend\ProfileController::class,
         'change_password' => App\Http\Controllers\Backend\ChangePasswordController::class,

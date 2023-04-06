@@ -14,7 +14,8 @@ class ArticlesNewsController extends Controller
 {
     public function index()
     {
-        $articles_news = Article::where('slug', 'berita')->get();
+        $categories = Category::where('slug', 'berita')->first();
+        $articles_news = Article::where('category_id', $categories->id)->get();
 
         return view('backend.article.news.index', compact('articles_news'));
     }
