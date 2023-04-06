@@ -54,4 +54,18 @@ class ProfileController extends Controller
 
         return redirect()->back()->with('message', 'Data berhasil diubah!');
     }
+
+    public function destroy($id)
+    {
+        $profile = Auth::user();
+        if ($profile->image) {
+            Storage::delete('public/profile/' . $profile->image);
+        }
+
+        $profile->update([
+            'image' => 'backend/assets/images/faces/2.jpg',
+        ]);
+
+        return redirect()->back()->with(['message' => 'Data berhasil dihapus!']);
+    }
 }

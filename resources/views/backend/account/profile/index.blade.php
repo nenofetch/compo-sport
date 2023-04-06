@@ -30,33 +30,39 @@
     <!-- // Basic multiple Column Form section start -->
     <section id="multiple-column-form">
         <div class="row match-height">
-          <div class="col-lg-12">
+          <div class="col-lg-6">
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('profile.store') }}" method="POST" class="form" enctype="multipart/form-data" data-parsley-validate>
-                            @csrf
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <div class="card">
-                                        <div class="card-body py-4 px-4">
-                                          <div class="d-flex align-items-center">
-                                            <div class="avatar avatar-xl">
-                                                @if ($profile->image )
-                                                    <img src="{{ asset('storage/profile/' . $profile->image ) }}" alt="avatar">
-                                                @else
-                                                    <img src="{{ $profile->image }}" class="img-preview" alt="avatar" />
-                                                @endif
-                                            </div>
-                                            <div class="ms-3 name">
-                                              <h5 class="font-bold">{{ $profile->name }}</h5>
-                                              <h6 class="text-muted mb-0">{{ $profile->email }}</h6>
-                                            </div>
-                                          </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body py-4 px-4">
+                                      <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-xl">
+                                            @if ($profile->image == 'backend/assets/images/faces/2.jpg')
+                                                <img src="{{ $profile->image }}" class="img-preview" alt="avatar" />
+                                            @else
+                                                <img src="{{ asset('storage/profile/' . $profile->image ) }}" alt="avatar">
+                                            @endif
+                                        </div>
+                                        <div class="ms-3 name">
+                                          <h5 class="font-bold">{{ $profile->name }}</h5>
+                                          <h6 class="text-muted mb-2">{{ $profile->email }}</h6>
+                                          <form action="{{ route('profile.destroy', $profile->id) }}" method="POST">
+                                              @csrf
+                                              @method('DELETE')
+                                              <button type="submit" class="btn btn-danger btn-sm">Hapus Foto</button>
+                                          </form>
                                         </div>
                                       </div>
-                                </div>
-                                <div class="col-lg-7">
+                                    </div>
+                                  </div>
+                            </div>
+                            <form action="{{ route('profile.store') }}" method="POST" class="form" enctype="multipart/form-data" data-parsley-validate>
+                                @csrf
+                                <div class="col-12">
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
                                         <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
@@ -88,8 +94,9 @@
                                 <div class="d-flex justify-content-end">
                                     <input type="submit" class="btn btn-primary me-1 mb-1" value="Simpan">
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>
