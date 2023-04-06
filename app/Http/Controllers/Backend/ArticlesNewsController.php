@@ -19,43 +19,6 @@ class ArticlesNewsController extends Controller
         return view('backend.article.news.index', compact('articles_news'));
     }
 
-    // public function create()
-    // {
-    //     $categories = Category::all();
-
-    //     return view('backend.article.news.add', compact('categories'));
-    // }
-
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'image' => 'required|mimes:jpg,png,jpeg|image|max:2048',
-    //         'title' => 'required',
-    //         'content' => 'required',
-    //         'category_id' => 'required',
-    //     ]);
-
-    //     if ($request->hasFile('image')) {
-    //         $imagePath = $request->file('image')->store('public/article');
-    //         $imageName = basename($imagePath);
-    //     } else {
-    //         $imageName = '';
-    //     }
-
-    //     Article::create([
-    //         'image' => $imageName,
-    //         'title' => $request->title,
-    //         'slug' => Str::slug($request->title, '-'),
-    //         'content' => $request->content,
-    //         'user_id' => Auth::user()->id,
-    //         'category_id' => $request->category_id,
-    //         'position_id' => 1,
-    //         'status' => $request->status
-    //     ]);
-
-    //     return redirect('articles_news')->with('message', 'Data berhasil ditambahkan!');
-    // }
-
     public function show($id)
     {
         $articles_news = Article::find($id);
