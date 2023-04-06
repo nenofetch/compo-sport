@@ -26,6 +26,8 @@ Route::middleware(['auth'])->group(function () {
         'articles_news' => App\Http\Controllers\Backend\ArticlesNewsController::class,
         'page' => App\Http\Controllers\Backend\PageController::class,
         'facility' => App\Http\Controllers\Backend\FacilityController::class,
+        'gallery_categories' => App\Http\Controllers\Backend\GalleryCategoriesController::class,
+        'gallery_images' => App\Http\Controllers\Backend\GalleryController::class,
         'profile' => App\Http\Controllers\Backend\ProfileController::class,
         'change_password' => App\Http\Controllers\Backend\ChangePasswordController::class,
     ]);
