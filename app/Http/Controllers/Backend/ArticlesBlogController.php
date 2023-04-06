@@ -14,7 +14,8 @@ class ArticlesBlogController extends Controller
 {
     public function index()
     {
-        $articles_blog = Article::whereNotIn('slug', ['berita'])->get();
+        $categories = Category::where('slug', 'berita')->first();
+        $articles_blog = Article::whereNotIn('category_id', [$categories->id])->get();
 
         return view('backend.article.blog.index', compact('articles_blog'));
     }
