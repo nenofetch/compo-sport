@@ -50,20 +50,41 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="scrollto active" href="#beranda">Beranda</a></li>
-                <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto active" href="#beranda">Beranda</a></li>
+                <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#fasilitas">Fasilitas</a></li>
-
-                        <li><a href="#">Bagian Olahraga</a></li>
-                        <li><a href="#">Aktifitas</a></li>
-                        <li><a href="#">Galeri</a></li>
+                      <li><a href="#">Tentang Kami</a></li>
+                      <li class="dropdown"><a href="#"><span>Aktifitas</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                          <li><a href="#">Singgasana Swimming Club</a></li>
+                          <li><a href="#">Aerobik & Seni Bela Diri</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Galeri</a></li>
+                    </ul>
+                  </li>
+                </li>
+                <li class="dropdown"><a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Whirlpool & Steam</a></li>
+                        <li><a href="#">Auditorium & Function Room</a></li>
+                        <li><a href="#">Pool Side Café & Kantin</a></li>
+                        <li><a href="#">Aerobik</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
-
-                {{-- <li><a class="{{Request::is('booking') ? 'active' : ''}}" href="blog.html">Booking</a></li> --}}
-                <li><a class="getstarted" href="{{route('login')}}">Login</a></li>
+                <li class="dropdown"><a href="#"><span>Bagian Olahraga</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Kolam Renang</a></li>
+                        <li><a href="#">Badminton & Basket</a></li>
+                        <li><a href="#">Tenis Indoor</a></li>
+                        <li><a href="#">Squash</a></li>
+                        <li><a href="#">Batting Practice</a></li>
+                        <li><a href="#">Fitness</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#">Blog</a></li>
+                <li><a class="nav-link scrollto" href="#">Keanggotaan</a></li>
+                <li><a class="nav-link scrollto" href="#">Kontak Kami</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
