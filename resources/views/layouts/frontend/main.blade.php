@@ -45,7 +45,7 @@
 
         <a href="index.html" class="logo d-flex align-items-center">
             <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.png" alt="">
-{{--            <span>Singgasana Sports</span>--}}
+            {{--            <span>Singgasana Sports</span>--}}
         </a>
 
         <nav id="navbar" class="navbar">
@@ -76,8 +76,8 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
                     <a href="index.html" class="logo d-flex align-items-center">
+                        <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.png" alt="">
 
-                        <span>Singgasana Sports and Recreation Centre</span>
                     </a>
                     <p> Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
                         Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk
@@ -87,8 +87,10 @@
                         Pool Side Cafe..</p>
                     <div class="social-links mt-3">
                         <a href="http://twitter.com/sngsportscentre" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="http://facebook.com/SinggasanaSportsandRecreationCentre" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="http://instagram.com/singgasanasportsandrecreation" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="http://facebook.com/SinggasanaSportsandRecreationCentre" class="facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="http://instagram.com/singgasanasportsandrecreation" class="instagram"><i
+                                class="bi bi-instagram"></i></a>
                     </div>
                 </div>
 
@@ -118,11 +120,12 @@
                     <h4>Contact Us</h4>
                     <p>
                         Jl. Galuh Pakuan Barat No. 3 Singgasana Pradana Residence
-                         <br>
+                        <br>
                         Cibaduyut - Bandung City<br>
                         Indonesia <br><br>
-                        <strong>Phone:</strong> <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p><br>
-                        <strong>Email:</strong> info@example.com<br>
+                        <strong>Phone:</strong>
+                    <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p><br>
+                    <strong>Email:</strong> info@example.com<br>
                     </p>
 
                 </div>
@@ -131,20 +134,20 @@
         </div>
     </div>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="{{ asset('frontend') }}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="{{ asset('frontend') }}/assets/vendor/aos/aos.js"></script>
-<script src="{{ asset('frontend') }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="{{ asset('frontend') }}/assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="{{ asset('frontend') }}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="{{ asset('frontend') }}/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="{{ asset('frontend') }}/assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('frontend') }}/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="{{ asset('frontend') }}/assets/vendor/aos/aos.js"></script>
+    <script src="{{ asset('frontend') }}/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('frontend') }}/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="{{ asset('frontend') }}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="{{ asset('frontend') }}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ asset('frontend') }}/assets/vendor/php-email-form/validate.js"></script>
 
-<!-- Template Main JS File -->
-<script src="{{ asset('frontend') }}/assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
 
 </body>
 
