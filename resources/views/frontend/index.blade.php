@@ -266,7 +266,7 @@
 
                     <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="box">
-                            <h3 style="color: #ff0071;">Ultimate Plan</h3>
+                            <h3 style="color: #26bf9b;">Student</h3>
                             {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
                             <img src="{{ asset('frontend') }}/assets/img/pricing/student.jpg" class="img-fluid" alt="">
                             <ul>
@@ -279,7 +279,7 @@
                     </div>
                     <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="box">
-                            <h3 style="color: #ff0071;">Corporate/Community</h3>
+                            <h3 style="color: #bfa826;">Corporate/Community</h3>
                             {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
                             <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg" class="img-fluid" alt="">
                             <ul>
