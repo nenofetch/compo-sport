@@ -52,7 +52,6 @@
             <ul>
                 <li><a class="scrollto active" href="#beranda">Beranda</a></li>
                 <li><a class="nav-link scrollto" href="#tentang">Tentang</a></li>
-                <li><a class="nav-link scrollto" href="#layanan">Layanan</a></li>
                 <li><a class="nav-link scrollto" href="#fasilitas">Fasilitas</a></li>
                 <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
 
@@ -99,7 +98,6 @@
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="#">Beranda</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="#tentang">Tentang</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#layanan">Layanan</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="#fasilitas">Fasilitas</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="#blog">Blog</a></li>
                     </ul>
@@ -125,7 +123,7 @@
                         Indonesia <br><br>
                         <strong>Phone:</strong>
                     <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p><br>
-                    <strong>Email:</strong> info@example.com<br>
+                    <strong>Email:</strong> singgasanasnr@gmail.com<br>
                     </p>
 
                 </div>
@@ -133,6 +131,7 @@
             </div>
         </div>
     </div>
+</footer>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
