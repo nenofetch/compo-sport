@@ -32,7 +32,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -193,6 +193,110 @@
   });
 
   /**
+   * Facility isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let facilityContainer = select('.facility-container');
+    if (facilityContainer) {
+      let facilityIsotope = new Isotope(facilityContainer, {
+        itemSelector: '.facility-item',
+        layoutMode: 'fitRows'
+      });
+
+      let facilityFilters = select('#facility-flters li', true);
+
+      on('click', '#facility-flters li', function(e) {
+        e.preventDefault();
+        facilityFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        facilityIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        aos_init();
+      }, true);
+    }
+
+  });
+
+  /**
+   * Initiate Facility lightbox
+   */
+  const facilityLightbox = GLightbox({
+    selector: '.portfokio-lightbox'
+  });
+
+  /**
+   * Facility details slider
+   */
+  new Swiper('.facility-details-slider', {
+    speed: 400,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+
+  /**
+   * Gallery isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let galleryContainer = select('.gallery-container');
+    if (galleryContainer) {
+      let galleryIsotope = new Isotope(galleryContainer, {
+        itemSelector: '.gallery-item',
+        layoutMode: 'fitRows'
+      });
+
+      let galleryFilters = select('#gallery-flters li', true);
+
+      on('click', '#gallery-flters li', function(e) {
+        e.preventDefault();
+        galleryFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        galleryIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        aos_init();
+      }, true);
+    }
+
+  });
+
+  /**
+   * Initiate Gallery lightbox
+   */
+  const galleryLightbox = GLightbox({
+    selector: '.portfokio-lightbox'
+  });
+
+  /**
+   * Gallery details slider
+   */
+  new Swiper('.gallery-details-slider', {
+    speed: 400,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
+
+  /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
@@ -222,7 +326,7 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfokio-lightbox'
@@ -288,7 +392,7 @@
   });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
 
