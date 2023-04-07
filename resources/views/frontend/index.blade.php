@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="{{ asset('frontend') }}/assets/img/hero-img.jpg" class="img-fluid" alt="">
+                    <img src="{{ asset('frontend') }}/assets/img/hero-img.webp" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="{{ asset('frontend') }}/assets/img/background-ssnrc.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('frontend') }}/assets/img/background-ssnrc.webp" class="img-fluid" alt="">
                     </div>
 
                 </div>
@@ -135,7 +135,7 @@
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #07d5c0;" class="card-title">Personal</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/personal.jpg" class="card-img-top"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/personal.webp" class="card-img-top"
                                  alt="Personal Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
@@ -148,7 +148,7 @@
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #65c600;" class="card-title">Couple</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.jpg" alt="" class="card-img-top"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.webp" alt="" class="card-img-top"
                                  alt="Couple Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
@@ -164,7 +164,7 @@
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #ff901c;" class="card-title">Triple</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/triple.jpg"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/triple.webp"
                                  class="card-img-top" alt="Triple Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
@@ -177,7 +177,7 @@
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #ff0071;" class="card-title">Family</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.webp"
                                  class="card-img-top" alt="Family Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
@@ -190,7 +190,7 @@
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #26bf9b;" class="card-title">Student</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/student.jpg"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/student.webp"
                                  class="card-img-top" alt="Student Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
@@ -205,7 +205,7 @@
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #ff901c;" class="card-title">Corporate/Community</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/community.jpg"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/community.webp"
                                  class="card-img-top" alt="Community Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
