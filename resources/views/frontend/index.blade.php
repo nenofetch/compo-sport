@@ -144,7 +144,7 @@
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-                    <!--ADD CLASSES HERE d-flex align-items-stretch-->
+
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #65c600;" class="card-title">Couple</h3>
@@ -160,7 +160,7 @@
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-                    <!--ADD CLASSES HERE d-flex align-items-stretch-->
+
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #ff901c;" class="card-title">Triple</h3>
@@ -174,6 +174,7 @@
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
+
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #ff0071;" class="card-title">Family</h3>
@@ -187,6 +188,7 @@
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
+
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #26bf9b;" class="card-title">Student</h3>
@@ -202,6 +204,7 @@
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
+
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #ff901c;" class="card-title">Corporate/Community</h3>
@@ -246,12 +249,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -261,12 +264,12 @@
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -276,28 +279,12 @@
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.jpg"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -308,12 +295,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -324,12 +311,28 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp"
+                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
+                        <div class="portfolio-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -340,12 +343,12 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>Kolam</h4>
                                 <p></p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -356,13 +359,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -373,13 +376,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -390,13 +393,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -407,13 +410,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>Card 2</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -425,13 +428,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>App 3</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -442,13 +445,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>Card 1</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -459,13 +462,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.jpg" class="img-fluid"
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.webp" class="img-fluid"
                                  alt="">
                             <div class="portfolio-info">
                                 <h4>Card 3</h4>
                                 <p>Card</p>
                                 <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.jpg"
+                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.webp"
                                        data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i
                                             class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -494,7 +497,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.jpg"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.webp"
                                                        class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Tue, September 15</span>
@@ -507,7 +510,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.jpg"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.webp"
                                                        class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Fri, August 28</span>
@@ -519,7 +522,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.jpg"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.webp"
                                                        class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Mon, July 11</span>
