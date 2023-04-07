@@ -11,9 +11,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with
-                        Bootstrap</h2>
+                    <h1 data-aos="fade-up">Singgasana Sports and Recreation Centre</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Tempat olahraga dan rekreasi terpopuler di Kota Bandung dengan banyak pilihan venue</h2>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
                             <a href="#about"
