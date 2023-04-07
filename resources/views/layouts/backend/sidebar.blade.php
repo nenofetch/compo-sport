@@ -83,19 +83,12 @@
             </a>
           </li>
 
-          <li class="sidebar-item {{ Request::is('category*') ? 'active' : '' }}">
-            <a href="{{ route('category.index') }}" class="sidebar-link">
-              <i class="bi bi-stack"></i>
-              <span>Kategori</span>
-            </a>
-          </li>
-
-          <li class="sidebar-item has-sub {{ Request::is(['write_articles*', 'articles_blog*', 'articles_news*']) ? 'active' : '' }}">
+          <li class="sidebar-item has-sub {{ Request::is(['write_articles*', 'articles_blog*', 'articles_news*', 'category*']) ? 'active' : '' }}">
             <a href="#" class="sidebar-link">
               <i class="bi bi-pen-fill"></i>
               <span>Artikel</span>
             </a>
-            <ul class="submenu {{ Request::is(['write_articles*', 'articles_blog*', 'articles_news*']) ? 'active' : '' }}">
+            <ul class="submenu {{ Request::is(['write_articles*', 'articles_blog*', 'articles_news*', 'category*']) ? 'active' : '' }}">
                 <li class="submenu-item {{ Request::is('write_articles*') ? 'active' : '' }}">
                     <a href="{{ route('write_articles.index') }}">Tulis Artikel</a>
                 </li>
@@ -104,6 +97,9 @@
                 </li>
                 <li class="submenu-item {{ Request::is('articles_news*') ? 'active' : '' }}">
                     <a href="{{ route('articles_news.index') }}">Artikel Berita</a>
+                </li>
+                <li class="submenu-item {{ Request::is('category*') ? 'active' : '' }}">
+                    <a href="{{ route('category.index') }}">Kategori Artikel</a>
                 </li>
             </ul>
           </li>
@@ -129,13 +125,20 @@
             </a>
           </li>
 
-          <li class="sidebar-item">
-            <a href="" class="sidebar-link">
+          <li class="sidebar-item has-sub {{ Request::is(['gallery_categories*', 'gallery_images*']) ? 'active' : '' }}">
+            <a href="#" class="sidebar-link">
               <i class="bi bi-image-fill"></i>
               <span>Galeri</span>
             </a>
+            <ul class="submenu {{ Request::is(['gallery_categories*', 'gallery_images*']) ? 'active' : '' }}">
+                <li class="submenu-item {{ Request::is('gallery_categories*') ? 'active' : '' }}">
+                    <a href="{{ route('gallery_categories.index') }}">Kategori Foto</a>
+                </li>
+                <li class="submenu-item {{ Request::is('gallery_images*') ? 'active' : '' }}">
+                    <a href="{{ route('gallery_images.index') }}">Foto</a>
+                </li>
+            </ul>
           </li>
-
 
           <li class="sidebar-title">Akun &amp; Pengaturan</li>
 
