@@ -597,7 +597,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.webp"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.jpg"
                                                        class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Tue, September 15</span>
@@ -610,7 +610,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.webp"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.jpg"
                                                        class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Fri, August 28</span>
@@ -622,7 +622,7 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.webp"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.jpg"
                                                        class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Mon, July 11</span>
