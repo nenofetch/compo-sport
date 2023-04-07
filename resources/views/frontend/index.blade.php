@@ -12,7 +12,8 @@
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
                     <h1 data-aos="fade-up">Singgasana Sports and Recreation Centre</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">Tempat olahraga dan rekreasi terpopuler di Kota Bandung dengan banyak pilihan venue</h2>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Tempat olahraga dan rekreasi terpopuler di Kota Bandung
+                        dengan banyak pilihan venue</h2>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
                             <a href="#about"
@@ -24,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="{{ asset('frontend') }}/assets/img/hero-img.png" class="img-fluid" alt="">
+                    <img src="{{ asset('frontend') }}/assets/img/hero-img.jpg" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -130,82 +131,86 @@
                     <p>Ada beberapa jenis keanggotaan yang kami tawarkan dengan periode Keanggotaan 2 bulan, 6 bulan dan
                         12 bulan.</p>
                 </header>
-
                 <div class="row gy-4" data-aos="fade-left">
-
-                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="box">
-                            <h3 style="color: #07d5c0;">Personal</h3>
-                            {{--                            <div class="price"><sup>Rp</sup>0<span> / bulan</span></div>--}}
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/personal.jpg" class="img-fluid" alt="">
-                            <ul>
-                                <li>1 Orang (Usia 17 Tahun Ke Atas)</li>
-                            </ul>
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                        <div class="card box">
+                            <h3 style="color: #07d5c0;" class="card-title">Personal</h3>
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/personal.jpg" class="card-img-top"
+                                 alt="Personal Membership">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Syarat</h5>
+                                <p class="card-text mb-4">1 Orang (Usia 17 Tahun Ke Atas)</p>
+                            </div>
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-
-                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="box">
-                            {{--                            <span class="featured">Featured</span>--}}
-                            <h3 style="color: #65c600;">Couple</h3>
-                            {{--                            <div class="price"><sup>$</sup>19<span> / mo</span></div>--}}
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.jpg" class="img-fluid" alt="">
-                            <ul>
-                                <li>2 Orang (Usia 17 Tahun Ke Atas)</li>
-                                <li>Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga</li>
-                            </ul>
+                    <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                        <div class="card box">
+                            <h3 style="color: #65c600;" class="card-title">Couple</h3>
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.jpg" alt="" class="card-img-top"
+                                 alt="Couple Membership">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Syarat</h5>
+                                <p class="card-text mb-4">
+                                    2 Orang (Usia 17 Tahun Ke Atas)<br>
+                                    Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga
+                                </p>
+                            </div>
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-
-                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="box">
-                            <h3 style="color: #ff901c;">Triple</h3>
-                            {{--                            <div class="price"><sup>$</sup>29<span> / mo</span></div>--}}
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/triple.jpg" class="img-fluid" alt="">
-                            <ul>
-                                <li>3 Orang (2 Orang Dewasa, 1 Orang Usia Dibawah 17 Tahun)</li>
-                                <li>Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga</li>
-                            </ul>
+                    <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                        <div class="card box">
+                            <h3 style="color: #ff901c;" class="card-title">Triple</h3>
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/triple.jpg"
+                                 class="card-img-top" alt="Triple Membership">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Syarat</h5>
+                                <p class="card-text mb-4"> 3 Orang (2 Orang Dewasa, 1 Orang Usia Dibawah 17 Tahun)<br>
+                                    Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga</p>
+                            </div>
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-
-                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <h3 style="color: #ff0071;">Family</h3>
-                            {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg" class="img-fluid" alt="">
-                            <ul>
-                                <li>4 Orang (2 Orang Dewasa, 2 Orang Usia Dibawah 17 Tahun)</li>
-                                <li>Untuk Paket Keanggotaan Family Harus Menyertakan Kartu Keluarga</li>
-                            </ul>
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                        <div class="card box">
+                            <h3 style="color: #ff0071;" class="card-title">Family</h3>
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg"
+                                 class="card-img-top" alt="Family Membership">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Syarat</h5>
+                                <p class="card-text mb-4"> 4 Orang (2 Orang Dewasa, 2 Orang Usia Dibawah 17 Tahun)<br>
+                                    Untuk Paket Keanggotaan Family Harus Menyertakan Kartu Keluarga</p>
+                            </div>
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-
-                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <h3 style="color: #26bf9b;">Student</h3>
-                            {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/student.jpg" class="img-fluid" alt="">
-                            <ul>
-                                <li> Untuk Paket Keanggotaan Student Harus Menyertakan Kartu Siswa / Kartu Mahasiswa
-                                </li>
-                                <li> Periode Keanggotaan Student (2 Bulan & 6 Bulan)</li>
-                            </ul>
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                        <div class="card box">
+                            <h3 style="color: #26bf9b;" class="card-title">Student</h3>
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/student.jpg"
+                                 class="card-img-top" alt="Student Membership">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Syarat</h5>
+                                <p class="card-text mb-4">Untuk Paket Keanggotaan Student Harus Menyertakan Kartu Siswa
+                                    / Kartu Mahasiswa
+                                    <br>
+                                    Periode Keanggotaan Student (2 Bulan & 6 Bulan)</p>
+                            </div>
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <h3 style="color: #bfa826;">Corporate/Community</h3>
-                            {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg" class="img-fluid" alt="">
-                            <ul>
-                                <li>Terdiri dari 5 / 10 Orang dalam 1 Group</li>
-                            </ul>
+                    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                        <div class="card box">
+                            <h3 style="color: #ff901c;" class="card-title">Corporate/Community</h3>
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/community.jpg"
+                                 class="card-img-top" alt="Community Membership">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Syarat</h5>
+                                <p class="card-text mb-4"> Terdiri dari 5 / 10 Orang dalam 1 Group</p>
+                            </div>
                             <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
@@ -214,7 +219,6 @@
             </div>
 
         </section><!-- End Pricing Section -->
-
         <!-- ======= Portfolio Section ======= -->
         <section id="fasilitas" class="portfolio">
 
@@ -475,132 +479,6 @@
             </div>
 
         </section><!-- End Portfolio Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Testimonials</h2>
-                    <p>Apa yang mereka katakan tentang venue kami.</p>
-                </header>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-1.jpg"
-                                         class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                    legam anim culpa.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-2.jpg"
-                                         class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                    minim.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-3.jpg"
-                                         class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-4.jpg"
-                                         class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                        class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonials/testimonials-5.jpg"
-                                         class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-
-        </section><!-- End Testimonials Section -->
 
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="blog" class="recent-blog-posts">
