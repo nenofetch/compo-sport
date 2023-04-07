@@ -51,8 +51,15 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="scrollto active" href="#beranda">Beranda</a></li>
-                <li><a class="nav-link scrollto" href="#tentang">Tentang</a></li>
-                <li><a class="nav-link scrollto" href="#fasilitas">Fasilitas</a></li>
+                <li class="dropdown"><a href="#"><span>Tentang Kami</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#fasilitas">Fasilitas</a></li>
+
+                        <li><a href="#">Bagian Olahraga</a></li>
+                        <li><a href="#">Aktifitas</a></li>
+                        <li><a href="#">Galeri</a></li>
+                    </ul>
+                </li>
                 <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
 
                 {{-- <li><a class="{{Request::is('booking') ? 'active' : ''}}" href="blog.html">Booking</a></li> --}}
