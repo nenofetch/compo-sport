@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', App\Http\Controllers\Frontend\HomepageController::class);
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
