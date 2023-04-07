@@ -220,10 +220,189 @@
                 </div>
 
             </div>
-
         </section><!-- End Pricing Section -->
-        <!-- ======= Portfolio Section ======= -->
-        <section id="fasilitas" class="portfolio">
+
+        <!-- ======= FacilitySection ======= -->
+        <section id="fasilitas" class="facility">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>Fasilitas</h2>
+                    <p>Lihat fasilitas yang ada</p>
+                </header>
+
+                <div class="row gy-4 facility-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
+                            <div class="facility-info">
+                                <h4>Kolam</h4>
+                                <p></p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="Web 3"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp" class="img-fluid"
+                                 alt="">
+                            <div class="facility-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 2"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp" class="img-fluid"
+                                 alt="">
+                            <div class="facility-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 2"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 facility-item">
+                        <div class="facility-wrap">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp" class="img-fluid"
+                                 alt="">
+                            <div class="facility-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                                <div class="facility-links">
+                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp"
+                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 2"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- End FacilitySection -->
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="fasilitas" class="gallery">
 
             <div class="container" data-aos="fade-up">
 
@@ -234,7 +413,7 @@
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
+                        <ul id="gallery-flters">
                             <li data-filter="*" class="filter-active">All Venue</li>
                             <li data-filter=".filter-football">Football Area</li>
                             <li data-filter=".filter-swim">Swimming Area</li>
@@ -245,233 +424,164 @@
                     </div>
                 </div>
 
-                <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-swim">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-football">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-football">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>Kolam</h4>
                                 <p></p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="Web 3"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-tennis">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp" class="img-fluid"
                                  alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-tennis">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp" class="img-fluid"
                                  alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
-                        <div class="portfolio-wrap">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-tennis">
+                        <div class="gallery-wrap">
                             <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp" class="img-fluid"
                                  alt="">
-                            <div class="portfolio-info">
+                            <div class="gallery-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
-                                <div class="portfolio-links">
+                                <div class="gallery-links">
                                     <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i
+                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-football">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.webp" class="img-fluid"
-                                 alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.webp" class="img-fluid"
-                                 alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-football">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.webp" class="img-fluid"
-                                 alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-football">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.webp" class="img-fluid"
-                                 alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.webp"
-                                       data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -481,7 +591,7 @@
 
             </div>
 
-        </section><!-- End Portfolio Section -->
+        </section><!-- End Gallery Section -->
 
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="blog" class="recent-blog-posts">
