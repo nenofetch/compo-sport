@@ -45,12 +45,7 @@ class WriteArticlesController extends Controller
             'status' => $request->status
         ]);
 
-        $categories = Category::whereId($request->category_id)->first();
-        if ($categories->slug == 'berita') {
-            return redirect('articles_news')->with('message', 'Data berhasil ditambahkan!');
-        } else {
-            return redirect('articles_blog')->with('message', 'Data berhasil ditambahkan!');
-        }
+        return redirect('articles_blog')->with('message', 'Data berhasil ditambahkan!');
 
     }
 }
