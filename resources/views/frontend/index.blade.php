@@ -45,7 +45,12 @@
                             <h3>Tentang Kita</h3>
                             <h2>Singgasana Sports and Recreation Centre.</h2>
                             <p>
-                                Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor, Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam, Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan Pool Side Cafe.
+                                Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
+                                Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk
+                                warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor,
+                                Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam,
+                                Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan
+                                Pool Side Cafe.
                             </p>
                             <div class="text-center text-lg-start">
                                 <a href="#"
@@ -109,7 +114,6 @@
                             </div>
                         </div>
                     </div>
-
 
 
                 </div>
@@ -201,77 +205,89 @@
             <div class="container" data-aos="fade-up">
 
                 <header class="section-header">
-                    <h2>Pricing</h2>
-                    <p>Check our Pricing</p>
+                    <h2>Keanggotaan</h2>
+                    <p>Ada beberapa jenis keanggotaan yang kami tawarkan dengan periode Keanggotaan 2 bulan, 6 bulan dan
+                        12 bulan.</p>
                 </header>
 
                 <div class="row gy-4" data-aos="fade-left">
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                         <div class="box">
-                            <h3 style="color: #07d5c0;">Free Plan</h3>
-                            <div class="price"><sup>$</sup>0<span> / mo</span></div>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing-free.png" class="img-fluid" alt="">
+                            <h3 style="color: #07d5c0;">Personal</h3>
+                            {{--                            <div class="price"><sup>Rp</sup>0<span> / bulan</span></div>--}}
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/personal.jpg" class="img-fluid" alt="">
                             <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li class="na">Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
+                                <li>1 Orang (Usia 17 Tahun Ke Atas)</li>
                             </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
+                            <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                         <div class="box">
-                            <span class="featured">Featured</span>
-                            <h3 style="color: #65c600;">Starter Plan</h3>
-                            <div class="price"><sup>$</sup>19<span> / mo</span></div>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing-starter.png" class="img-fluid" alt="">
+                            {{--                            <span class="featured">Featured</span>--}}
+                            <h3 style="color: #65c600;">Couple</h3>
+                            {{--                            <div class="price"><sup>$</sup>19<span> / mo</span></div>--}}
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.jpg" class="img-fluid" alt="">
                             <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li class="na">Massa ultricies mi</li>
+                                <li>2 Orang (Usia 17 Tahun Ke Atas)</li>
+                                <li>Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga</li>
                             </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
+                            <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                         <div class="box">
-                            <h3 style="color: #ff901c;">Business Plan</h3>
-                            <div class="price"><sup>$</sup>29<span> / mo</span></div>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing-business.png" class="img-fluid" alt="">
+                            <h3 style="color: #ff901c;">Triple</h3>
+                            {{--                            <div class="price"><sup>$</sup>29<span> / mo</span></div>--}}
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/triple.jpg" class="img-fluid" alt="">
                             <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
+                                <li>3 Orang (2 Orang Dewasa, 1 Orang Usia Dibawah 17 Tahun)</li>
+                                <li>Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga</li>
                             </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
+                            <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="box">
+                            <h3 style="color: #ff0071;">Family</h3>
+                            {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg" class="img-fluid" alt="">
+                            <ul>
+                                <li>4 Orang (2 Orang Dewasa, 2 Orang Usia Dibawah 17 Tahun)</li>
+                                <li>Untuk Paket Keanggotaan Family Harus Menyertakan Kartu Keluarga</li>
+                            </ul>
+                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="box">
                             <h3 style="color: #ff0071;">Ultimate Plan</h3>
-                            <div class="price"><sup>$</sup>49<span> / mo</span></div>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+                            {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/student.jpg" class="img-fluid" alt="">
                             <ul>
-                                <li>Aida dere</li>
-                                <li>Nec feugiat nisl</li>
-                                <li>Nulla at volutpat dola</li>
-                                <li>Pharetra massa</li>
-                                <li>Massa ultricies mi</li>
+                                <li> Untuk Paket Keanggotaan Student Harus Menyertakan Kartu Siswa / Kartu Mahasiswa
+                                </li>
+                                <li> Periode Keanggotaan Student (2 Bulan & 6 Bulan)</li>
                             </ul>
-                            <a href="#" class="btn-buy">Buy Now</a>
+                            <a href="#" class="btn-buy">Pilih Sekarang</a>
                         </div>
                     </div>
-
+                    <div class="col-lg-2 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="box">
+                            <h3 style="color: #ff0071;">Corporate/Community</h3>
+                            {{--                            <div class="price"><sup>$</sup>49<span> / mo</span></div>--}}
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/family.jpg" class="img-fluid" alt="">
+                            <ul>
+                                <li>Terdiri dari 5 / 10 Orang dalam 1 Group</li>
+                            </ul>
+                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -415,7 +431,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
@@ -431,7 +448,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
@@ -447,7 +465,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-tennis">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
@@ -463,7 +482,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-4.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>Card 2</h4>
                                 <p>Card</p>
@@ -480,7 +500,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-6.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>App 3</h4>
                                 <p>App</p>
@@ -496,7 +517,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-7.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>Card 1</h4>
                                 <p>Card</p>
@@ -512,7 +534,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-football">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                            <img src="{{ asset('frontend') }}/assets/img/portfolio/portfolio-8.jpg" class="img-fluid"
+                                 alt="">
                             <div class="portfolio-info">
                                 <h4>Card 3</h4>
                                 <p>Card</p>
@@ -658,41 +681,6 @@
 
         </section><!-- End Testimonials Section -->
 
-        <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Our Clients</h2>
-                    <p>Temporibus omnis officia</p>
-                </header>
-
-                <div class="clients-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-1.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-2.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-3.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-4.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-5.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-6.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-7.png" class="img-fluid"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('frontend') }}/assets/img/clients/client-8.png" class="img-fluid"
-                                                       alt=""></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-
-        </section><!-- End Clients Section -->
-
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="blog" class="recent-blog-posts">
 
@@ -707,7 +695,8 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.jpg" class="img-fluid"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.jpg"
+                                                       class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Tue, September 15</span>
                             <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur
@@ -719,7 +708,8 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.jpg" class="img-fluid"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.jpg"
+                                                       class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Fri, August 28</span>
                             <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
@@ -730,7 +720,8 @@
 
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.jpg" class="img-fluid"
+                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.jpg"
+                                                       class="img-fluid"
                                                        alt=""></div>
                             <span class="post-date">Mon, July 11</span>
                             <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
@@ -765,21 +756,14 @@
                                     <i class="bi bi-geo-alt"></i>
                                     <h3>Our Address</h3>
                                     <p>Bandung <br>
-                                    Jawa Barat</p>
+                                        Jawa Barat</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="info-box">
                                     <i class="bi bi-telephone"></i>
                                     <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>info@example.com<br>contact@example.com</p>
+                                    <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
