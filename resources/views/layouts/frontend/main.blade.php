@@ -47,7 +47,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
         <a href="index.html" class="logo d-flex align-items-center">
-            <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.png" alt="">
+            <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="">
             {{--            <span>Singgasana Sports</span>--}}
         </a>
 
@@ -106,7 +106,7 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.png" alt="">
+                        <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="">
 
                     </a>
                     <p> Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
