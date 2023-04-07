@@ -436,7 +436,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -451,7 +450,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -466,7 +464,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -482,7 +479,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -498,7 +494,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -514,7 +509,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -530,7 +524,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="Web 3"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -547,7 +540,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -564,7 +556,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -581,7 +572,6 @@
                                     <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp"
                                        data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
                                             class="bi bi-zoom-in"></i></a>
-                                    <a href="gallery-details.html" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
