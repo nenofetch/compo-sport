@@ -5,9 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     @yield('title')
-
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta name="description" content="Singgasana Sports and Recreation Centre Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor, Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam, Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan Pool Side Cafe. " />
+    <meta name="keywords" content="singgasana, sports, recreation center, rekreasi, olahraga, tempat olahraga, rekreasi keluar, beladiri, bandung, jawa barat, tenis indoor, renang, basket indoor, xquash, tenis meja, badminton, batting practice, fitness, aerobic, steam, whirlpool, jujitsu, archery, sport shop, swimming pool, auditorium, function room, pool side cafe." />
+    <meta name="author" content="Singgasana Sports and Recreation Centre" />
+    <meta name="email" content="" />
+    <meta name="website" content="http://singgasanasports-recreationcentre.com" />
+    <meta name="Version" content="v1.0.0" />
 
     <!-- Favicons -->
     <link href="{{ asset('frontend') }}/assets/img/favicon.png" rel="icon">
@@ -44,7 +47,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
         <a href="index.html" class="logo d-flex align-items-center">
-            <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.png" alt="">
+            <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="">
             {{--            <span>Singgasana Sports</span>--}}
         </a>
 
@@ -103,7 +106,7 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.png" alt="">
+                        <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="">
 
                     </a>
                     <p> Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
