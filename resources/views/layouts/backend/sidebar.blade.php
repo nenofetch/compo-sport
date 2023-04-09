@@ -83,17 +83,17 @@
             </a>
           </li>
 
-          <li class="sidebar-item has-sub {{ Request::is(['write_articles*', 'articles_blog*', 'category*']) ? 'active' : '' }}">
+          <li class="sidebar-item has-sub {{ Request::is(['write_articles*', 'article*', 'category*']) ? 'active' : '' }}">
             <a href="#" class="sidebar-link">
               <i class="bi bi-pen-fill"></i>
               <span>Artikel</span>
             </a>
-            <ul class="submenu {{ Request::is(['write_articles*', 'articles_blog*', 'category*']) ? 'active' : '' }}">
+            <ul class="submenu {{ Request::is(['write_articles*', 'article*', 'category*']) ? 'active' : '' }}">
                 <li class="submenu-item {{ Request::is('write_articles*') ? 'active' : '' }}">
                     <a href="{{ route('write_articles.index') }}">Tulis Artikel</a>
                 </li>
-                <li class="submenu-item {{ Request::is('articles_blog*') ? 'active' : '' }}">
-                    <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
+                <li class="submenu-item {{ Request::is('article*') ? 'active' : '' }}">
+                    <a href="{{ route('article.index') }}">Artikel Blog</a>
                 </li>
                 <li class="submenu-item {{ Request::is('category*') ? 'active' : '' }}">
                     <a href="{{ route('category.index') }}">Kategori Artikel</a>

@@ -10,29 +10,29 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class ArticlesBlogController extends Controller
+class ArticleController extends Controller
 {
     public function index()
     {
         $categories = Category::where('slug', 'berita')->first();
-        $articles_blog = Article::all();
+        $articles = Article::all();
 
-        return view('backend.article.blog.index', compact('articles_blog'));
+        return view('backend.article.index', compact('articles'));
     }
 
     public function show($id)
     {
-        $articles_blog = Article::find($id);
+        $articles = Article::find($id);
 
-        return view('backend.article.blog.detail', compact('articles_blog'));
+        return view('backend.article.detail', compact('articles'));
     }
 
     public function edit($id)
     {
-        $articles_blog = Article::find($id);
+        $articles = Article::find($id);
         $categories = Category::all();
 
-        return view('backend.article.blog.edit', compact('articles_blog', 'categories'));
+        return view('backend.article.edit', compact('articles', 'categories'));
     }
 
     public function update(Request $request,$id)
@@ -44,17 +44,17 @@ class ArticlesBlogController extends Controller
             'category_id' => 'required',
         ]);
 
-        $articles_blog = Article::find($id);
+        $articles = Article::find($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/article/' . $articles_blog->image);
+            Storage::delete('public/article/' . $articles->image);
             $imagePath = $request->file('image')->store('public/article');
             $imageName = basename($imagePath);
         } else {
-            $imageName = $articles_blog->image;
+            $imageName = $articles->image;
         }
 
-        $articles_blog->update([
+        $articles->update([
             'image' => $imageName,
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
@@ -63,17 +63,21 @@ class ArticlesBlogController extends Controller
             'status' => $request->status
         ]);
 
-        return redirect('articles_blog')->with('message', 'Data berhasil diubah!');
+        $tags = explode(',', $request->tags);
+        $articles->retag($tags);
+
+        return redirect('article')->with('message', 'Data berhasil diubah!');
     }
 
     public function destroy($id)
     {
-        $articles_blog = Article::find($id);
-        if ($articles_blog->image) {
-            Storage::delete('public/article/' . $articles_blog->image);
+        $articles = Article::find($id);
+        if ($articles->image) {
+            Storage::delete('public/article/' . $articles->image);
         }
 
-        $articles_blog->delete();
+        $articles->untag();
+        $articles->delete();
         return response()->json(['status' => 'Data berhasil dihapus!']);
     }
 }

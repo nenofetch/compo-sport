@@ -16,7 +16,7 @@ class WriteArticlesController extends Controller
     {
         $categories = Category::all();
 
-        return view('backend.article.write.index', compact('categories'));
+        return view('backend.article.add', compact('categories'));
     }
 
     public function store(Request $request)
@@ -26,6 +26,7 @@ class WriteArticlesController extends Controller
             'title' => 'required',
             'content' => 'required',
             'category_id' => 'required',
+            'tags' => 'required',
         ]);
 
         if ($request->hasFile('image')) {
@@ -35,7 +36,7 @@ class WriteArticlesController extends Controller
             $imageName = '';
         }
 
-        Article::create([
+        $article = Article::create([
             'image' => $imageName,
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
@@ -45,7 +46,11 @@ class WriteArticlesController extends Controller
             'status' => $request->status
         ]);
 
-        return redirect('articles_blog')->with('message', 'Data berhasil ditambahkan!');
+        $tags = explode(',', $request->tags);
+
+        $article->tag($tags);
+
+        return redirect('article')->with('message', 'Data berhasil ditambahkan!');
 
     }
 }

@@ -22,7 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resources([
         'category' => App\Http\Controllers\Backend\CategoryController::class,
         'write_articles' => App\Http\Controllers\Backend\WriteArticlesController::class,
-        'articles_blog' => App\Http\Controllers\Backend\ArticlesBlogController::class,
+        'article' => App\Http\Controllers\Backend\ArticleController::class,
         'page' => App\Http\Controllers\Backend\PageController::class,
         'facility' => App\Http\Controllers\Backend\FacilityController::class,
         'gallery_categories' => App\Http\Controllers\Backend\GalleryCategoriesController::class,

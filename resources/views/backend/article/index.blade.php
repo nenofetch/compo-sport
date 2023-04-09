@@ -19,7 +19,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
+                <a href="{{ route('article.index') }}">Artikel Blog</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 List
@@ -43,12 +43,13 @@
                 <th>Slug</th>
                 <th>Penulis</th>
                 <th>Kategori</th>
+                <th>Tag</th>
                 <th>Status</th>
                 <th width="20%">Aksi</th>
               </tr>
             </thead>
             <tbody>
-            @foreach ($articles_blog as $row)
+            @foreach ($articles as $row)
               <tr>
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
@@ -57,10 +58,15 @@
                 <td>{{ $row->slug }}</td>
                 <td>{{ $row->user->name }}</td>
                 <td>{{ $row->category->title }}</td>
+                <td>
+                    @foreach ($row->tags as $tag)
+                        {{ $tag->name }},
+                    @endforeach
+                </td>
                 <td><span class="badge bg-{{ $row->status == 'Publish' ? 'success' : 'danger' }}">{{ $row->status == 'Publish' ? 'Publish' : 'Draft' }}</span></td>
                 <td>
-                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='/articles_blog/{{ $row->id }}'"><i class="fas fa-eye"></i> Detail</button>
-                  <button class="btn btn-warning btn-sm mb-2" onclick="window.location='/articles_blog/{{ $row->id }}/edit'"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='/article/{{ $row->id }}'"><i class="fas fa-eye"></i> Detail</button>
+                  <button class="btn btn-warning btn-sm mb-2" onclick="window.location='/article/{{ $row->id }}/edit'"><i class="fas fa-edit"></i> Edit</button>
                   <button class="btn btn-danger btn-delete btn-sm mb-2" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
                 </td>
               </tr>
@@ -107,7 +113,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: "articles_blog/" + id,
+                    url: "article/" + id,
                     type: 'DELETE',
                     data: {
                         "id": id,
