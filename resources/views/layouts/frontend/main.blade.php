@@ -8,7 +8,7 @@
     <meta name="description" content="Singgasana Sports and Recreation Centre Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor, Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam, Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan Pool Side Cafe. " />
     <meta name="keywords" content="singgasana, sports, recreation center, rekreasi, olahraga, tempat olahraga, rekreasi keluar, beladiri, bandung, jawa barat, tenis indoor, renang, basket indoor, xquash, tenis meja, badminton, batting practice, fitness, aerobic, steam, whirlpool, jujitsu, archery, sport shop, swimming pool, auditorium, function room, pool side cafe." />
     <meta name="author" content="Singgasana Sports and Recreation Centre" />
-    <meta name="email" content="" />
+    <meta name="email" content="singgasanasnr@gmail.com" />
     <meta name="website" content="http://singgasanasports-recreationcentre.com" />
     <meta name="Version" content="v1.0.0" />
 
