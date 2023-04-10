@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Facility;
+use App\Models\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -12,7 +13,7 @@ class FacilityController extends Controller
 {
     public function index()
     {
-        $facilities = Facility::all();
+        $facilities = Facility::with('files')->get();
 
         return view('backend.facility.index', compact('facilities'));
     }
@@ -25,27 +26,31 @@ class FacilityController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|mimes:jpg,png,jpeg|image|max:2048',
             'name' => 'required',
             'description' => 'required',
+            'files.*' => 'required|mimes:jpg,png,jpeg|image|max:2048',
         ]);
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/facility');
-            $imageName = basename($imagePath);
-        } else {
-            $imageName = '';
-        }
-
-        Facility::create([
-            'image' => $imageName,
+        $facilities = Facility::create([
             'name' => $request->name,
             'slug' => Str::slug($request->name, '-'),
             'description' => $request->description,
         ]);
 
+        if ($request->hasFile('files')) {
+            foreach ($request->file('files') as $file) {
+                $path = basename($file->store('public/facility'));
+
+                File::create([
+                    'path' => $path,
+                    'facility_id' => $facilities->id,
+                ]);
+            }
+        }
+
         return redirect('facility')->with('message', 'Data berhasil ditambahkan!');
     }
+
 
     public function show($id)
     {

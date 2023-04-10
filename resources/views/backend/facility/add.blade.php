@@ -6,6 +6,10 @@
 <!-- CSS -->
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/summernote.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/summernote/summernote-lite.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/filepond/filepond.css" />
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/toastify-js/src/toastify.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/filepond.css" />
 
 <div class="page-heading">
     <div class="page-title">
@@ -36,7 +40,7 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('facility.store') }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
+                        <form action="{{ route('facility.store') }}" method="POST" class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             <div class="row">
                                 <div class="col-12">
@@ -51,20 +55,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
-                                        <div class="row">
-                                            <div class="col-md-2 mt-2 mb-2">
-                                                <img src="{{ asset('backend/assets/images/logo/default.png') }}"
-                                                    alt="image"class="img-thumbnail img-preview">
+                                        <input type="file" name="files[]" class="multiple-files-filepond @error('files') is-invalid @enderror" multiple/>
+                                        @error('files')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
                                             </div>
-                                            <div class="col-md-10">
-                                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
-                                                @error('image')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Deskripsi</label>
@@ -96,15 +92,7 @@
 <script src="{{ asset('backend') }}/assets/js/pages/summernote.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
-<script>
-    function previewImg() {
-        const logo = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
-        const fileImg = new FileReader();
-        fileImg.readAsDataURL(logo.files[0]);
-        fileImg.onload = function(e) {
-            imgPreview.src = e.target.result;
-        }
-    }
-</script>
+<script src="{{ asset('backend') }}/assets/extensions/filepond/filepond.js"></script>
+<script src="{{ asset('backend') }}/assets/extensions/toastify-js/src/toastify.js"></script>
+<script src="{{ asset('backend') }}/assets/js/pages/filepond.js"></script>
 @endsection

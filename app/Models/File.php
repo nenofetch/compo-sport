@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Facility extends Model
+class File extends Model
 {
     use HasFactory;
 
-    public $fillable = ['name', 'slug', 'description'];
+    protected $fillable = ['path', 'facility_id'];
 
-    public function files()
+    public function facility()
     {
-        return $this->hasMany(File::class);
+        return $this->belongsTo(Facility::class);
     }
 }
