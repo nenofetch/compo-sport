@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/summernote.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/summernote/summernote-lite.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/filepond/filepond.css" />
-<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.css"/>
-<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/toastify-js/src/toastify.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/filepond.css" />
 
 <div class="page-heading">
@@ -93,6 +91,5 @@
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/filepond/filepond.js"></script>
-<script src="{{ asset('backend') }}/assets/extensions/toastify-js/src/toastify.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/filepond.js"></script>
 @endsection
