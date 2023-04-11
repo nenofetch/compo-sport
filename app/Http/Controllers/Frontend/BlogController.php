@@ -12,7 +12,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->get();
+        $articles = Article::orderBy('created_at', 'desc')->paginate(3);
         $categories = Category::all();
         $recentPosts = Article::latest()->take(5)->get();
         $tags = Tag::pluck('name')->unique()->toArray();

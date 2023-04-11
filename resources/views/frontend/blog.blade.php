@@ -27,6 +27,8 @@
 
                 <div class="col-lg-8 entries">
 
+                    @if(count($articles) > 0)
+
                     @foreach ($articles as $row)
                     <article class="entry">
 
@@ -58,12 +60,27 @@
 
                     <div class="blog-pagination">
                         <ul class="justify-content-center">
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+                            @if ($articles->lastPage() > 1)
+                                <li class="{{ ($articles->currentPage() == 1) ? ' disabled' : '' }}">
+                                    <a href="{{ $articles->url(1) }}">Previous</a>
+                                </li>
+                                @for ($i = 1; $i <= $articles->lastPage(); $i++)
+                                    <li class="{{ ($articles->currentPage() == $i) ? ' active' : '' }}">
+                                        <a href="{{ $articles->url($i) }}">{{ $i }}</a>
+                                    </li>
+                                @endfor
+                                <li class="{{ ($articles->currentPage() == $articles->lastPage()) ? ' disabled' : '' }}">
+                                    <a href="{{ $articles->url($articles->currentPage()+1) }}">Next</a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
 
+                    @else
+                        <div class="entry-content">
+                            <h2 class="entry-title">Tidak ada artikel yang ditemukan.</h2>
+                        </div>
+                    @endif
                 </div><!-- End blog entries list -->
 
                 <div class="col-lg-4">
