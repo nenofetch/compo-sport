@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Facility extends Model
 {
     use HasFactory;
-    public $fillable = ['name', 'slug', 'image', 'description'];
+
+    public $fillable = ['name', 'slug', 'description'];
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

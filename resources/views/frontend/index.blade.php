@@ -1,8 +1,6 @@
 @extends('layouts.frontend.main')
 
-@section('title')
-    <title>Singgasana Sports</title>
-@endsection
+@section('title', 'Singgasana Sports')
 
 @section('content')
     <!-- ======= Hero Section ======= -->

@@ -6,6 +6,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/summernote.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/summernote/summernote-lite.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/tag-input.css"/>
 
 <div class="page-heading">
     <div class="page-title">
@@ -92,6 +94,15 @@
                                             </div>
                                         @enderror
                                     </div>
+                                    <div class="form-group">
+                                        <label for="first-name-column">Tag</label>
+                                        <input type="text" name="tags" class="form-control @error('tags') is-invalid @enderror" data-role="tagsinput">
+                                        @error('tags')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="col-12 d-flex justify-content-end">
                                     <input type="submit" class="btn btn-primary me-1 mb-1" name="status" value="Publish">
@@ -115,6 +126,7 @@
 <script src="{{ asset('backend') }}/assets/js/pages/summernote.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     function previewImg() {
         const logo = document.querySelector('#image');

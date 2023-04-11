@@ -6,19 +6,21 @@
 <!-- CSS -->
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/summernote.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/summernote/summernote-lite.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" integrity="sha512-xmGTNt20S0t62wHLmQec2DauG9T+owP9e6VU8GigI0anN7OXLip9i7IwEhelasml2osdxX71XcYm6BQunTQeQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/tag-input.css"/>
 
 <div class="page-heading">
     <div class="page-title">
       <div class="row">
         <div class="col-12 col-md-6 order-md-1 order-last mb-3">
           <h3>Ubah Data</h3>
-          <a href="{{ route('articles_blog.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
+          <a href="{{ route('article.index') }}" class="btn btn-warning btn-sm"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
         <div class="col-12 col-md-6 order-md-2 order-first">
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('articles_blog.index') }}">Artikel Blog</a>
+                <a href="{{ route('article.index') }}">Artikel Blog</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Ubah Data
@@ -39,15 +41,15 @@
                 </div>
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('articles_blog.update', $articles_blog->id) }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
+                        <form action="{{ route('article.update', $articles->id) }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             @method('PUT')
                             <div class="row">
-                                <input type="hidden" name="id" value="{{ $articles_blog->id }}">
+                                <input type="hidden" name="id" value="{{ $articles->id }}">
                                 <div class="col-md-9 col-12">
                                     <div class="form-group">
                                         <label for="first-name-column">Judul</label>
-                                        <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $articles_blog->title }}" placeholder="Judul" />
+                                        <input type="text" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ $articles->title }}" placeholder="Judul" />
                                         @error('title')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -56,7 +58,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Konten</label>
-                                        <textarea name="content" id="summernote" class="form-control @error('content') is-invalid @enderror">{{ $articles_blog->content }}</textarea>
+                                        <textarea name="content" id="summernote" class="form-control @error('content') is-invalid @enderror">{{ $articles->content }}</textarea>
                                         @error('content')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -68,8 +70,8 @@
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
                                         <div class="col-md-6 mt-2 mb-2">
-                                            @if ($articles_blog->image)
-                                                <img src="{{ asset('storage/article/' . $articles_blog->image) }}"
+                                            @if ($articles->image)
+                                                <img src="{{ asset('storage/article/' . $articles->image) }}"
                                                     alt="image"class="img-thumbnail img-preview">
                                             @else
                                                 <img src="{{ asset('backend/assets/images/logo/default.png') }}"
@@ -89,12 +91,22 @@
                                             <option value="">Pilih Kategori</option>
                                             @foreach ($categories as $row)
                                                 <option id="categories_data" value="{{ $row->id }}"
-                                                    {{ $articles_blog->category_id == $row->id ? 'selected' : '' }}>
+                                                    {{ $articles->category_id == $row->id ? 'selected' : '' }}>
                                                     {{ $row->title }}
                                                 </option>
                                             @endforeach
                                         </select>
                                         @error('category_id')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="first-name-column">Tag</label>
+                                        <input type="text" name="tags" class="form-control @error('tags') is-invalid @enderror" value="{{ old('tags', implode(',', $articles->tags->pluck('name')->toArray())) }}" data-role="tagsinput">
+                                        @error('tags')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -123,6 +135,7 @@
 <script src="{{ asset('backend') }}/assets/js/pages/summernote.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha512-9UR1ynHntZdqHnwXKTaOm1s6V9fExqejKvg5XMawEMToW4sSw+3jtLrYfZPijvnwnnE8Uol1O9BcAskoxgec+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     function previewImg() {
         const logo = document.querySelector('#image');

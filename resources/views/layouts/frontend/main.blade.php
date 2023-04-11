@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    @yield('title')
+    <title>@yield('title')</title>
     <meta name="description" content="Singgasana Sports and Recreation Centre Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor, Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam, Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan Pool Side Cafe. " />
     <meta name="keywords" content="singgasana, sports, recreation center, rekreasi, olahraga, tempat olahraga, rekreasi keluar, beladiri, bandung, jawa barat, tenis indoor, renang, basket indoor, xquash, tenis meja, badminton, batting practice, fitness, aerobic, steam, whirlpool, jujitsu, archery, sport shop, swimming pool, auditorium, function room, pool side cafe." />
     <meta name="author" content="Singgasana Sports and Recreation Centre" />
-    <meta name="email" content="" />
+    <meta name="email" content="singgasanasnr@gmail.com" />
     <meta name="website" content="http://singgasanasports-recreationcentre.com" />
     <meta name="Version" content="v1.0.0" />
 
@@ -53,7 +53,7 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="#beranda">Beranda</a></li>
+                <li><a class="nav-link scrollto active" href="{{ route('/') }}">Beranda</a></li>
                 <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                       <li><a href="#">Tentang Kami</a></li>
@@ -85,7 +85,7 @@
                         <li><a href="#">Fitness</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="#">Blog</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('blog.index') }}">Blog</a></li>
                 <li><a class="nav-link scrollto" href="#">Keanggotaan</a></li>
                 <li><a class="nav-link scrollto" href="#">Kontak Kami</a></li>
             </ul>

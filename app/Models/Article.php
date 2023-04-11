@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use \Conner\Tagging\Taggable;
 
 class Article extends Model
 {
-    use HasFactory;
-    public $fillable = ['image', 'title', 'content', 'slug', 'user_id', 'category_id', 'status'];
+    use HasFactory, Taggable;
+    public $fillable = ['image', 'title', 'content', 'slug', 'viewers', 'user_id', 'category_id', 'status'];
 
     public function user()
     {

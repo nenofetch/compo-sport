@@ -6,6 +6,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/summernote.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/summernote/summernote-lite.css"/>
+<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/filepond/filepond.css" />
 
 <div class="page-heading">
     <div class="page-title">
@@ -36,15 +37,15 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('facility.update', $facilities->id) }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
+                        <form action="{{ route('facility.update', $facility->id) }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             @method('PUT')
                             <div class="row">
-                                <input type="hidden" name="id" value="{{ $facilities->id }}">
+                                <input type="hidden" name="id" value="{{ $facility->id }}">
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="first-name-column">Nama</label>
-                                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $facilities->name }}" placeholder="Nama" />
+                                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ $facility->name }}" placeholder="Nama" />
                                         @error('name')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -53,29 +54,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
-                                        <div class="row">
-                                            <div class="col-md-2 mt-2 mb-2">
-                                                @if ($facilities->image)
-                                                    <img src="{{ asset('storage/facility/' . $facilities->image) }}"
-                                                        alt="image"class="img-thumbnail img-preview">
-                                                @else
-                                                    <img src="{{ asset('backend/assets/images/logo/default.png') }}"
-                                                        alt="image"class="img-thumbnail img-preview">
-                                                @endif
+                                        <input type="file" name="image[]" class="form-control @error('image') is-invalid @enderror" multiple>
+                                        @error('image')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
                                             </div>
-                                            <div class="col-md-10">
-                                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
-                                                @error('image')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Deskripsi</label>
-                                        <textarea name="description" id="summernote" class="form-control @error('description') is-invalid @enderror">{{ $facilities->description }}</textarea>
+                                        <textarea name="description" id="summernote" class="form-control @error('description') is-invalid @enderror">{{ $facility->description }}</textarea>
                                         @error('description')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -104,15 +92,6 @@
 <script src="{{ asset('backend') }}/assets/js/pages/summernote.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
-<script>
-    function previewImg() {
-        const logo = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
-        const fileImg = new FileReader();
-        fileImg.readAsDataURL(logo.files[0]);
-        fileImg.onload = function(e) {
-            imgPreview.src = e.target.result;
-        }
-    }
-</script>
+<script src="{{ asset('backend') }}/assets/extensions/filepond/filepond.js"></script>
+<script src="{{ asset('backend') }}/assets/js/pages/filepond.js"></script>
 @endsection

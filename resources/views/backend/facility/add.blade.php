@@ -36,7 +36,7 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-body">
-                        <form action="{{ route('facility.store') }}" method="POST"  class="form" enctype="multipart/form-data" data-parsley-validate>
+                        <form action="{{ route('facility.store') }}" method="POST" class="form" enctype="multipart/form-data" data-parsley-validate>
                             @csrf
                             <div class="row">
                                 <div class="col-12">
@@ -51,20 +51,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
-                                        <div class="row">
-                                            <div class="col-md-2 mt-2 mb-2">
-                                                <img src="{{ asset('backend/assets/images/logo/default.png') }}"
-                                                    alt="image"class="img-thumbnail img-preview">
+                                        <input type="file" name="image[]" class="form-control @error('image') is-invalid @enderror" multiple>
+                                        @error('image')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
                                             </div>
-                                            <div class="col-md-10">
-                                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
-                                                @error('image')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Deskripsi</label>
@@ -96,15 +88,4 @@
 <script src="{{ asset('backend') }}/assets/js/pages/summernote.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
-<script>
-    function previewImg() {
-        const logo = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
-        const fileImg = new FileReader();
-        fileImg.readAsDataURL(logo.files[0]);
-        fileImg.onload = function(e) {
-            imgPreview.src = e.target.result;
-        }
-    }
-</script>
 @endsection
