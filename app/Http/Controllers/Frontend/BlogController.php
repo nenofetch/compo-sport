@@ -98,4 +98,23 @@ class BlogController extends Controller
         return view('frontend.blog.tag', compact('articles', 'categories', 'recentPosts', 'tags', 'tag'));
     }
 
+    public function search(Request $request)
+    {
+        $query = $request->input('search');
+
+        $articles = Article::where('title', 'LIKE', "%$query%")
+                            ->orWhere('body', 'LIKE', "%$query%")
+                            ->get();
+
+        $categories = Category::where('name', 'LIKE', "%$query%")
+                              ->orWhere('slug', 'LIKE', "%$query%")
+                              ->get();
+
+        $tags = Tag::where('name', 'LIKE', "%$query%")
+                   ->orWhere('slug', 'LIKE', "%$query%")
+                   ->get();
+
+        return view('frontend.blog.search', compact('articles', 'categories', 'tags', 'query'));
+    }
+
 }

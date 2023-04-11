@@ -1,6 +1,6 @@
 @extends('frontend.blog.layouts.main')
 
-@section('title', 'Singgasana Sports - Penulis Blog')
+@section('title', 'Singgasana Sports - Pencarian Blog')
 
 @section('breadcrumbs')
 <!-- ======= Breadcrumbs ======= -->
@@ -10,9 +10,9 @@
         <ol>
             <li><a href="{{ route('/') }}">Beranda</a></li>
             <li><a href="{{ route('blog.index') }}">Blog</a></li>
-            <li>Penulis Blog</li>
+            <li>Pencarian Blog</li>
         </ol>
-        <h2>Penulis Blog oleh {{ $author->name }}</h2>
+        <h2>Pencrian blog berdasarkan {{ $query }}</h2>
 
     </div>
 </section><!-- End Breadcrumbs -->
@@ -36,9 +36,9 @@
 
         <div class="entry-meta">
             <ul>
-            <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ route('blog.author', $row->user_id) }}">{{ $row->user->name }}</a></li>
-            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ route('blog.date', date('y-m-d', strtotime($row->created_at))) }}"><time datetime="{{ date('d-M-Y', strtotime($row->created_at)) }}">{{ date('d-M-Y', strtotime($row->created_at)) }}</time></a></li>
-            <li class="d-flex align-items-center"><i class="bi bi-folder"></i> <a href="{{ route('blog.category', $row->category->slug) }}">{{ $row->category->title }}</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ route('blog.author', $row->user_id) }}">{{ $row->user->name }}</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ route('blog.date', date('y-m-d', strtotime($row->created_at))) }}"><time datetime="{{ date('y-m-d', strtotime($row->created_at)) }}">{{ date('d-M-Y', strtotime($row->created_at)) }}</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-folder"></i> <a href="{{ route('blog.category', $row->category->slug) }}">{{ $row->category->title }}</a></li>
             </ul>
         </div>
 

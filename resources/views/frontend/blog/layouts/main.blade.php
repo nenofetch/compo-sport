@@ -18,15 +18,15 @@
 
                     <div class="sidebar">
 
-                        <h3 class="sidebar-title">Search</h3>
+                        <h3 class="sidebar-title">Pencarian</h3>
                         <div class="sidebar-item search-form">
-                            <form action="">
-                            <input type="text">
-                            <button type="submit"><i class="bi bi-search"></i></button>
+                            <form action="{{ route('blog.search') }}" method="GET">
+                                <input type="text" name="search">
+                                <button type="submit"><i class="bi bi-search"></i></button>
                             </form>
-                        </div><!-- End sidebar search formn-->
+                        </div><!-- End sidebar search form-->
 
-                        <h3 class="sidebar-title">Categories</h3>
+                        <h3 class="sidebar-title">Kategori</h3>
                         <div class="sidebar-item categories">
                             <ul>
                                 @foreach ($categories as $row)
@@ -35,7 +35,7 @@
                             </ul>
                         </div><!-- End sidebar categories-->
 
-                        <h3 class="sidebar-title">Recent Posts</h3>
+                        <h3 class="sidebar-title">Postingan Terbaru</h3>
                         <div class="sidebar-item recent-posts">
                             @foreach ($recentPosts as $row)
                             <div class="post-item clearfix">
@@ -47,7 +47,7 @@
 
                         </div><!-- End sidebar recent posts-->
 
-                        <h3 class="sidebar-title">Tags</h3>
+                        <h3 class="sidebar-title">Tag</h3>
                         <div class="sidebar-item tags">
                             <ul>
                                 @foreach ($tags as $tag)

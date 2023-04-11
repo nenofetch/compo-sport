@@ -20,7 +20,7 @@ Route::get('blog/author/{id}', [App\Http\Controllers\Frontend\BlogController::cl
 Route::get('blog/date/{date}', [App\Http\Controllers\Frontend\BlogController::class, 'date'])->name('blog.date');
 Route::get('blog/category/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'category'])->name('blog.category');
 Route::get('blog/tag/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'tag'])->name('blog.tag');
-
+Route::get('blog/search', [App\Http\Controllers\Frontend\BlogController::class, 'search'])->name('blog.search');
 
 Auth::routes(['register' => false]);
 
