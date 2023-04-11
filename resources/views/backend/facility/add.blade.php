@@ -6,8 +6,6 @@
 <!-- CSS -->
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/summernote.css"/>
 <link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/summernote/summernote-lite.css"/>
-<link rel="stylesheet" href="{{ asset('backend') }}/assets/extensions/filepond/filepond.css" />
-<link rel="stylesheet" href="{{ asset('backend') }}/assets/css/pages/filepond.css" />
 
 <div class="page-heading">
     <div class="page-title">
@@ -53,8 +51,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
-                                        <input type="file" name="files[]" class="multiple-files-filepond @error('files') is-invalid @enderror" multiple/>
-                                        @error('files')
+                                        <input type="file" name="image[]" class="form-control @error('image') is-invalid @enderror" multiple>
+                                        @error('image')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -90,6 +88,4 @@
 <script src="{{ asset('backend') }}/assets/js/pages/summernote.js"></script>
 <script src="{{ asset('backend') }}/assets/extensions/parsleyjs/parsley.min.js"></script>
 <script src="{{ asset('backend') }}/assets/js/pages/parsley.js"></script>
-<script src="{{ asset('backend') }}/assets/extensions/filepond/filepond.js"></script>
-<script src="{{ asset('backend') }}/assets/js/pages/filepond.js"></script>
 @endsection

@@ -11,8 +11,8 @@ class Facility extends Model
 
     public $fillable = ['name', 'slug', 'description'];
 
-    public function files()
+    public function images()
     {
-        return $this->hasMany(File::class);
+        return $this->hasMany(Image::class);
     }
 }

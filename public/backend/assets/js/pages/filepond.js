@@ -8,12 +8,12 @@ FilePond.create(document.querySelector(".basic-filepond"), {
 })
 
 // Filepond: Multiple Files
-FilePond.create(document.querySelector(".multiple-files-filepond"), {
+FilePond.create(document.querySelector('input[class="multiple-files-filepond"]'), {
   credits: null,
-  allowImagePreview: false,
+  allowImagePreview: true,
   allowMultiple: true,
   allowFileEncode: false,
-  required: false,
+  required: true,
 })
 
 // Filepond: With Validation

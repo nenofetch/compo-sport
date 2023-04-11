@@ -53,9 +53,13 @@
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
                 <td>
-                    <img src="{{ asset('storage/facility/' . $row->image) }}" width="100%" alt="image">
+                    @if ($row->images->count() > 0)
+                        @foreach ($row->images as $image)
+                            <img src="{{ asset('storage/facility/'.$image->path) }}" class="mb-2" width="100%" alt="image">
+                        @endforeach
+                    @endif
                 </td>
-                <td>{{ $row->title }}</td>
+                <td>{{ $row->name }}</td>
                 <td>{{ $row->slug }}</td>
                 <td>
                   <button class="btn btn-info btn-sm mb-2" onclick="window.location='/facility/{{ $row->id }}'"><i class="fas fa-eye"></i> Detail</button>

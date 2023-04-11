@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class File extends Model
+class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['path', 'facility_id'];
+    protected $fillable = ['name', 'path', 'facility_id'];
 
     public function facility()
     {
