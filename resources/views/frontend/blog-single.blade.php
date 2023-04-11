@@ -11,7 +11,7 @@
         <div class="container">
 
             <ol>
-                <li><a href="{{ route('/') }}">Home</a></li>
+                <li><a href="{{ route('/') }}">Beranda</a></li>
                 <li><a href="{{ route('blog.index') }}">Blog</a></li>
                 <li>Detail Blog</li>
             </ol>
