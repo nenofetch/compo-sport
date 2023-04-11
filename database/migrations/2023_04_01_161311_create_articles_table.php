@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('content');
+            $table->integer('viewers')->nullable()->default(0);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
             $table->string('status');
