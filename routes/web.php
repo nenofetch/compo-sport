@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', App\Http\Controllers\Frontend\HomepageController::class);
+Route::get('/', [App\Http\Controllers\Frontend\HomepageController::class, 'index'])->name('/');
+Route::get('blog', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('blog.index');
+Route::get('blog/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'single'])->name('blog.single');
 
 Auth::routes(['register' => false]);
 
