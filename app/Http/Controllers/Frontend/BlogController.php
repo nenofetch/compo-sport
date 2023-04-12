@@ -104,18 +104,21 @@ class BlogController extends Controller
     {
         $search = $request->input('keyword');
 
-        $articles = Article::where('status', 'Publish')->where(function($query) use ($search) {
+        $articles = Article::where('status', 'Publish')
+                            ->where(function($query) use ($search) {
                                 $query->where('title', 'LIKE', "%$search%")
-                                ->orWhere('content', 'LIKE', "%$search%")
-                                ->orWhere('created_at', 'LIKE', "%$search%");
+                                    ->orWhere('content', 'LIKE', "%$search%")
+                                    ->orWhere('created_at', 'LIKE', "%$search%");
                             })
-                            ->orWhereHas('category', function ($query) use ($search) {
-                                $query->where('title', 'LIKE', "%$search%")
-                                ->orWhere('slug', 'LIKE', "%$search%");
-                            })
-                            ->orWhereHas('tagged', function ($query) use ($search) {
-                                $query->where('tag_name', 'LIKE', "%$search%")
-                                ->orWhere('slug', 'LIKE', "%$search%");
+                            ->where(function ($query) use ($search) {
+                                $query->whereHas('category', function ($query) use ($search) {
+                                    $query->where('title', 'LIKE', "%$search%")
+                                        ->orWhere('slug', 'LIKE', "%$search%");
+                                })
+                                ->orWhereHas('tagged', function ($query) use ($search) {
+                                    $query->where('tag_name', 'LIKE', "%$search%")
+                                        ->orWhere('slug', 'LIKE', "%$search%");
+                                });
                             })
                             ->paginate(5);
 
