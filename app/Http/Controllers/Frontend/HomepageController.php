@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class HomepageController extends Controller
 {
@@ -14,7 +15,9 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        return view('frontend.home.index');
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(3)->get();
+
+        return view('frontend.home.index', compact('recentPosts'));
     }
 
     /**

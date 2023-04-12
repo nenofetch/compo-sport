@@ -28,7 +28,7 @@ class FacilityController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'required',
-            'image' => 'required',
+            'image' => 'required|max:2048',
             'image.*' => 'mimes:jpg,png,jpeg|image|max:2048',
         ]);
 
@@ -73,6 +73,7 @@ class FacilityController extends Controller
         $request->validate([
             'name' => 'required',
             'description' => 'required',
+            'image' => 'max:2048',
             'image.*' => 'mimes:jpg,png,jpeg|image|max:2048',
         ]);
 

@@ -10,4 +10,9 @@ class Page extends Model
     use HasFactory;
 
     protected $fillable = ['image', 'title', 'slug', 'content'];
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

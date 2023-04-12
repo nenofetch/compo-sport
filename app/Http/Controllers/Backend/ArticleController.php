@@ -14,8 +14,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $categories = Category::where('slug', 'berita')->first();
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->get();
 
         return view('backend.article.index', compact('articles'));
     }

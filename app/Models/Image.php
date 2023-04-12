@@ -9,10 +9,15 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'path', 'facility_id'];
+    protected $fillable = ['name', 'path', 'facility_id', 'page_id'];
 
     public function facility()
     {
         return $this->belongsTo(Facility::class);
+    }
+
+    public function page()
+    {
+        return $this->belongsTo(Page::class);
     }
 }

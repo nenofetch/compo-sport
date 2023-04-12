@@ -14,11 +14,11 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(5);
+        $articles = Article::where('status', 'Publish')->orderBy('created_at', 'desc')->paginate(5);
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
@@ -27,11 +27,11 @@ class BlogController extends Controller
 
     public function single($slug)
     {
-        $article = Article::where('slug', $slug)->firstOrFail();
+        $article = Article::where(['slug' => $slug, 'status' => 'Publish'])->firstOrFail();
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
@@ -44,28 +44,26 @@ class BlogController extends Controller
 
     public function author($id)
     {
-        $articles = Article::where('user_id', $id)->orderBy('created_at', 'desc')->paginate(5);
+        $articles = Article::where(['user_id' => $id, 'status' => 'Publish'])->orderBy('created_at', 'desc')->paginate(5);
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
         $author = User::findOrFail($id);
 
-        $hashedId = Hash::make($author->$id);
-
-        return view('frontend.blog.author', compact('articles', 'categories', 'recentPosts', 'tags', 'author', 'hashedId'));
+        return view('frontend.blog.author', compact('articles', 'categories', 'recentPosts', 'tags', 'author'));
     }
 
     public function date($date)
     {
-        $articles = Article::whereDate('created_at', $date)->orderBy('created_at', 'desc')->paginate(5);
+        $articles = Article::whereDate('created_at', $date)->where('status', 'Publish')->orderBy('created_at', 'desc')->paginate(5);
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
@@ -76,11 +74,11 @@ class BlogController extends Controller
     {
         $category = Category::where('slug', $slug)->firstOrFail();
 
-        $articles = $category->article()->orderBy('created_at', 'desc')->paginate(5);
+        $articles = $category->article()->where('status', 'Publish')->orderBy('created_at', 'desc')->paginate(5);
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
@@ -91,11 +89,11 @@ class BlogController extends Controller
     {
         $tag = Tag::where('slug', $slug)->firstOrFail();
 
-        $articles = Article::withAnyTag([$slug])->paginate(5);
+        $articles = Article::withAnyTag([$slug])->where('status', 'Publish')->paginate(5);
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
@@ -106,24 +104,27 @@ class BlogController extends Controller
     {
         $search = $request->input('keyword');
 
-        $articles = Article::where(function($query) use ($search) {
+        $articles = Article::where('status', 'Publish')
+                            ->where(function($query) use ($search) {
                                 $query->where('title', 'LIKE', "%$search%")
-                                ->orWhere('content', 'LIKE', "%$search%")
-                                ->orWhere('created_at', 'LIKE', "%$search%");
+                                    ->orWhere('content', 'LIKE', "%$search%")
+                                    ->orWhere('created_at', 'LIKE', "%$search%");
                             })
-                            ->orWhereHas('category', function ($query) use ($search) {
-                                $query->where('title', 'LIKE', "%$search%")
-                                ->orWhere('slug', 'LIKE', "%$search%");
-                            })
-                            ->orWhereHas('tagged', function ($query) use ($search) {
-                                $query->where('tag_name', 'LIKE', "%$search%")
-                                ->orWhere('slug', 'LIKE', "%$search%");
+                            ->where(function ($query) use ($search) {
+                                $query->whereHas('category', function ($query) use ($search) {
+                                    $query->where('title', 'LIKE', "%$search%")
+                                        ->orWhere('slug', 'LIKE', "%$search%");
+                                })
+                                ->orWhereHas('tagged', function ($query) use ($search) {
+                                    $query->where('tag_name', 'LIKE', "%$search%")
+                                        ->orWhere('slug', 'LIKE', "%$search%");
+                                });
                             })
                             ->paginate(5);
 
         $categories = Category::all();
 
-        $recentPosts = Article::latest()->take(5)->get();
+        $recentPosts = Article::where('status', 'Publish')->latest()->take(5)->get();
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Page;
+use App\Models\Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -12,7 +13,7 @@ class PageController extends Controller
 {
     public function index()
     {
-        $pages = Page::all();
+        $pages = Page::with('images')->get();
 
         return view('backend.page.index', compact('pages'));
     }
@@ -25,38 +26,43 @@ class PageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'mimes:jpg,png,jpeg|image|max:2048',
+            'image' => 'required|max:2048',
+            'image.*' => 'mimes:jpg,png,jpeg,webp|image|max:2048',
             'title' => 'required',
             'content' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/page');
-            $imageName = basename($imagePath);
-        } else {
-            $imageName = '';
-        }
-
-        Page::create([
-            'image' => $imageName,
+        $page = Page::create([
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
             'content' => $request->content,
         ]);
+
+        if ($request->hasFile('image')) {
+            $images = $request->file('image');
+            foreach ($images as $image) {
+                $path = basename($image->store('public/page'));
+
+                Image::create([
+                    'path' => $path,
+                    'page_id' => $page->id,
+                ]);
+            }
+        }
 
         return redirect('page')->with('message', 'Data berhasil ditambahkan!');
     }
 
     public function show($id)
     {
-        $pages = Page::find($id);
+        $pages = Page::with('images')->find($id);
 
         return view('backend.page.detail', compact('pages'));
     }
 
     public function edit($id)
     {
-        $pages = Page::find($id);
+        $pages = Page::with('images')->find($id);
 
         return view('backend.page.edit', compact('pages'));
     }
@@ -64,23 +70,31 @@ class PageController extends Controller
     public function update(Request $request,$id)
     {
         $request->validate([
-            'image' => 'mimes:jpg,png,jpeg|image|max:2048',
+            'image' => 'max:2048',
+            'image.*' => 'mimes:jpg,png,jpeg,webp|image|max:2048',
             'title' => 'required',
             'content' => 'required',
         ]);
 
-        $pages = Page::find($id);
+        $pages = Page::findOrFail($id);
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/page/' . $pages->image);
-            $imagePath = $request->file('image')->store('public/page');
-            $imageName = basename($imagePath);
-        } else {
-            $imageName = $pages->image;
+            foreach ($pages->images as $image) {
+                Storage::delete('public/page/' . $image->path);
+                $image->delete();
+            }
+
+            $images = $request->file('image');
+            foreach ($images as $image) {
+                $path = basename($image->store('public/page'));
+                Image::create([
+                    'path' => $path,
+                    'page_id' => $pages->id,
+                ]);
+            }
         }
 
         $pages->update([
-            'image' => $imageName,
             'title' => $request->title,
             'slug' => Str::slug($request->title, '-'),
             'content' => $request->content,
@@ -92,8 +106,9 @@ class PageController extends Controller
     public function destroy($id)
     {
         $pages = Page::find($id);
-        if ($pages->image) {
-            Storage::delete('public/page/' . $pages->image);
+        foreach ($pages->images as $image) {
+            Storage::delete('public/page/' . $image->path);
+            $image->delete();
         }
 
         $pages->delete();

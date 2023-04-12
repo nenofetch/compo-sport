@@ -53,10 +53,10 @@
                 <input type="hidden" class="delete_id" value="{{ $row->id }}">
                 <td>{{ $loop->iteration }}</td>
                 <td>
-                    @if ($row->image)
-                        <img src="{{ asset('storage/page/' . $row->image) }}" width="100%" alt="image">
-                    @else
-                        Tidak memakai foto
+                    @if ($row->images->count() > 0)
+                        @foreach ($row->images as $image)
+                            <img src="{{ asset('storage/page/'.$image->path) }}" class="mb-2" width="100%" alt="image">
+                        @endforeach
                     @endif
                 </td>
                 <td>{{ $row->title }}</td>
