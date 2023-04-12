@@ -21,6 +21,7 @@ Route::get('blog/date/{date}', [App\Http\Controllers\Frontend\BlogController::cl
 Route::get('blog/category/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'category'])->name('blog.category');
 Route::get('blog/tag/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'tag'])->name('blog.tag');
 Route::get('search', [App\Http\Controllers\Frontend\BlogController::class, 'search'])->name('blog.search');
+Route::get('facilities/{slug}', [App\Http\Controllers\Frontend\FacilityController::class, 'index'])->name('facilities.index');
 
 Auth::routes(['register' => false]);
 

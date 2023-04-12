@@ -67,12 +67,12 @@
                     </ul>
                   </li>
                 </li>
-                <li class="dropdown"><a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href=""><span>Fasilitas</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Whirlpool & Steam</a></li>
-                        <li><a href="#">Auditorium & Function Room</a></li>
-                        <li><a href="#">Pool Side Café & Kantin</a></li>
-                        <li><a href="#">Aerobik</a></li>
+                        <li><a href="{{ route('facilities.index', 'whirlpool-steam') }}">Whirlpool & Steam</a></li>
+                        <li><a href="{{ route('facilities.index', 'auditorium-function-room') }}">Auditorium & Function Room</a></li>
+                        <li><a href="{{ route('facilities.index', 'pool-side-cafe-kantin') }}">Pool Side Café & Kantin</a></li>
+                        <li><a href="{{ route('facilities.index', 'aerobik') }}">Aerobik</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Bagian Olahraga</span> <i class="bi bi-chevron-down"></i></a>
