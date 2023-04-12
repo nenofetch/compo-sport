@@ -105,12 +105,13 @@ class BlogController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('search');
+        dd($query);
 
         $articles = Article::where('title', 'LIKE', "%$query%")
-                            ->orWhere('body', 'LIKE', "%$query%")
+                            ->orWhere('content', 'LIKE', "%$query%")
                             ->get();
 
-        $categories = Category::where('name', 'LIKE', "%$query%")
+        $categories = Category::where('title', 'LIKE', "%$query%")
                               ->orWhere('slug', 'LIKE', "%$query%")
                               ->get();
 
