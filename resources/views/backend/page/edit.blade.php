@@ -53,25 +53,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="city-column">Foto</label>
-                                        <div class="row">
-                                            <div class="col-md-2 mt-2 mb-2">
-                                                @if ($pages->image)
-                                                    <img src="{{ asset('storage/page/' . $pages->image) }}"
-                                                        alt="image"class="img-thumbnail img-preview">
-                                                @else
-                                                    <img src="{{ asset('backend/assets/images/logo/default.png') }}"
-                                                        alt="image"class="img-thumbnail img-preview">
-                                                @endif
+                                        <input type="file" name="image[]" class="form-control @error('image') is-invalid @enderror" multiple>
+                                        @error('image')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
                                             </div>
-                                            <div class="col-md-10">
-                                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" onchange="previewImg()"/>
-                                                @error('image')
-                                                    <div class="invalid-feedback">
-                                                        {{ $message }}
-                                                    </div>
-                                                @enderror
-                                            </div>
-                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="last-name-column">Konten</label>

@@ -399,188 +399,6 @@
 
         </section><!-- End FacilitySection -->
 
-        <!-- ======= Gallery Section ======= -->
-        <section id="fasilitas" class="gallery">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Venue</h2>
-                    <p>Lihat venue sport yang ada</p>
-                </header>
-
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="gallery-flters">
-                            <li data-filter="*" class="filter-active">All Venue</li>
-                            <li data-filter=".filter-football">Football Area</li>
-                            <li data-filter=".filter-swim">Swimming Area</li>
-                            <li data-filter=".filter-gym">Gym Area</li>
-                            <li data-filter=".filter-tennis">Tennis Area</li>
-                            <li data-filter=".filter-basket">Basket Area</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-swim">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-football">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
-                            <div class="gallery-info">
-                                <h4>Kolam</h4>
-                                <p></p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="Web 3"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-tennis">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp" class="img-fluid"
-                                 alt="">
-                            <div class="gallery-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-tennis">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp" class="img-fluid"
-                                 alt="">
-                            <div class="gallery-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 gallery-item filter-tennis">
-                        <div class="gallery-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp" class="img-fluid"
-                                 alt="">
-                            <div class="gallery-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="gallery-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp"
-                                       data-gallery="galleryGallery" class="portfokio-lightbox" title="App 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Gallery Section -->
-
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="blog" class="recent-blog-posts">
 
@@ -593,132 +411,25 @@
 
                 <div class="row">
 
+                    @foreach ($recentPosts as $row)
                     <div class="col-lg-4">
                         <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-1.jpg"
-                                                       class="img-fluid"
-                                                       alt=""></div>
-                            <span class="post-date">Tue, September 15</span>
-                            <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur
-                                sit</h3>
-                            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                            <div class="post-img">
+                                <img src="{{ asset('storage/article/' . $row->image) }}" class="img-fluid" alt="image-blog">
+                            </div>
+                            <span class="post-date"><i class="bi bi-clock"></i> {{ date('d-M-Y', strtotime($row->created_at)) }}</span>
+                            <h3 class="post-title">{{ $row->title }}</h3>
+                            <a href="{{ route('blog.single', $row->slug) }}" class="readmore stretched-link mt-auto"><span>Read More</span><i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <div class="col-lg-4">
-                        <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-2.jpg"
-                                                       class="img-fluid"
-                                                       alt=""></div>
-                            <span class="post-date">Fri, August 28</span>
-                            <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-                            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="post-box">
-                            <div class="post-img"><img src="{{ asset('frontend') }}/assets/img/blog/blog-3.jpg"
-                                                       class="img-fluid"
-                                                       alt=""></div>
-                            <span class="post-date">Mon, July 11</span>
-                            <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-                            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
 
             </div>
 
         </section><!-- End Recent Blog Posts Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Contact</h2>
-                    <p>Contact Us</p>
-                </header>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Our Address</h3>
-                                    <p>Bandung <br>
-                                        Jawa Barat</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday<br>9:00AM - 05:00PM</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                           required>
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                           required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                           required>
-                                </div>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message"
-                                              required></textarea>
-                                </div>
-
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
-
-                            </div>
-                        </form>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
 @endsection

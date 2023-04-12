@@ -56,14 +56,14 @@
                 <li><a class="nav-link scrollto active" href="{{ route('/') }}">Beranda</a></li>
                 <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      <li><a href="#">Tentang Kami</a></li>
-                      <li class="dropdown"><a href="#"><span>Aktifitas</span> <i class="bi bi-chevron-right"></i></a>
+                      <li><a href="{{ route('pages.index', 'tentang-kami') }}">Tentang Kami</a></li>
+                      <li class="dropdown"><a href=""><span>Aktifitas</span> <i class="bi bi-chevron-right"></i></a>
                         <ul>
-                          <li><a href="#">Singgasana Swimming Club</a></li>
-                          <li><a href="#">Aerobik & Seni Bela Diri</a></li>
+                          <li><a href="{{ route('pages.index', 'singgasana-swimming-club') }}">Singgasana Swimming Club</a></li>
+                          <li><a href="{{ route('pages.index', 'aerobik-seni-bela-diri') }}">Aerobik & Seni Bela Diri</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Galeri</a></li>
+                      <li><a href="{{ route('gallery.index') }}">Galeri</a></li>
                     </ul>
                   </li>
                 </li>
@@ -77,17 +77,18 @@
                 </li>
                 <li class="dropdown"><a href="#"><span>Bagian Olahraga</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Kolam Renang</a></li>
-                        <li><a href="#">Badminton & Basket</a></li>
-                        <li><a href="#">Tenis Indoor</a></li>
-                        <li><a href="#">Squash</a></li>
-                        <li><a href="#">Batting Practice</a></li>
-                        <li><a href="#">Fitness</a></li>
+                        <li><a href="{{ route('pages.index', 'kolam-renang') }}">Kolam Renang</a></li>
+                        <li><a href="{{ route('pages.index', 'badminton-basket') }}">Badminton & Basket</a></li>
+                        <li><a href="{{ route('pages.index', 'tenis-indoor') }}">Tenis Indoor</a></li>
+                        <li><a href="{{ route('pages.index', 'tenis-meja') }}">Tenis Meja</a></li>
+                        <li><a href="{{ route('pages.index', 'squash') }}">Squash</a></li>
+                        <li><a href="{{ route('pages.index', 'batting-practice') }}">Batting Practice</a></li>
+                        <li><a href="{{ route('pages.index', 'fitness') }}">Fitness</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="{{ route('blog.index') }}">Blog</a></li>
                 <li><a class="nav-link scrollto" href="#">Keanggotaan</a></li>
-                <li><a class="nav-link scrollto" href="#">Kontak Kami</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('contact.index') }}">Kontak Kami</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
