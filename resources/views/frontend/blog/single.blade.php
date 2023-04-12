@@ -36,7 +36,7 @@
                 <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ route('blog.author', $article->user_id) }}">{{ $article->user->name }}</a></li>
                 <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ route('blog.date', date('y-m-d', strtotime($article->created_at))) }}"><time datetime="{{ date('d-M-Y', strtotime($article->created_at)) }}">{{ date('d-M-Y', strtotime($article->created_at)) }}</time></a></li>
                 <li class="d-flex align-items-center"><i class="bi bi-folder"></i> <a href="{{ route('blog.category', $article->category->slug) }}">{{ $article->category->title }}</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-eye"></i> <a>{{ $article->viewers }}</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-eye"></i> <a>{{ $article->viewers }} Dilihat</a></li>
             </ul>
         </div>
 

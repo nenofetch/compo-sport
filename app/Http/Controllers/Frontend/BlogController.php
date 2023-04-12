@@ -35,6 +35,10 @@ class BlogController extends Controller
 
         $tags = Tag::select('name', 'slug')->distinct()->get();
 
+        $article->update([
+            'viewers' => $article->viewers + 1,
+        ]);
+
         return view('frontend.blog.single', compact('article', 'categories', 'recentPosts', 'tags'));
     }
 
