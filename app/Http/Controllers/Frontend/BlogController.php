@@ -104,22 +104,30 @@ class BlogController extends Controller
 
     public function search(Request $request)
     {
-        $query = $request->input('search');
-        dd($query);
+        $search = $request->input('keyword');
 
-        $articles = Article::where('title', 'LIKE', "%$query%")
-                            ->orWhere('content', 'LIKE', "%$query%")
-                            ->get();
+        $articles = Article::where(function($query) use ($search) {
+                                $query->where('title', 'LIKE', "%$search%")
+                                ->orWhere('content', 'LIKE', "%$search%")
+                                ->orWhere('created_at', 'LIKE', "%$search%");
+                            })
+                            ->orWhereHas('category', function ($query) use ($search) {
+                                $query->where('title', 'LIKE', "%$search%")
+                                ->orWhere('slug', 'LIKE', "%$search%");
+                            })
+                            ->orWhereHas('tagged', function ($query) use ($search) {
+                                $query->where('tag_name', 'LIKE', "%$search%")
+                                ->orWhere('slug', 'LIKE', "%$search%");
+                            })
+                            ->paginate(5);
 
-        $categories = Category::where('title', 'LIKE', "%$query%")
-                              ->orWhere('slug', 'LIKE', "%$query%")
-                              ->get();
+        $categories = Category::all();
 
-        $tags = Tag::where('name', 'LIKE', "%$query%")
-                   ->orWhere('slug', 'LIKE', "%$query%")
-                   ->get();
+        $recentPosts = Article::latest()->take(5)->get();
 
-        return view('frontend.blog.search', compact('articles', 'categories', 'tags', 'query'));
+        $tags = Tag::select('name', 'slug')->distinct()->get();
+
+        return view('frontend.blog.search', compact('articles', 'categories', 'tags', 'recentPosts', 'search'));
     }
 
 }
