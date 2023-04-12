@@ -12,7 +12,7 @@
             <li><a href="{{ route('blog.index') }}">Blog</a></li>
             <li>Pencarian Blog</li>
         </ol>
-        <h2>Pencrian blog berdasarkan {{ $query }}</h2>
+        <h2>Pencrian blog berdasarkan {{ $search }}</h2>
 
     </div>
 </section><!-- End Breadcrumbs -->
