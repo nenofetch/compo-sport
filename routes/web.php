@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\Frontend\HomepageController::class, 'index'])->name('/');
 Route::get('blog', [App\Http\Controllers\Frontend\BlogController::class, 'index'])->name('blog.index');
 Route::get('blog/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'single'])->name('blog.single');
+Route::get('blog/author/{id}', [App\Http\Controllers\Frontend\BlogController::class, 'author'])->name('blog.author');
+Route::get('blog/date/{date}', [App\Http\Controllers\Frontend\BlogController::class, 'date'])->name('blog.date');
+Route::get('blog/category/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'category'])->name('blog.category');
+Route::get('blog/tag/{slug}', [App\Http\Controllers\Frontend\BlogController::class, 'tag'])->name('blog.tag');
+Route::get('blog/search', [App\Http\Controllers\Frontend\BlogController::class, 'search'])->name('blog.search');
 
 Auth::routes(['register' => false]);
 
