@@ -3,12 +3,12 @@
 @section('content')
     <div class="auth-logo">
         <a href="index.html">
-            <img src="{{ asset('backend') }}/assets/images/logo/logo.svg" alt="Logo">
+            <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="Logo">
         </a>
     </div>
-    <h1 class="auth-title">Log in.</h1>
+    <h1 class="auth-title">Masuk</h1>
     <p class="auth-subtitle mb-5">
-        Log in with your data that you entered during registration.
+        Masuk dengan data Anda yang benar!.
     </p>
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -42,16 +42,16 @@
         <div class="form-check form-check-lg d-flex align-items-end">
             <input class="form-check-input me-2" name="remember" type="checkbox" id="remember"
                 {{ old('remember') ? 'checked' : '' }}>
-            <label class="form-check-label text-gray-600" for="remember"> {{ __('Remember Me') }}
+            <label class="form-check-label text-gray-600" for="remember"> {{ __('Ingat saya') }}
             </label>
         </div>
         <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5" type="submit">
-            {{ __('Login') }}
+            {{ __('Masuk') }}
         </button>
     </form>
     <div class="text-center mt-5 text-lg fs-4">
         <p>
-          <a class="font-bold" href="{{ route('password.request') }}">Forgot password?</a>
+          <a class="font-bold" href="{{ route('password.request') }}">Lupa Kata Sandi?</a>
         </p>
     </div>
 @endsection

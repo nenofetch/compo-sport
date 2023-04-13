@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="auth-logo">
-        <a href="index.html"><img src="{{ asset('backend') }}/assets/images/logo/logo.svg" alt="Logo"/></a>
+        <a href="index.html"><img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="Logo"/></a>
     </div>
-    <h1 class="auth-title">Forgot Password</h1>
+    <h1 class="auth-title">Lupa Kata Sandi</h1>
     <p class="auth-subtitle mb-5">
-        Input your email and we will send you reset password link.
+        Masukkan email Anda dan kami akan mengirimkan link reset password.
     </p>
     @if (session('status'))
         <div class="alert alert-success" role="alert">
@@ -28,13 +28,13 @@
             @enderror
         </div>
         <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">
-            {{ __('Send Password Reset Link') }}
+            {{ __('Kirim') }}
         </button>
     </form>
     <div class="text-center mt-5 text-lg fs-4">
         <p class="text-gray-600">
-          Remember your account?
-          <a href="{{ route('login') }}" class="font-bold">Log in</a>.
+          Sudah Punya Akun?
+          <a href="{{ route('login') }}" class="font-bold">Masuk</a>.
         </p>
     </div>
 @endsection
