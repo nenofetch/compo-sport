@@ -36,7 +36,7 @@
                         <div class="col-md-4">
                             <div class="info-box">
                                 <i class="bi bi-geo-alt"></i>
-                                <h3>Our Address</h3>
+                                <h3>Alamat Kami</h3>
                                 <p>Bandung <br>
                                     Jawa Barat</p>
                             </div>
@@ -44,14 +44,14 @@
                         <div class="col-md-4">
                             <div class="info-box">
                                 <i class="bi bi-telephone"></i>
-                                <h3>Call Us</h3>
+                                <h3>Hubungi Kami</h3>
                                 <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="info-box">
                                 <i class="bi bi-clock"></i>
-                                <h3>Open Hours</h3>
+                                <h3>Jam buka</h3>
                                 <p>Monday - Friday<br>9:00AM - 05:00PM</p>
                             </div>
                         </div>
