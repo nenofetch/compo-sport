@@ -33,7 +33,7 @@
                 <div class="col-lg-12">
 
                     <div class="row gy-4">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="info-box">
                                 <i class="bi bi-geo-alt"></i>
                                 <h3>Alamat Kami</h3>
@@ -41,14 +41,21 @@
                                     Jawa Barat</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
+                            <div class="info-box">
+                                <i class="bi bi-envelope"></i>
+                                <h3>Email</h3>
+                                <p>singgasanasnr@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
                             <div class="info-box">
                                 <i class="bi bi-telephone"></i>
                                 <h3>Hubungi Kami</h3>
                                 <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="info-box">
                                 <i class="bi bi-clock"></i>
                                 <h3>Jam buka</h3>
