@@ -99,7 +99,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="count-box">
-                            <i class="bi bi-headset" style="color: #15be56;"></i>
+                            <i class="bi bi-pin-map-fill" style="color: #15be56;"></i>
                             <div>
                                 <span data-purecounter-start="0" data-purecounter-end="1463"
                                       data-purecounter-duration="1" class="purecounter"></span>
