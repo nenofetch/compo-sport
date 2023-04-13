@@ -7,6 +7,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Singgasana Sports</title>
 
+    <!-- Favicons -->
+    <link href="{{ asset('frontend') }}/assets/img/favicon.png" rel="icon">
+    <link href="{{ asset('frontend') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app.css" />
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app-dark.css" />
