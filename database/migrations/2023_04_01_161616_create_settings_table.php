@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('hero');
+            $table->string('favicon');
             $table->string('slogan');
             $table->string('visitors');
             $table->string('event');
