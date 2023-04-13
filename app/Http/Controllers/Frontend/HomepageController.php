@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Page;
 
 class HomepageController extends Controller
 {
@@ -15,9 +16,10 @@ class HomepageController extends Controller
      */
     public function index()
     {
+        $page = Page::where('slug', 'tentang-kami')->first();
         $recentPosts = Article::where('status', 'Publish')->latest()->take(3)->get();
 
-        return view('frontend.home.index', compact('recentPosts'));
+        return view('frontend.home.index', compact('recentPosts', 'page'));
     }
 
     /**

@@ -110,12 +110,8 @@
                         <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="">
 
                     </a>
-                    <p> Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
-                        Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk
-                        warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor,
-                        Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam,
-                        Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan
-                        Pool Side Cafe..</p>
+                    <?php $page = App\Models\Page::where('slug', 'tentang-kami')->first(); ?>
+                    <p>{!! Str::limit($page->content, $limit = 650, $end = '...') !!}</p>
                     <div class="social-links mt-3">
                         <a href="http://twitter.com/sngsportscentre" class="twitter"><i class="bi bi-twitter"></i></a>
                         <a href="http://facebook.com/SinggasanaSportsandRecreationCentre" class="facebook"><i
@@ -126,28 +122,28 @@
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Tautan</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Beranda</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#tentang">Tentang</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#fasilitas">Fasilitas</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#blog">Blog</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('/') }}">Beranda</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('pages.index', 'tentang-kami') }}">Tentang Kami</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('blog.index') }}">Blog</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#fasilitas">Keanggotaan</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('contact.index') }}">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Venue</h4>
+                    <h4>Fasilitas</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Football Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Swimming Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Gymnastic Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Tennis Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Basket Area</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'whirlpool-steam') }}">Whirlpool & Steam</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'auditorium-function-room') }}">Auditorium & Function Room</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'pool-side-cafe-kantin') }}">Pool Side Café & Kantin</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'aerobik') }}">Aerobik</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
+                    <h4>Kontak Kami</h4>
                     <p>
                         Jl. Galuh Pakuan Barat No. 3 Singgasana Pradana Residence
                         <br>

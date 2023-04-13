@@ -43,15 +43,10 @@
                             <h3>Tentang Kita</h3>
                             <h2>Singgasana Sports and Recreation Centre.</h2>
                             <p>
-                                Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
-                                Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk
-                                warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor,
-                                Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam,
-                                Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan
-                                Pool Side Cafe.
+                                {!! Str::limit($page->content, $limit = 650, $end = '...') !!}
                             </p>
                             <div class="text-center text-lg-start">
-                                <a href="#"
+                                <a href="{{ route('pages.index', 'tentang-kami') }}"
                                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                                     <span>Baca Selengkapnya</span>
                                     <i class="bi bi-arrow-right"></i>
@@ -108,7 +103,7 @@
                             <div>
                                 <span data-purecounter-start="0" data-purecounter-end="1463"
                                       data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Venue</p>
+                                <p>Tempat</p>
                             </div>
                         </div>
                     </div>
@@ -406,7 +401,7 @@
 
                 <header class="section-header">
                     <h2>Blog</h2>
-                    <p>Recent posts form our Blog</p>
+                    <p>Postingan Terbaru</p>
                 </header>
 
                 <div class="row">
