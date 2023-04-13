@@ -17,9 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('hero');
+            $table->string('slogan');
+            $table->string('visitors');
+            $table->string('event');
+            $table->string('venue');
             $table->string('telpon', 15);
             $table->string('email');
             $table->string('address');
+            $table->text('open_hours');
             $table->timestamps();
         });
     }
