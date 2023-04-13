@@ -6,6 +6,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title') - SSnRC Admin Panel</title>
 
+    <!-- Favicons -->
+    <link href="{{ asset('frontend') }}/assets/img/favicon.png" rel="icon">
+    <link href="{{ asset('frontend') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app.css" />
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app-dark.css" />
     <link rel="shortcut icon" href="{{ asset('backend') }}/assets/images/logo/favicon.svg" type="image/x-icon"/>
