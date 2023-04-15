@@ -1,7 +1,5 @@
 @extends('frontend.blog.layouts.main')
 
-@section('title', 'Singgasana Sports - Pencarian Blog')
-
 @section('breadcrumbs')
 <!-- ======= Breadcrumbs ======= -->
 <section class="breadcrumbs">

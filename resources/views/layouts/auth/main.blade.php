@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<?php $setting = App\Models\Setting::first(); ?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Singgasana Sports</title>
+    <title>{{ $setting->name }}</title>
 
     <!-- Favicons -->
-    <link href="{{ asset('frontend') }}/assets/img/favicon.png" rel="icon">
-    <link href="{{ asset('frontend') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('storage/setting/' . $setting->favicon) }}" rel="icon">
+    <link href="{{ asset('storage/setting/' . $setting->favicon) }}" rel="apple-touch-icon">
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/main/app.css" />

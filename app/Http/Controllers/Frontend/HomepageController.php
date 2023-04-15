@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Page;
 use App\Models\Facility;
+use App\Models\Setting;
 
 class HomepageController extends Controller
 {
@@ -17,13 +18,15 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        $page = Page::where('slug', 'tentang-kami')->first();
+        $page = Page::where('slug', 'tentang-kami')->with('images')->first();
 
         $facilities = Facility::latest()->take(3)->get();
 
         $recentPosts = Article::where('status', 'Publish')->latest()->take(3)->get();
 
-        return view('frontend.home.index', compact('recentPosts', 'page', 'facilities'));
+        $setting = Setting::find(1);
+
+        return view('frontend.home.index', compact('recentPosts', 'page', 'facilities', 'setting'));
     }
 
     /**
