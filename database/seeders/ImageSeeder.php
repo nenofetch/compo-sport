@@ -18,7 +18,6 @@ class ImageSeeder extends Seeder
         $images = [
             [
                 'path' => 'HgQ2hhsLbWf9an9ADN2Phv14KuctdYNR8CJP8NEi.webp',
-                'facility_id' => '',
                 'page_id' => '1',
             ],
         ];
