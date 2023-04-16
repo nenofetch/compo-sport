@@ -62,7 +62,7 @@
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->slug }}</td>
                 <td>
-                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='/page/{{ $row->id }}'"><i class="fas fa-eye"></i> Detail</button>
+                  <button class="btn btn-info btn-sm mb-2" onclick="window.location='{{ route('pages.index', $row->slug) }}'"><i class="fas fa-eye"></i> Detail</button>
                   <button class="btn btn-warning btn-sm mb-2" onclick="window.location='/page/{{ $row->id }}/edit'"><i class="fas fa-edit"></i> Edit</button>
                   <button class="btn btn-danger btn-delete btn-sm mb-2" data-id="{{ $row->id }}"><i class="fas fa-trash"></i> Hapus</button>
                 </td>

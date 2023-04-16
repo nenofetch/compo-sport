@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php $setting = App\Models\Setting::first(); ?>
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>@yield('title')</title>
+    <title>{{ $setting->name }}</title>
     <meta name="description" content="Singgasana Sports and Recreation Centre Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor, Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam, Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan Pool Side Cafe. " />
     <meta name="keywords" content="singgasana, sports, recreation center, rekreasi, olahraga, tempat olahraga, rekreasi keluar, beladiri, bandung, jawa barat, tenis indoor, renang, basket indoor, xquash, tenis meja, badminton, batting practice, fitness, aerobic, steam, whirlpool, jujitsu, archery, sport shop, swimming pool, auditorium, function room, pool side cafe." />
     <meta name="author" content="Singgasana Sports and Recreation Centre" />
@@ -13,8 +14,8 @@
     <meta name="Version" content="v1.0.0" />
 
     <!-- Favicons -->
-    <link href="{{ asset('frontend') }}/assets/img/favicon.png" rel="icon">
-    <link href="{{ asset('frontend') }}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('storage/setting/' . $setting->favicon) }}" rel="icon">
+    <link href="{{ asset('storage/setting/' . $setting->favicon) }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -107,15 +108,11 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
                     <a href="index.html" class="logo d-flex align-items-center">
-                        <img src="{{ asset('frontend') }}/assets/img/Logo-SSRC-cut.webp" alt="">
+                        <img src="{{ asset('storage/setting/' . $setting->logo) }}" alt="logo">
 
                     </a>
-                    <p> Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
-                        Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk
-                        warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor,
-                        Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam,
-                        Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan
-                        Pool Side Cafe..</p>
+                    <?php $page = App\Models\Page::where('slug', 'tentang-kami')->first(); ?>
+                    <p>{!! Str::limit($page->content, $limit = 650, $end = '...') !!}</p>
                     <div class="social-links mt-3">
                         <a href="http://twitter.com/sngsportscentre" class="twitter"><i class="bi bi-twitter"></i></a>
                         <a href="http://facebook.com/SinggasanaSportsandRecreationCentre" class="facebook"><i
@@ -126,36 +123,33 @@
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Tautan</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Beranda</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#tentang">Tentang</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#fasilitas">Fasilitas</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#blog">Blog</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('/') }}">Beranda</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('pages.index', 'tentang-kami') }}">Tentang Kami</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('blog.index') }}">Blog</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#fasilitas">Keanggotaan</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="{{ route('contact.index') }}">Kontak</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Our Venue</h4>
+                    <h4>Fasilitas</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Football Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Swimming Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Gymnastic Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Tennis Area</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Basket Area</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'whirlpool-steam') }}">Whirlpool & Steam</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'auditorium-function-room') }}">Auditorium & Function Room</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'pool-side-cafe-kantin') }}">Pool Side Café & Kantin</a></li>
+                        <li><i class="bi bi-chevron-right"></i><a href="{{ route('facilities.index', 'aerobik') }}">Aerobik</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4>Contact Us</h4>
+                    <h4>Kontak Kami</h4>
                     <p>
-                        Jl. Galuh Pakuan Barat No. 3 Singgasana Pradana Residence
-                        <br>
-                        Cibaduyut - Bandung City<br>
-                        Indonesia <br><br>
+                        {{ $setting->address1 }}
                         <strong>Phone:</strong>
-                    <p>P : +62 22 543 6458<br>F : +62 22 543 5868</p><br>
-                    <strong>Email:</strong> singgasanasnr@gmail.com<br>
+                        <p>P : {{ $setting->telephone1 }} <br>F : {{ $setting->telephone2 }}</p><br>
+                        <strong>Email:</strong> {{ $setting->email }}<br>
                     </p>
 
                 </div>

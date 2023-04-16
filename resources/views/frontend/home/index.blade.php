@@ -1,7 +1,5 @@
 @extends('layouts.frontend.main')
 
-@section('title', 'Singgasana Sports')
-
 @section('content')
     <!-- ======= Hero Section ======= -->
     <section id="beranda" class="hero d-flex align-items-center">
@@ -9,12 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">Singgasana Sports and Recreation Centre</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">Tempat olahraga dan rekreasi terpopuler di Kota Bandung
-                        dengan banyak pilihan venue</h2>
+                    <h1 data-aos="fade-up">{{ $setting->name }}</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">{{ $setting->slogan }}</h2>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <div class="text-center text-lg-start">
-                            <a href="#about"
+                            <a href="#pricing"
                                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                                 <span>Get Started</span>
                                 <i class="bi bi-arrow-right"></i>
@@ -23,7 +20,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="{{ asset('frontend') }}/assets/img/hero-img.webp" class="img-fluid" alt="">
+                    <img src="{{ asset('storage/setting/' . $setting->hero) }}" class="img-fluid" alt="hero">
                 </div>
             </div>
         </div>
@@ -40,18 +37,13 @@
                     <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up"
                          data-aos-delay="200">
                         <div class="content">
-                            <h3>Tentang Kita</h3>
-                            <h2>Singgasana Sports and Recreation Centre.</h2>
+                            <h3>Tentang Kami</h3>
+                            <h2>{{ $setting->name }}</h2>
                             <p>
-                                Adalah sarana olah raga dan rekreasi keluarga terletak di kawasan exclusive Permukiman
-                                Singgasana Pradana – Bandung. Terdapat fasilitas olahraga dan sarana rekreasi untuk
-                                warga sekitar & masyarakat luas. Fasilitas tersebut antara lain : Lapangan Tenis Indoor,
-                                Basket Indoor, Squash, Tenis Meja, Badminton, Batting Practice, Fitness, Aerobic, Steam,
-                                Whirlpool, Jujitsu, Archery, Sport Shop, Swimming Pool, Auditorium, Function Room, dan
-                                Pool Side Cafe.
+                                {!! Str::limit($page->content, $limit = 650, $end = '...') !!}
                             </p>
                             <div class="text-center text-lg-start">
-                                <a href="#"
+                                <a href="{{ route('pages.index', 'tentang-kami') }}"
                                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                                     <span>Baca Selengkapnya</span>
                                     <i class="bi bi-arrow-right"></i>
@@ -61,7 +53,11 @@
                     </div>
 
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="{{ asset('frontend') }}/assets/img/background-ssnrc.webp" class="img-fluid" alt="">
+                        @if ($page->images->count() > 0)
+                            @foreach ($page->images as $image)
+                                <img src="{{ asset('storage/page/' . $image->path) }}" class="img-fluid" alt="img-about">
+                            @endforeach
+                        @endif
                     </div>
 
                 </div>
@@ -74,7 +70,7 @@
             <div class="container" data-aos="fade-up">
 
                 <header class="section-header">
-                    <h2>Statistics</h2>
+                    <h2>Statistik</h2>
                     <p>Berapa banyak angka yang kami peroleh</p>
                 </header>
 
@@ -104,11 +100,11 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="count-box">
-                            <i class="bi bi-headset" style="color: #15be56;"></i>
+                            <i class="bi bi-pin-map-fill" style="color: #15be56;"></i>
                             <div>
                                 <span data-purecounter-start="0" data-purecounter-end="1463"
                                       data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Venue</p>
+                                <p>Tempat Fasilitas</p>
                             </div>
                         </div>
                     </div>
@@ -220,185 +216,6 @@
             </div>
         </section><!-- End Pricing Section -->
 
-        <!-- ======= FacilitySection ======= -->
-        <section id="fasilitas" class="facility">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Fasilitas</h2>
-                    <p>Lihat fasilitas yang ada</p>
-                </header>
-
-                <div class="row gy-4 facility-container" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-1.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-3.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-4.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-5.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-6.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 1"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp" class="img-fluid" alt="">
-                            <div class="facility-info">
-                                <h4>Kolam</h4>
-                                <p></p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/kolam-2.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="Web 3"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp" class="img-fluid"
-                                 alt="">
-                            <div class="facility-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-2.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp" class="img-fluid"
-                                 alt="">
-                            <div class="facility-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-3.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 facility-item">
-                        <div class="facility-wrap">
-                            <img src="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp" class="img-fluid"
-                                 alt="">
-                            <div class="facility-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="facility-links">
-                                    <a href="{{ asset('frontend') }}/assets/img/venue/tenis-meja-1.webp"
-                                       data-gallery="facilityGallery" class="portfokio-lightbox" title="App 2"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="facility-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- End FacilitySection -->
-
         <!-- ======= Recent Blog Posts Section ======= -->
         <section id="blog" class="recent-blog-posts">
 
@@ -406,11 +223,10 @@
 
                 <header class="section-header">
                     <h2>Blog</h2>
-                    <p>Recent posts form our Blog</p>
+                    <p>Postingan Terbaru</p>
                 </header>
 
                 <div class="row">
-
                     @foreach ($recentPosts as $row)
                     <div class="col-lg-4">
                         <div class="post-box">

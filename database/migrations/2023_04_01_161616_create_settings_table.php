@@ -15,11 +15,20 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('name');
+            $table->string('logo');
             $table->string('hero');
-            $table->string('telpon', 15);
+            $table->string('favicon');
+            $table->string('slogan');
+            $table->string('visitors');
+            $table->string('event');
+            $table->string('venue');
+            $table->string('telephone1', 15);
+            $table->string('telephone2', 15)->nullable();
             $table->string('email');
-            $table->string('address');
+            $table->string('address1');
+            $table->string('address2')->nullable();
+            $table->text('open_hours');
             $table->timestamps();
         });
     }

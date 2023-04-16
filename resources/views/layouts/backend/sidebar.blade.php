@@ -154,8 +154,8 @@
             </ul>
           </li>
 
-          <li class="sidebar-item">
-            <a href="" class="sidebar-link">
+          <li class="sidebar-item {{ Request::is('setting*') ? 'active' : '' }}">
+            <a href="{{ route('setting.index') }}" class="sidebar-link">
               <i class="bi bi-gear-fill"></i>
               <span>Pengaturan</span>
             </a>

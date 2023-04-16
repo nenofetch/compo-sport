@@ -1,7 +1,5 @@
 @extends('layouts.frontend.main')
 
-@section('title', 'Singgasana Sports - Fasilitas')
-
 @section('content')
 <main id="main">
 

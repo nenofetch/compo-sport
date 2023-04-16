@@ -16,7 +16,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="{{ route('articles_blog.index') }}">Profil</a>
+                <a href="{{ route('profile.index') }}">Profil</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Ubah Data
