@@ -23,7 +23,7 @@
                     <div class="row">
                       <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
                         <div class="stats-icon purple mb-2">
-                            <i class="bi bi-pen-fill"></i>
+                            <i class="iconly-boldEdit"></i>
                         </div>
                       </div>
                       <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -42,7 +42,7 @@
                     <div class="row">
                       <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
                         <div class="stats-icon blue mb-2">
-                          <i class="bi bi-grid-fill"></i>
+                          <i class="iconly-boldCategory"></i>
                         </div>
                       </div>
                       <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -59,7 +59,7 @@
                     <div class="row">
                       <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
                         <div class="stats-icon green mb-2">
-                          <i class="bi bi-grid-1x2-fill"></i>
+                          <i class="iconly-boldPaper"></i>
                         </div>
                       </div>
                       <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -76,7 +76,7 @@
                     <div class="row">
                       <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
                         <div class="stats-icon red mb-2">
-                          <i class="bi bi-journal-check"></i>
+                          <i class="iconly-boldShield-Done"></i>
                         </div>
                       </div>
                       <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
