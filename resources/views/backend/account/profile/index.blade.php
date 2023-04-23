@@ -44,7 +44,7 @@
                                             @if ($profile->image == 'backend/assets/images/faces/2.jpg')
                                                 <img src="{{ $profile->image }}" class="img-preview" alt="avatar" />
                                             @else
-                                                <img src="{{ asset('storage/profile/' . $profile->image ) }}" alt="avatar">
+                                                <img src="{{ asset('storage/profile/' . $profile->image ) }}" class="img-preview" alt="avatar">
                                             @endif
                                         </div>
                                         <div class="ms-3 name">
