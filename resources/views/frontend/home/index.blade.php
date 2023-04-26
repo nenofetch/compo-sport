@@ -55,7 +55,8 @@
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
                         @if ($page->images->count() > 0)
                             @foreach ($page->images as $image)
-                                <img src="{{ asset('storage/page/' . $image->path) }}" class="img-fluid" alt="img-about">
+                                <img src="{{ asset('storage/page/' . $image->path) }}" class="img-fluid"
+                                     alt="img-about">
                             @endforeach
                         @endif
                     </div>
@@ -135,14 +136,19 @@
                                 <h5 class="card-title">Syarat</h5>
                                 <p class="card-text mb-4">1 Orang (Usia 17 Tahun Ke Atas)</p>
                             </div>
-                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                            <button class="btn-buy" data-bs-toggle="modal" data-bs-target="#personalModal"
+                                    data-bs-aria-expanded="false" aria-controls="personalModal">
+                                Pilih
+                                Sekarang
+                            </button>
                         </div>
                     </div>
 
                     <div class="col-lg-4 mb-3 d-flex align-items-stretch">
                         <div class="card box">
                             <h3 style="color: #65c600;" class="card-title">Couple</h3>
-                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.webp" alt="" class="card-img-top"
+                            <img src="{{ asset('frontend') }}/assets/img/pricing/couple.webp" alt=""
+                                 class="card-img-top"
                                  alt="Couple Membership">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Syarat</h5>
@@ -151,7 +157,9 @@
                                     Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga
                                 </p>
                             </div>
-                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                            <button class="btn-buy" data-bs-toggle="modal" data-bs-target="#coupleModal"
+                                    data-bs-aria-expanded="false" aria-controls="coupleModal">Pilih Sekarang
+                            </button>
                         </div>
                     </div>
 
@@ -165,7 +173,9 @@
                                 <p class="card-text mb-4"> 3 Orang (2 Orang Dewasa, 1 Orang Usia Dibawah 17 Tahun)<br>
                                     Untuk Paket Keanggotaan Couple Harus Menyertakan Kartu Keluarga</p>
                             </div>
-                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                            <button class="btn-buy" data-bs-toggle="modal" data-bs-target="#tripleModal"
+                                    data-bs-aria-expanded="false" aria-controls="tripleModal">Pilih Sekarang
+                            </button>
                         </div>
                     </div>
 
@@ -179,7 +189,9 @@
                                 <p class="card-text mb-4"> 4 Orang (2 Orang Dewasa, 2 Orang Usia Dibawah 17 Tahun)<br>
                                     Untuk Paket Keanggotaan Family Harus Menyertakan Kartu Keluarga</p>
                             </div>
-                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                            <button class="btn-buy" data-bs-toggle="modal" data-bs-target="#familyModal"
+                                    data-bs-aria-expanded="false" aria-controls="familyModal">Pilih Sekarang
+                            </button>
                         </div>
                     </div>
 
@@ -195,7 +207,9 @@
                                     <br>
                                     Periode Keanggotaan Student (2 Bulan & 6 Bulan)</p>
                             </div>
-                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                            <button class="btn-buy" data-bs-toggle="modal" data-bs-target="#studentModal"
+                                    data-bs-aria-expanded="false" aria-controls="studentModal">Pilih Sekarang
+                            </button>
                         </div>
                     </div>
 
@@ -208,12 +222,130 @@
                                 <h5 class="card-title">Syarat</h5>
                                 <p class="card-text mb-4"> Terdiri dari 5 / 10 Orang dalam 1 Group</p>
                             </div>
-                            <a href="#" class="btn-buy">Pilih Sekarang</a>
+                            <button class="btn-buy" data-bs-toggle="modal" data-bs-target="#communityModal"
+                                    data-bs-aria-expanded="false" aria-controls="communityModal">Pilih Sekarang
+                            </button>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <!-- Modal Start -->
+            <div class="modal fade" id="personalModal" tabindex="-1" aria-labelledby="personalModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="personalModalLabel">Personal Membership</h1>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="coupleModal" tabindex="-1" aria-labelledby="coupleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="coupleModalLabel">Couple Membership</h1>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="tripleModal" tabindex="-1" aria-labelledby="tripleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="tripleModalLabel">Triple Membership</h1>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="familyModal" tabindex="-1" aria-labelledby="familyModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="familyModalLabel">Family Membership</h1>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="studentModalLabel">Student Membership</h1>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="communityModal" tabindex="-1" aria-labelledby="communityModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="communityModalLabel">Community/Corporate Membership</h1>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal End -->
         </section><!-- End Pricing Section -->
 
         <!-- ======= Recent Blog Posts Section ======= -->
@@ -228,17 +360,19 @@
 
                 <div class="row">
                     @foreach ($recentPosts as $row)
-                    <div class="col-lg-4">
-                        <div class="post-box">
-                            <div class="post-img">
-                                <img src="{{ asset('storage/article/' . $row->image) }}" class="img-fluid" alt="image-blog">
+                        <div class="col-lg-4">
+                            <div class="post-box">
+                                <div class="post-img">
+                                    <img src="{{ asset('storage/article/' . $row->image) }}" class="img-fluid"
+                                         alt="image-blog">
+                                </div>
+                                <span class="post-date"><i class="bi bi-clock"></i> {{ date('d-M-Y', strtotime($row->created_at)) }}</span>
+                                <h3 class="post-title">{{ $row->title }}</h3>
+                                <a href="{{ route('blog.single', $row->slug) }}"
+                                   class="readmore stretched-link mt-auto"><span>Read More</span><i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
-                            <span class="post-date"><i class="bi bi-clock"></i> {{ date('d-M-Y', strtotime($row->created_at)) }}</span>
-                            <h3 class="post-title">{{ $row->title }}</h3>
-                            <a href="{{ route('blog.single', $row->slug) }}" class="readmore stretched-link mt-auto"><span>Read More</span><i
-                                    class="bi bi-arrow-right"></i></a>
                         </div>
-                    </div>
                     @endforeach
 
                 </div>

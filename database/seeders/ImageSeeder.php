@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Image;
+use Illuminate\Database\Seeder;
 
 class ImageSeeder extends Seeder
 {
@@ -17,7 +16,7 @@ class ImageSeeder extends Seeder
     {
         $images = [
             [
-                'path' => 'HgQ2hhsLbWf9an9ADN2Phv14KuctdYNR8CJP8NEi.webp',
+                'path' => 'about-image.webp',
                 'page_id' => '1',
             ],
         ];
