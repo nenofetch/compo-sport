@@ -231,6 +231,7 @@
             </div>
 
             <!-- Modal Start -->
+            <!-- Personal Membership Modal-->
             <div class="modal fade" id="personalModal" tabindex="-1" aria-labelledby="personalModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -238,18 +239,59 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="personalModalLabel">Personal Membership</h1>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                            </button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                   id="nama_lengkap" required>
+                                            <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" required>
+                                            <label for="email">Email *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <label for="notelp">No Telpon *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <select name="membership" id="membership" class="form-select">
+                                                <option selected>Pilih Durasi Membership</option>
+                                                <option value="1">1 Bulan</option>
+                                                <option value="2">2 Bulan</option>
+                                                <option value="3">3 Bulan</option>
+                                            </select>
+                                            <label for="membership">Membership</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <textarea name="alamat" id="alamat" style="height: 100px;"
+                                                      class="form-control"></textarea>
+                                            <label for="alamat">Alamat</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Berlangganan</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
+
+            <!-- Couple Membership Modal-->
             <div class="modal fade" id="coupleModal" tabindex="-1" aria-labelledby="coupleModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -257,18 +299,65 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="coupleModalLabel">Couple Membership</h1>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                            </button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                   id="nama_lengkap" required>
+                                            <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_penanggung" class="form-control"
+                                                   id="nama_penanggung" required>
+                                            <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" required>
+                                            <label for="email">Email *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <label for="notelp">No Telpon *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <select name="membership" id="membership" class="form-select">
+                                                <option selected>Pilih Durasi Membership</option>
+                                                <option value="1">1 Bulan</option>
+                                                <option value="2">2 Bulan</option>
+                                                <option value="3">3 Bulan</option>
+                                            </select>
+                                            <label for="membership">Membership</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <textarea name="alamat" id="alamat" style="height: 100px"
+                                                      class="form-control"></textarea>
+                                            <label for="alamat">Alamat Penanggung Jawab</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Berlangganan</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
+            <!-- Triple Membership Modal-->
             <div class="modal fade" id="tripleModal" tabindex="-1" aria-labelledby="tripleModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -276,18 +365,65 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="tripleModalLabel">Triple Membership</h1>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                            </button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                   id="nama_lengkap" required>
+                                            <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_penanggung" class="form-control"
+                                                   id="nama_penanggung" required>
+                                            <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" required>
+                                            <label for="email">Email *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <label for="notelp">No Telpon *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <select name="membership" id="membership" class="form-select">
+                                                <option selected>Pilih Membership</option>
+                                                <option value="1">1 Bulan</option>
+                                                <option value="2">2 Bulan</option>
+                                                <option value="3">3 Bulan</option>
+                                            </select>
+                                            <label for="membership">Membership</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <textarea name="alamat" id="alamat" style="height: 100px"
+                                                      class="form-control"></textarea>
+                                            <label for="alamat">Alamat Penanggung Jawab</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Berlangganan</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
+            <!-- Family Membership Modal-->
             <div class="modal fade" id="familyModal" tabindex="-1" aria-labelledby="familyModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -295,18 +431,71 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="familyModalLabel">Family Membership</h1>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                            </button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                   id="nama_lengkap" required>
+                                            <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_penanggung" class="form-control"
+                                                   id="nama_penanggung" required>
+                                            <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" required>
+                                            <label for="email">Email *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <label for="notelp">No Telpon *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <select name="membership" id="membership" class="form-select">
+                                                <option selected>Pilih Durasi Membership</option>
+                                                <option value="1">1 Bulan</option>
+                                                <option value="2">2 Bulan</option>
+                                                <option value="3">3 Bulan</option>
+                                            </select>
+                                            <label for="membership">Membership</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <textarea name="alamat" id="alamat" style="height: 100px"
+                                                      class="form-control"></textarea>
+                                            <label for="alamat">Alamat</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="file" name="csv" id="csv" class="form-control" required>
+                                            <label for="csv">Upload CSV untuk pendataan anggota</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Berlangganan</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
+            <!-- Student Membership Modal-->
             <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -314,18 +503,71 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="studentModalLabel">Student Membership</h1>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                            </button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                   id="nama_lengkap" required>
+                                            <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_penanggung" class="form-control"
+                                                   id="nama_penanggung" required>
+                                            <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" required>
+                                            <label for="email">Email *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <label for="notelp">No Telpon *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <select name="membership" id="membership" class="form-select">
+                                                <option selected>Pilih Durasi Membership</option>
+                                                <option value="1">1 Bulan</option>
+                                                <option value="2">2 Bulan</option>
+                                                <option value="3">3 Bulan</option>
+                                            </select>
+                                            <label for="membership">Membership</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <textarea name="alamat" id="alamat" style="height: 100px"
+                                                      class="form-control"></textarea>
+                                            <label for="alamat">Alamat Sekolah</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="file" name="csv" id="csv" class="form-control" required>
+                                            <label for="csv">Upload CSV untuk pendataan murid</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Berlangganan</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
+            <!-- Community Membership Modal-->
             <div class="modal fade" id="communityModal" tabindex="-1" aria-labelledby="communityModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -333,14 +575,66 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="communityModalLabel">Community/Corporate Membership</h1>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                            </button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_lengkap" class="form-control"
+                                                   id="nama_lengkap" required>
+                                            <label for="nama_lengkap">Nama Perusahaan/Komunitas *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <input type="text" name="nama_penanggung" class="form-control"
+                                                   id="nama_penanggung" required>
+                                            <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" class="form-control" required>
+                                            <label for="email">Email Penanggung Jawab*</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <label for="notelp">No Telpon *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <select name="membership" id="membership" class="form-select">
+                                                <option selected>Pilih Durasi Membership</option>
+                                                <option value="1">1 Bulan</option>
+                                                <option value="2">2 Bulan</option>
+                                                <option value="3">3 Bulan</option>
+                                            </select>
+                                            <label for="membership">Membership</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <textarea name="alamat" id="alamat" style="height: 100px"
+                                                      class="form-control"></textarea>
+                                            <label for="alamat">Alamat Kantor/Komunitas</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="file" name="csv" id="csv" class="form-control" required>
+                                            <label for="csv">Upload CSV untuk pendataan anggota</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Berlangganan</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
