@@ -258,7 +258,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -325,7 +325,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -391,7 +391,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -457,7 +457,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -529,7 +529,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -601,7 +601,7 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
