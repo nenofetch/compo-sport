@@ -252,6 +252,16 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Personal">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Couple">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
@@ -308,6 +318,11 @@
                                             <input type="text" name="nama_lengkap" class="form-control"
                                                    id="nama_lengkap" required>
                                             <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Couple">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -376,6 +391,11 @@
                                             <label for="nama_lengkap">Nama Lengkap *</label>
                                         </div>
                                     </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Triple">
+                                        </div>
+                                    </div>
                                     <div class="col-lg-6">
                                         <div class="form-floating">
                                             <input type="text" name="nama_penanggung" class="form-control"
@@ -413,6 +433,12 @@
                                             <label for="alamat">Alamat Penanggung Jawab</label>
                                         </div>
                                     </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="file" name="csv" id="csv" class="form-control" required>
+                                            <label for="csv">Upload CSV untuk pendataan anggota</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -440,6 +466,11 @@
                                             <input type="text" name="nama_lengkap" class="form-control"
                                                    id="nama_lengkap" required>
                                             <label for="nama_lengkap">Nama Lengkap *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Family">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -523,6 +554,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Student">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
@@ -591,6 +627,11 @@
                                             <input type="text" name="nama_penanggung" class="form-control"
                                                    id="nama_penanggung" required>
                                             <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Community">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
