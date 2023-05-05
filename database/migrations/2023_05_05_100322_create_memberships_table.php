@@ -15,13 +15,13 @@ return new class extends Migration {
         Schema::create('memberships', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
-            $table->string('nama_penanggung');
+            $table->string('nama_penanggung')->nullable();
             $table->string('tipe_membership');
             $table->string('email');
-            $table->unsignedBigInteger('notelp');
+            $table->string('notelp');
             $table->string('membership');
             $table->string('alamat');
-            $table->string('csv');
+            $table->string('csv')->nullable();
             $table->timestamps();
         });
     }
