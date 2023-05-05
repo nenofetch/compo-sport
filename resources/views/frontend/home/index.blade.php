@@ -239,7 +239,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="personalModalLabel">Personal Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.personal') }}" method="POST">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -252,13 +252,18 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Personal">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -299,7 +304,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="coupleModalLabel">Couple Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.couple') }}" method="POST">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -319,13 +324,18 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Couple">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -365,7 +375,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="tripleModalLabel">Triple Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.triple') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -385,13 +395,18 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Triple">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -413,6 +428,12 @@
                                             <label for="alamat">Alamat Penanggung Jawab</label>
                                         </div>
                                     </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="file" name="csv" id="csv" class="form-control" required>
+                                            <label for="csv">Upload CSV untuk pendataan anggota</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -431,7 +452,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="familyModalLabel">Family Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.family') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -451,13 +472,18 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Family">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -503,7 +529,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="studentModalLabel">Student Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.student') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -523,13 +549,18 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Student">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email *</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
@@ -575,7 +606,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="communityModalLabel">Community/Corporate Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.community') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -595,13 +626,18 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Community">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
                                             <input type="email" name="email" id="email" class="form-control" required>
                                             <label for="email">Email Penanggung Jawab*</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <input type="text" name="notelp" id="notel" class="form-control" required>
+                                            <input type="text" name="notelp" id="notelp" class="form-control" required>
                                             <label for="notelp">No Telpon *</label>
                                         </div>
                                     </div>
