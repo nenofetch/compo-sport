@@ -45,7 +45,12 @@
                         <tr>
                             <th width="5%">No</th>
                             <th>Nama Lengkap</th>
+                            <th>Nama Penanggung Jawab</th>
+                            <th>Email</th>
+                            <th>No Telp</th>
                             <th>Tipe Membership</th>
+                            <th>Durasi Membership</th>
+                            <th>Alamat</th>
                             <th width="20%">Aksi</th>
                         </tr>
                         </thead>
@@ -56,10 +61,19 @@
                                 <td>{{ $loop->iteration }}</td>
 
                                 <td>{{ $membership->nama_lengkap }}</td>
+                                @if($membership->nama_penanggung == '')
+                                    <td>-</td>
+                                @else
+                                    <td>{{ $membership->nama_penanggung }}</td>
+                                @endif
+                                <td>{{ $membership->email }}</td>
+                                <td>{{ $membership->notelp }}</td>
                                 <td>{{ $membership->tipe_membership }}</td>
+                                <td>{{ $membership->booking_until }}</td>
+                                <td>{{ $membership->alamat }}</td>
                                 <td>
                                     <button class="btn btn-info btn-sm mb-2"
-                                            onclick="window.location='{{ route('membership.show', $membership->nama_lengkap) }}'">
+                                            data-id="{{$membership->id}}">
                                         <i
                                             class="fas fa-eye"></i> Detail
                                     </button>

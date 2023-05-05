@@ -9,7 +9,7 @@ class Memberships extends Model
 {
     use HasFactory;
 
-    public $fillable = ['nama_lengkap', 'nama_penanggung', 'tipe_membership', 'email', 'notelp', 'membership', 'csv', 'alamat'];
+    public $fillable = ['nama_lengkap', 'nama_penanggung', 'tipe_membership', 'email', 'notelp', 'booking_until', 'csv', 'alamat'];
 
     protected $guarded = ['id'];
 }

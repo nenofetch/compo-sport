@@ -17,7 +17,7 @@ class MembershipController extends Controller
             'tipe_membership' => 'required',
             'email' => 'required|email:dns',
             'notelp' => 'required|numeric',
-            'membership' => 'required',
+            'booking_until' => 'required',
             'alamat' => 'required'
         ]);
 
@@ -33,7 +33,7 @@ class MembershipController extends Controller
             'tipe_membership' => 'required',
             'email' => 'required|email:dns',
             'notelp' => 'required|numeric',
-            'membership' => 'required',
+            'booking_until' => 'required',
             'alamat' => 'required',
         ]);
 
@@ -49,7 +49,7 @@ class MembershipController extends Controller
             'tipe_membership' => 'required',
             'email' => 'required|email:dns',
             'notelp' => 'required|numeric',
-            'membership' => 'required',
+            'booking_until' => 'required',
             'alamat' => 'required',
             'csv' => 'required|file|mimes:csv'
         ]);
@@ -70,7 +70,7 @@ class MembershipController extends Controller
             'tipe_membership' => 'required',
             'email' => 'required|email:dns',
             'notelp' => 'required|numeric',
-            'membership' => 'required',
+            'booking_until' => 'required',
             'alamat' => 'required',
             'csv' => 'required|file|mimes:csv'
         ]);
@@ -87,7 +87,7 @@ class MembershipController extends Controller
             'tipe_membership' => 'required',
             'email' => 'required|email:dns',
             'notelp' => 'required|numeric',
-            'membership' => 'required',
+            'booking_until' => 'required',
             'alamat' => 'required',
             'csv' => 'required|file|mimes:csv'
         ]);
@@ -104,7 +104,7 @@ class MembershipController extends Controller
             'tipe_membership' => 'required',
             'email' => 'required|email:dns',
             'notelp' => 'required|numeric',
-            'membership' => 'required',
+            'booking_until' => 'required',
             'alamat' => 'required',
             'csv' => 'required|file|mimes:csv'
         ]);
