@@ -239,7 +239,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="personalModalLabel">Personal Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.personal') }}" method="POST">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -253,11 +253,6 @@
                                     <div class="col-lg-12">
                                         <div class="form-floating">
                                             <input type="hidden" name="tipe_membership" value="Personal">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-floating">
-                                            <input type="hidden" name="tipe_membership" value="Couple">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -309,7 +304,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="coupleModalLabel">Couple Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.couple') }}" method="POST">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -320,16 +315,16 @@
                                             <label for="nama_lengkap">Nama Lengkap *</label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-floating">
-                                            <input type="hidden" name="tipe_membership" value="Couple">
-                                        </div>
-                                    </div>
                                     <div class="col-lg-6">
                                         <div class="form-floating">
                                             <input type="text" name="nama_penanggung" class="form-control"
                                                    id="nama_penanggung" required>
                                             <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Couple">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -380,7 +375,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="tripleModalLabel">Triple Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.triple') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -391,16 +386,16 @@
                                             <label for="nama_lengkap">Nama Lengkap *</label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-floating">
-                                            <input type="hidden" name="tipe_membership" value="Triple">
-                                        </div>
-                                    </div>
                                     <div class="col-lg-6">
                                         <div class="form-floating">
                                             <input type="text" name="nama_penanggung" class="form-control"
                                                    id="nama_penanggung" required>
                                             <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Triple">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -457,7 +452,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="familyModalLabel">Family Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.family') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -468,16 +463,16 @@
                                             <label for="nama_lengkap">Nama Lengkap *</label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-floating">
-                                            <input type="hidden" name="tipe_membership" value="Family">
-                                        </div>
-                                    </div>
                                     <div class="col-lg-6">
                                         <div class="form-floating">
                                             <input type="text" name="nama_penanggung" class="form-control"
                                                    id="nama_penanggung" required>
                                             <label for="nama_penanggung">Nama Penanggung Jawab *</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-floating">
+                                            <input type="hidden" name="tipe_membership" value="Family">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -534,7 +529,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="studentModalLabel">Student Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.student') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
@@ -611,7 +606,7 @@
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="communityModalLabel">Community/Corporate Membership</h1>
                         </div>
-                        <form action="" method="POST">
+                        <form action="{{ route('membership.community') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="row g-2">
