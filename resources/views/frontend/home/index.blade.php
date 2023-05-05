@@ -269,13 +269,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <select name="membership" id="membership" class="form-select">
+                                            <select name="booking_until" id="booking_until" class="form-select">
                                                 <option selected>Pilih Durasi Membership</option>
-                                                <option value="1">1 Bulan</option>
-                                                <option value="2">2 Bulan</option>
-                                                <option value="3">3 Bulan</option>
+                                                <option value="1 Bulan">1 Bulan</option>
+                                                <option value="2 Bulan">2 Bulan</option>
+                                                <option value="3 Bulan">3 Bulan</option>
                                             </select>
-                                            <label for="membership">Membership</label>
+                                            <label for="booking_until">Membership</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -341,13 +341,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <select name="membership" id="membership" class="form-select">
+                                            <select name="booking_until" id="booking_until" class="form-select">
                                                 <option selected>Pilih Durasi Membership</option>
-                                                <option value="1">1 Bulan</option>
-                                                <option value="2">2 Bulan</option>
-                                                <option value="3">3 Bulan</option>
+                                                <option value="1 Bulan">1 Bulan</option>
+                                                <option value="2 Bulan">2 Bulan</option>
+                                                <option value="3 Bulan">3 Bulan</option>
                                             </select>
-                                            <label for="membership">Membership</label>
+                                            <label for="booking_until">Membership</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -412,13 +412,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <select name="membership" id="membership" class="form-select">
+                                            <select name="booking_until" id="booking_until" class="form-select">
                                                 <option selected>Pilih Membership</option>
-                                                <option value="1">1 Bulan</option>
-                                                <option value="2">2 Bulan</option>
-                                                <option value="3">3 Bulan</option>
+                                                <option value="1 Bulan">1 Bulan</option>
+                                                <option value="2 Bulan">2 Bulan</option>
+                                                <option value="3 Bulan">3 Bulan</option>
                                             </select>
-                                            <label for="membership">Membership</label>
+                                            <label for="booking_until">Membership</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -489,13 +489,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <select name="membership" id="membership" class="form-select">
+                                            <select name="booking_until" id="booking_until" class="form-select">
                                                 <option selected>Pilih Durasi Membership</option>
-                                                <option value="1">1 Bulan</option>
-                                                <option value="2">2 Bulan</option>
-                                                <option value="3">3 Bulan</option>
+                                                <option value="1 Bulan">1 Bulan</option>
+                                                <option value="2 Bulan">2 Bulan</option>
+                                                <option value="3 Bulan">3 Bulan</option>
                                             </select>
-                                            <label for="membership">Membership</label>
+                                            <label for="booking_until">Membership</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -566,13 +566,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <select name="membership" id="membership" class="form-select">
+                                            <select name="booking_until" id="booking_until" class="form-select">
                                                 <option selected>Pilih Durasi Membership</option>
-                                                <option value="1">1 Bulan</option>
-                                                <option value="2">2 Bulan</option>
-                                                <option value="3">3 Bulan</option>
+                                                <option value="1 Bulan">1 Bulan</option>
+                                                <option value="2 Bulan">2 Bulan</option>
+                                                <option value="3 Bulan">3 Bulan</option>
                                             </select>
-                                            <label for="membership">Membership</label>
+                                            <label for="booking_until">Membership</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -643,13 +643,13 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-floating">
-                                            <select name="membership" id="membership" class="form-select">
+                                            <select name="booking_until" id="booking_until" class="form-select">
                                                 <option selected>Pilih Durasi Membership</option>
-                                                <option value="1">1 Bulan</option>
-                                                <option value="2">2 Bulan</option>
-                                                <option value="3">3 Bulan</option>
+                                                <option value="1 Bulan">1 Bulan</option>
+                                                <option value="2 Bulan">2 Bulan</option>
+                                                <option value="3 Bulan">3 Bulan</option>
                                             </select>
-                                            <label for="membership">Membership</label>
+                                            <label for="booking_until">Membership</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
