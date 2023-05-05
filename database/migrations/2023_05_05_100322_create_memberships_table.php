@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('tipe_membership');
             $table->string('email');
             $table->string('notelp');
-            $table->string('membership');
+            $table->string('booking_until');
             $table->string('alamat');
             $table->string('csv')->nullable();
             $table->timestamps();
