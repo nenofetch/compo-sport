@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,12 @@ Route::get('facilities/{slug}', [App\Http\Controllers\Frontend\FacilityControlle
 Route::get('pages/{slug}', [App\Http\Controllers\Frontend\PageController::class, 'index'])->name('pages.index');
 Route::get('gallery', [App\Http\Controllers\Frontend\GalleryController::class, 'index'])->name('gallery.index');
 Route::get('contact', [App\Http\Controllers\Frontend\ContactController::class, 'index'])->name('contact.index');
+Route::post('membership', [App\Http\Controllers\Frontend\MembershipController::class, 'storePersonal'])->name('personal');
+Route::post('membership', [App\Http\Controllers\Frontend\MembershipController::class, 'storeCouple'])->name('couple');
+Route::post('membership', [App\Http\Controllers\Frontend\MembershipController::class, 'storeTriple'])->name('triple');
+Route::post('membership', [App\Http\Controllers\Frontend\MembershipController::class, 'storeFamily'])->name('family');
+Route::post('membership', [App\Http\Controllers\Frontend\MembershipController::class, 'storeStudent'])->name('student');
+Route::post('membership', [App\Http\Controllers\Frontend\MembershipController::class, 'storeCommunity'])->name('community');
 
 Auth::routes(['register' => false]);
 
