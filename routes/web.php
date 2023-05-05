@@ -48,5 +48,6 @@ Route::middleware(['auth'])->group(function () {
         'profile' => App\Http\Controllers\Backend\ProfileController::class,
         'change_password' => App\Http\Controllers\Backend\ChangePasswordController::class,
         'setting' => App\Http\Controllers\Backend\SettingController::class,
+        'membership' => App\Http\Controllers\Backend\MembershipController::class,
     ]);
 });
