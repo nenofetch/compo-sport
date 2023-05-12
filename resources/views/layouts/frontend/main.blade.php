@@ -94,7 +94,7 @@
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="{{ route('blog.index') }}">Blog</a></li>
-                <li><a class="nav-link scrollto" href="#">Keanggotaan</a></li>
+                <li><a class="nav-link scrollto" href="#members">Keanggotaan</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('contact.index') }}">Kontak Kami</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
