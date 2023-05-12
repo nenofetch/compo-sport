@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Memberships;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\InvoiceMail;
 
 class MembershipController extends Controller
 {
@@ -22,6 +24,11 @@ class MembershipController extends Controller
         ]);
 
         Memberships::create($personalMembership);
+        $data = [
+            'order_id' => 'ORD20293092030',
+            // Insert other data here
+        ];
+        Mail::to($request->email)->send(new InvoiceMail($data));
         return redirect('/')->with('message', 'Data Berhasil Dikirim. Silahkan Lihat Email Konfirmasi');
     }
 

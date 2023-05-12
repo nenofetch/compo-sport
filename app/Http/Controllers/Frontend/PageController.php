@@ -14,4 +14,9 @@ class PageController extends Controller
 
         return view('frontend.page.index', compact('pages'));
     }
+
+    public function cek()
+    {
+        return view('emails.cek');
+    }
 }

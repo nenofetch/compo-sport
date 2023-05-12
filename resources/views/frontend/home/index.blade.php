@@ -117,7 +117,7 @@
         </section><!-- End Counts Section -->
 
         <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="pricing">
+        <section id="members" class="pricing">
 
             <div class="container" data-aos="fade-up">
 
